@@ -262,43 +262,43 @@ var map = {
 		168
 	],
 	"../pages/cabsand-fuel-add/cabsand-fuel-add.module": [
-		166
+		170
 	],
 	"../pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.module": [
-		170
+		166
 	],
 	"../pages/cabsand-fuel-truck/cabsand-fuel-truck.module": [
 		172
 	],
 	"../pages/cabsand-fuel/cabsand-fuel.module": [
-		174
-	],
-	"../pages/cabsand-prestart/cabsand-prestart.module": [
 		173
 	],
+	"../pages/cabsand-prestart/cabsand-prestart.module": [
+		176
+	],
 	"../pages/dashboard/dashboard.module": [
-		175
+		174
 	],
 	"../pages/jsa/jsa.module": [
-		177
+		187
 	],
 	"../pages/klmr-fuel-add/klmr-fuel-add.module": [
-		180
+		177
 	],
 	"../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module": [
-		178
+		179
 	],
 	"../pages/klmr-fuel-truck/klmr-fuel-truck.module": [
-		182
+		181
 	],
 	"../pages/klmr-fuel/klmr-fuel.module": [
-		184
+		182
 	],
 	"../pages/login/login.module": [
-		185
+		183
 	],
 	"../pages/prestart/prestart.module": [
-		183
+		186
 	]
 };
 function webpackAsyncContext(req) {
@@ -667,10 +667,10 @@ var AddprestartPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandFuelAddPageModule", function() { return CabsandFuelAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandFuelTruckAddPageModule", function() { return CabsandFuelTruckAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_add__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck_add__ = __webpack_require__(167);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -680,23 +680,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CabsandFuelAddPageModule = /** @class */ (function () {
-    function CabsandFuelAddPageModule() {
+var CabsandFuelTruckAddPageModule = /** @class */ (function () {
+    function CabsandFuelTruckAddPageModule() {
     }
-    CabsandFuelAddPageModule = __decorate([
+    CabsandFuelTruckAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_add__["a" /* CabsandFuelAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_add__["a" /* CabsandFuelAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */]),
             ],
         })
-    ], CabsandFuelAddPageModule);
-    return CabsandFuelAddPageModule;
+    ], CabsandFuelTruckAddPageModule);
+    return CabsandFuelTruckAddPageModule;
 }());
 
-//# sourceMappingURL=cabsand-fuel-add.module.js.map
+//# sourceMappingURL=cabsand-fuel-truck-add.module.js.map
 
 /***/ }),
 
@@ -704,13 +704,13 @@ var CabsandFuelAddPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelAddPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelTruckAddPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_cabsand_fuel__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_truck_cabsand_fuel_truck__ = __webpack_require__(83);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -761,8 +761,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var CabsandFuelAddPage = /** @class */ (function () {
-    function CabsandFuelAddPage(navCtrl, navParams, api, utiltiy, formBuilder) {
+var CabsandFuelTruckAddPage = /** @class */ (function () {
+    function CabsandFuelTruckAddPage(navCtrl, navParams, api, utiltiy, formBuilder) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.api = api;
@@ -791,52 +791,29 @@ var CabsandFuelAddPage = /** @class */ (function () {
         var currentDate = new Date();
         var date = currentDate.toISOString().split('T')[0];
         this.createFuel = this.formBuilder.group({
-            filled_by: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             date: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */](date, [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            odometer: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            filled_by: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            truck: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             diesel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            container: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            fleet_no: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             fuel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            price: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             amount: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            fuel_odr: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            location: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
         });
         console.log("param", this.params);
     }
-    CabsandFuelAddPage.prototype.ionViewDidLoad = function () {
-        this.getappColor();
+    CabsandFuelTruckAddPage.prototype.ionViewDidLoad = function () {
         this.getMetaData();
     };
-    CabsandFuelAddPage.prototype.getappColor = function () {
+    CabsandFuelTruckAddPage.prototype.getMetaData = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _a;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         _a = this;
-                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
-                    case 1:
-                        _a.appColor = _b.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    CabsandFuelAddPage.prototype.getMetaData = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a, _b;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        _a = this;
-                        return [4 /*yield*/, this.getFleetList()];
-                    case 1:
-                        _a.fleetList = _c.sent();
-                        _b = this;
                         return [4 /*yield*/, this.getFilledBtList()];
-                    case 2:
-                        _b.filledByList = _c.sent();
+                    case 1:
+                        _a.filledByList = _b.sent();
                         if (this.params) {
                             this.regenerateForm();
                         }
@@ -845,28 +822,10 @@ var CabsandFuelAddPage = /** @class */ (function () {
             });
         });
     };
-    CabsandFuelAddPage.prototype.getFleetList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                this.fleetList = [];
-                this.utiltiy.startLoading();
-                return [2 /*return*/, this.api.get("/tansix_prestart/fleet/get", false)
-                        .then(function (result) {
-                        console.log("result", result);
-                        _this.utiltiy.stopLoading();
-                        if (result.status) {
-                            return result.result;
-                        }
-                    }, function (err) {
-                        _this.utiltiy.stopLoading();
-                        _this.utiltiy.toaster(err.error.message);
-                        return [];
-                    })];
-            });
-        });
+    CabsandFuelTruckAddPage.prototype.fuelCalculator = function (evnt) {
+        this.createFuel.get("amount").setValue(this.createFuel.value.fuel * this.createFuel.value.price);
     };
-    CabsandFuelAddPage.prototype.getFilledBtList = function () {
+    CabsandFuelTruckAddPage.prototype.getFilledBtList = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -890,61 +849,24 @@ var CabsandFuelAddPage = /** @class */ (function () {
             });
         });
     };
-    CabsandFuelAddPage.prototype.regenerateForm = function () {
+    CabsandFuelTruckAddPage.prototype.regenerateForm = function () {
         this.createFuel.patchValue({
-            filled_by: this.params.filled_by,
             date: this.params.date,
-            odometer: this.params.odometer,
+            filled_by: this.params.filled_by,
+            truck: this.params.truck,
             diesel: this.params.diesel,
-            container: this.params.container,
-            fleet_no: this.params.fleet_no,
             fuel: this.params.fuel,
-            fuel_odr: this.params.fuel_odr,
+            price: this.params.price,
             amount: this.params.amount,
-            location: this.params.location,
         });
         this.filledBy = this.params.filled_by;
-        this.selectedConatiner = this.params.container;
-        this.selectedFleet = this.params.fleet_no;
+        this.selectedConatiner = this.params.truck;
         this.selectedFuel = this.params.diesel;
     };
-    CabsandFuelAddPage.prototype.dropDownChange = function (value, key) {
+    CabsandFuelTruckAddPage.prototype.dropDownChange = function (value, key) {
         this.createFuel.get("" + key).setValue(value);
-        if (key == "diesel" || key == "container") {
-            this.fuelCalculator();
-        }
     };
-    CabsandFuelAddPage.prototype.fuelCalculator = function () {
-        if (this.createFuel.value.container.length != 0 && this.createFuel.value.diesel.length != 0 && this.createFuel.value.fuel.length != 0) {
-            this.fetchAmount();
-        }
-    };
-    CabsandFuelAddPage.prototype.fetchAmount = function () {
-        var _this = this;
-        this.createFuel.get('amount').setValue("");
-        this.utiltiy.startLoading();
-        var formData = new FormData();
-        formData.append("container", this.createFuel.value.container);
-        formData.append("diesel", this.createFuel.value.diesel);
-        formData.append("fuel", this.createFuel.value.fuel);
-        this.api.post("/tansix_prestart/fuel/fuel/detail", false, formData)
-            .then(function (result) {
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                if (result.result.price != 0) {
-                    _this.createFuel.get('amount').setValue(result.result.price);
-                }
-                else {
-                    _this.utiltiy.toaster("fuel is not available in storage");
-                }
-            }
-        }, function (err) {
-            console.log("err", err);
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    CabsandFuelAddPage.prototype.submit = function () {
+    CabsandFuelTruckAddPage.prototype.submit = function () {
         var _this = this;
         console.log("this.credentialsForm.value", this.createFuel.value);
         var formKeys = Object.keys(this.createFuel.value);
@@ -958,27 +880,29 @@ var CabsandFuelAddPage = /** @class */ (function () {
                     string_1 = string_1 + "&" + key + "=" + _this.createFuel.value[key];
                 }
             });
-            var body = string_1;
+            var body = string_1 + "&reminder_fuel=" + ("" + this.createFuel.value['fuel']);
+            ;
             console.log("string-1", body);
-            this.updateFuel(body, this.params.id);
+            this.updateFuelTruck(body, this.params.id);
         }
         else {
             var formData_1 = new FormData();
             formKeys.forEach(function (key) {
                 formData_1.append(key, _this.createFuel.value[key]);
             });
-            this.addFuel(formData_1);
+            formData_1.append("reminder_fuel", this.createFuel.value['fuel']);
+            this.addFuelTruck(formData_1);
         }
     };
-    CabsandFuelAddPage.prototype.addFuel = function (formData) {
+    CabsandFuelTruckAddPage.prototype.addFuelTruck = function (formData) {
         var _this = this;
-        this.api.post("/tansix_prestart/fuel/fuel/store", false, formData)
+        this.api.post("/tansix_prestart/fuel/fuel_truck/store", false, formData)
             .then(function (result) {
             console.log("result", result);
             _this.utiltiy.stopLoading();
             if (result.status) {
                 _this.utiltiy.toaster(result.message);
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_cabsand_fuel__["a" /* CabsandFuelPage */]);
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_truck_cabsand_fuel_truck__["a" /* CabsandFuelTruckPage */]);
             }
         }, function (err) {
             console.log("err", err);
@@ -986,15 +910,15 @@ var CabsandFuelAddPage = /** @class */ (function () {
             _this.utiltiy.toaster(err.error.message);
         });
     };
-    CabsandFuelAddPage.prototype.updateFuel = function (formData, id) {
+    CabsandFuelTruckAddPage.prototype.updateFuelTruck = function (formData, id) {
         var _this = this;
-        this.api.put("/tansix_prestart/fuel/fuel/update/" + id, false, formData)
+        this.api.put("/tansix_prestart/fuel/fuel_truck/update/" + id, false, formData)
             .then(function (result) {
             console.log("result", result);
             _this.utiltiy.stopLoading();
             if (result.status) {
                 _this.utiltiy.toaster(result.message);
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_cabsand_fuel__["a" /* CabsandFuelPage */]);
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_truck_cabsand_fuel_truck__["a" /* CabsandFuelTruckPage */]);
             }
         }, function (err) {
             console.log("err", err);
@@ -1002,16 +926,16 @@ var CabsandFuelAddPage = /** @class */ (function () {
             _this.utiltiy.toaster(err.error.message);
         });
     };
-    CabsandFuelAddPage = __decorate([
+    CabsandFuelTruckAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-fuel-add',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-add/cabsand-fuel-add.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\'">\n    <ion-navbar>\n      <ion-title *ngIf="!isUpdate">Add Fuel</ion-title>\n      <ion-title *ngIf="isUpdate">Update Fuel</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" [disabled]="!createFuel.valid" (click)="submit()">\n          <ion-icon name="checkmark"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item margin-bottom>\n    <ion-label>Filled By</ion-label>\n    <ion-select [(ngModel)]="filledBy" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(filledBy,\'filled_by\')">\n      <ion-option *ngFor="let filledBy of filledByList;let i = index" [value]="filledBy.name">{{filledBy.name}}\n      </ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Date</ion-label>\n            <ion-datetime class="border-1px-solid" displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>\n          </ion-item>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Odometer</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="odometer"></ion-input>\n          </ion-item>\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n  <ion-item margin-bottom>\n    <ion-label>Type of Fuel</ion-label>\n    <ion-select [(ngModel)]="selectedFuel" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFuel,\'diesel\')">\n      <ion-option *ngFor="let fuel of fuelList;let i = index" [value]="fuel">{{fuel}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n  <ion-item margin-bottom>\n    <ion-label>Container</ion-label>\n    <ion-select [(ngModel)]="selectedConatiner" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedConatiner,\'container\')">\n      <ion-option *ngFor="let container of containerList;let i = index" [value]="container">{{container}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n  <ion-item margin-bottom>\n    <ion-label>Fleet No.</ion-label>\n    <ion-select [(ngModel)]="selectedFleet" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFleet,\'fleet_no\')">\n      <ion-option *ngFor="let fleet of fleetList;let i = index" [value]="fleet.fleet_no">{{fleet.fleet_no}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Fuel (In Litres)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel" (keyup)="fuelCalculator()"></ion-input>\n          </ion-item>\n       \n          <ion-item>\n            <ion-label floating>Amount</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="amount" disabled="true"></ion-input>\n          </ion-item>\n         \n          <ion-item>\n            <ion-label floating>Fuel ODR</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel_odr"></ion-input>\n          </ion-item>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Location</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="location"></ion-input>\n          </ion-item>\n\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-add/cabsand-fuel-add.html"*/,
+            selector: 'page-cabsand-fuel-truck-add',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <ion-title *ngIf="!isUpdate">Add Fuel Truck</ion-title>\n      <ion-title *ngIf="isUpdate">Update Fuel Truck</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" [disabled]="!createFuel.valid" (click)="submit()">\n          <ion-icon name="checkmark"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin class="full-width">\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Date</ion-label>\n            <ion-datetime class="border-1px-solid" displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>\n          </ion-item>\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n  <ion-item margin-bottom>\n    <ion-label>Type of Fuel</ion-label>\n    <ion-select [(ngModel)]="selectedFuel" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFuel,\'diesel\')">\n      <ion-option *ngFor="let fuel of fuelList;let i = index" [value]="fuel">{{fuel}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n\n  <ion-item margin-bottom>\n    <ion-label>Filled By</ion-label>\n    <ion-select [(ngModel)]="filledBy" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(filledBy,\'filled_by\')">\n      <ion-option *ngFor="let filledBy of filledByList;let i = index" [value]="filledBy.name">{{filledBy.name}}\n      </ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-item margin-bottom>\n    <ion-label>Container</ion-label>\n    <ion-select [(ngModel)]="selectedConatiner" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedConatiner,\'truck\')">\n      <ion-option *ngFor="let container of containerList;let i = index" [value]="container">{{container}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin class="full-width">\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Fuel (In Litres)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel" type="number" (keyup)="fuelCalculator($event)"></ion-input>\n          </ion-item>\n       \n          <ion-item>\n            <ion-label floating>Price (Per Litre)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="price" type="number" (keyup)="fuelCalculator($event)"></ion-input>\n          </ion-item>\n         \n          <ion-item margin-bottom>\n            <ion-label floating>Total Amount</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="amount" disabled="true"></ion-input>\n          </ion-item>\n\n          \n\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]])
-    ], CabsandFuelAddPage);
-    return CabsandFuelAddPage;
+    ], CabsandFuelTruckAddPage);
+    return CabsandFuelTruckAddPage;
 }());
 
-//# sourceMappingURL=cabsand-fuel-add.js.map
+//# sourceMappingURL=cabsand-fuel-truck-add.js.map
 
 /***/ }),
 
@@ -1361,10 +1285,10 @@ var CabsandAddprestartPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandFuelTruckAddPageModule", function() { return CabsandFuelTruckAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandFuelAddPageModule", function() { return CabsandFuelAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck_add__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_add__ = __webpack_require__(171);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1374,23 +1298,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CabsandFuelTruckAddPageModule = /** @class */ (function () {
-    function CabsandFuelTruckAddPageModule() {
+var CabsandFuelAddPageModule = /** @class */ (function () {
+    function CabsandFuelAddPageModule() {
     }
-    CabsandFuelTruckAddPageModule = __decorate([
+    CabsandFuelAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_add__["a" /* CabsandFuelAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_add__["a" /* CabsandFuelAddPage */]),
             ],
         })
-    ], CabsandFuelTruckAddPageModule);
-    return CabsandFuelTruckAddPageModule;
+    ], CabsandFuelAddPageModule);
+    return CabsandFuelAddPageModule;
 }());
 
-//# sourceMappingURL=cabsand-fuel-truck-add.module.js.map
+//# sourceMappingURL=cabsand-fuel-add.module.js.map
 
 /***/ }),
 
@@ -1398,13 +1322,13 @@ var CabsandFuelTruckAddPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelTruckAddPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelAddPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_truck_cabsand_fuel_truck__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_cabsand_fuel__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1455,8 +1379,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var CabsandFuelTruckAddPage = /** @class */ (function () {
-    function CabsandFuelTruckAddPage(navCtrl, navParams, api, utiltiy, formBuilder) {
+var CabsandFuelAddPage = /** @class */ (function () {
+    function CabsandFuelAddPage(navCtrl, navParams, api, utiltiy, formBuilder) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.api = api;
@@ -1485,29 +1409,52 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
         var currentDate = new Date();
         var date = currentDate.toISOString().split('T')[0];
         this.createFuel = this.formBuilder.group({
-            date: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */](date, [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             filled_by: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            truck: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            date: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */](date, [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            odometer: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             diesel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            container: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            fleet_no: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             fuel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            price: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
             amount: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            fuel_odr: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            location: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
         });
         console.log("param", this.params);
     }
-    CabsandFuelTruckAddPage.prototype.ionViewDidLoad = function () {
+    CabsandFuelAddPage.prototype.ionViewDidLoad = function () {
+        this.getappColor();
         this.getMetaData();
     };
-    CabsandFuelTruckAddPage.prototype.getMetaData = function () {
+    CabsandFuelAddPage.prototype.getappColor = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _a;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         _a = this;
-                        return [4 /*yield*/, this.getFilledBtList()];
+                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
                     case 1:
-                        _a.filledByList = _b.sent();
+                        _a.appColor = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CabsandFuelAddPage.prototype.getMetaData = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.getFleetList()];
+                    case 1:
+                        _a.fleetList = _c.sent();
+                        _b = this;
+                        return [4 /*yield*/, this.getFilledBtList()];
+                    case 2:
+                        _b.filledByList = _c.sent();
                         if (this.params) {
                             this.regenerateForm();
                         }
@@ -1516,10 +1463,28 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
             });
         });
     };
-    CabsandFuelTruckAddPage.prototype.fuelCalculator = function (evnt) {
-        this.createFuel.get("amount").setValue(this.createFuel.value.fuel * this.createFuel.value.price);
+    CabsandFuelAddPage.prototype.getFleetList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.fleetList = [];
+                this.utiltiy.startLoading();
+                return [2 /*return*/, this.api.get("/tansix_prestart/fleet/get", false)
+                        .then(function (result) {
+                        console.log("result", result);
+                        _this.utiltiy.stopLoading();
+                        if (result.status) {
+                            return result.result;
+                        }
+                    }, function (err) {
+                        _this.utiltiy.stopLoading();
+                        _this.utiltiy.toaster(err.error.message);
+                        return [];
+                    })];
+            });
+        });
     };
-    CabsandFuelTruckAddPage.prototype.getFilledBtList = function () {
+    CabsandFuelAddPage.prototype.getFilledBtList = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -1543,24 +1508,61 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
             });
         });
     };
-    CabsandFuelTruckAddPage.prototype.regenerateForm = function () {
+    CabsandFuelAddPage.prototype.regenerateForm = function () {
         this.createFuel.patchValue({
-            date: this.params.date,
             filled_by: this.params.filled_by,
-            truck: this.params.truck,
+            date: this.params.date,
+            odometer: this.params.odometer,
             diesel: this.params.diesel,
+            container: this.params.container,
+            fleet_no: this.params.fleet_no,
             fuel: this.params.fuel,
-            price: this.params.price,
+            fuel_odr: this.params.fuel_odr,
             amount: this.params.amount,
+            location: this.params.location,
         });
         this.filledBy = this.params.filled_by;
-        this.selectedConatiner = this.params.truck;
+        this.selectedConatiner = this.params.container;
+        this.selectedFleet = this.params.fleet_no;
         this.selectedFuel = this.params.diesel;
     };
-    CabsandFuelTruckAddPage.prototype.dropDownChange = function (value, key) {
+    CabsandFuelAddPage.prototype.dropDownChange = function (value, key) {
         this.createFuel.get("" + key).setValue(value);
+        if (key == "diesel" || key == "container") {
+            this.fuelCalculator();
+        }
     };
-    CabsandFuelTruckAddPage.prototype.submit = function () {
+    CabsandFuelAddPage.prototype.fuelCalculator = function () {
+        if (this.createFuel.value.container.length != 0 && this.createFuel.value.diesel.length != 0 && this.createFuel.value.fuel.length != 0) {
+            this.fetchAmount();
+        }
+    };
+    CabsandFuelAddPage.prototype.fetchAmount = function () {
+        var _this = this;
+        this.createFuel.get('amount').setValue("");
+        this.utiltiy.startLoading();
+        var formData = new FormData();
+        formData.append("container", this.createFuel.value.container);
+        formData.append("diesel", this.createFuel.value.diesel);
+        formData.append("fuel", this.createFuel.value.fuel);
+        this.api.post("/tansix_prestart/fuel/fuel/detail", false, formData)
+            .then(function (result) {
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                if (result.result.success) {
+                    _this.createFuel.get('amount').setValue(result.result.price);
+                }
+                else {
+                    _this.utiltiy.toaster(result.result.error);
+                }
+            }
+        }, function (err) {
+            console.log("err", err);
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    CabsandFuelAddPage.prototype.submit = function () {
         var _this = this;
         console.log("this.credentialsForm.value", this.createFuel.value);
         var formKeys = Object.keys(this.createFuel.value);
@@ -1574,29 +1576,27 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
                     string_1 = string_1 + "&" + key + "=" + _this.createFuel.value[key];
                 }
             });
-            var body = string_1 + "&reminder_fuel=" + ("" + this.createFuel.value['fuel']);
-            ;
+            var body = string_1;
             console.log("string-1", body);
-            this.updateFuelTruck(body, this.params.id);
+            this.updateFuel(body, this.params.id);
         }
         else {
             var formData_1 = new FormData();
             formKeys.forEach(function (key) {
                 formData_1.append(key, _this.createFuel.value[key]);
             });
-            formData_1.append("reminder_fuel", this.createFuel.value['fuel']);
-            this.addFuelTruck(formData_1);
+            this.addFuel(formData_1);
         }
     };
-    CabsandFuelTruckAddPage.prototype.addFuelTruck = function (formData) {
+    CabsandFuelAddPage.prototype.addFuel = function (formData) {
         var _this = this;
-        this.api.post("/tansix_prestart/fuel/fuel_truck/store", false, formData)
+        this.api.post("/tansix_prestart/fuel/fuel/store", false, formData)
             .then(function (result) {
             console.log("result", result);
             _this.utiltiy.stopLoading();
             if (result.status) {
                 _this.utiltiy.toaster(result.message);
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_truck_cabsand_fuel_truck__["a" /* CabsandFuelTruckPage */]);
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_cabsand_fuel__["a" /* CabsandFuelPage */]);
             }
         }, function (err) {
             console.log("err", err);
@@ -1604,15 +1604,15 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
             _this.utiltiy.toaster(err.error.message);
         });
     };
-    CabsandFuelTruckAddPage.prototype.updateFuelTruck = function (formData, id) {
+    CabsandFuelAddPage.prototype.updateFuel = function (formData, id) {
         var _this = this;
-        this.api.put("/tansix_prestart/fuel/fuel_truck/update/" + id, false, formData)
+        this.api.put("/tansix_prestart/fuel/fuel/update/" + id, false, formData)
             .then(function (result) {
             console.log("result", result);
             _this.utiltiy.stopLoading();
             if (result.status) {
                 _this.utiltiy.toaster(result.message);
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_truck_cabsand_fuel_truck__["a" /* CabsandFuelTruckPage */]);
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__cabsand_fuel_cabsand_fuel__["a" /* CabsandFuelPage */]);
             }
         }, function (err) {
             console.log("err", err);
@@ -1620,16 +1620,16 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
             _this.utiltiy.toaster(err.error.message);
         });
     };
-    CabsandFuelTruckAddPage = __decorate([
+    CabsandFuelAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-fuel-truck-add',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <ion-title *ngIf="!isUpdate">Add Fuel Truck</ion-title>\n      <ion-title *ngIf="isUpdate">Update Fuel Truck</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" [disabled]="!createFuel.valid" (click)="submit()">\n          <ion-icon name="checkmark"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin class="full-width">\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Date</ion-label>\n            <ion-datetime class="border-1px-solid" displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>\n          </ion-item>\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n  <ion-item margin-bottom>\n    <ion-label>Type of Fuel</ion-label>\n    <ion-select [(ngModel)]="selectedFuel" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFuel,\'diesel\')">\n      <ion-option *ngFor="let fuel of fuelList;let i = index" [value]="fuel">{{fuel}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n\n  <ion-item margin-bottom>\n    <ion-label>Filled By</ion-label>\n    <ion-select [(ngModel)]="filledBy" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(filledBy,\'filled_by\')">\n      <ion-option *ngFor="let filledBy of filledByList;let i = index" [value]="filledBy.name">{{filledBy.name}}\n      </ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-item margin-bottom>\n    <ion-label>Container</ion-label>\n    <ion-select [(ngModel)]="selectedConatiner" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedConatiner,\'truck\')">\n      <ion-option *ngFor="let container of containerList;let i = index" [value]="container">{{container}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin class="full-width">\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Fuel (In Litres)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel" type="number" (keyup)="fuelCalculator($event)"></ion-input>\n          </ion-item>\n       \n          <ion-item>\n            <ion-label floating>Price (Per Litre)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="price" type="number" (keyup)="fuelCalculator($event)"></ion-input>\n          </ion-item>\n         \n          <ion-item margin-bottom>\n            <ion-label floating>Total Amount</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="amount" disabled="true"></ion-input>\n          </ion-item>\n\n          \n\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.html"*/,
+            selector: 'page-cabsand-fuel-add',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-add/cabsand-fuel-add.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\'">\n    <ion-navbar>\n      <ion-title *ngIf="!isUpdate">Add Fuel</ion-title>\n      <ion-title *ngIf="isUpdate">Update Fuel</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" [disabled]="!createFuel.valid" (click)="submit()">\n          <ion-icon name="checkmark"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item margin-bottom>\n    <ion-label>Filled By</ion-label>\n    <ion-select [(ngModel)]="filledBy" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(filledBy,\'filled_by\')">\n      <ion-option *ngFor="let filledBy of filledByList;let i = index" [value]="filledBy.name">{{filledBy.name}}\n      </ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Date</ion-label>\n            <ion-datetime class="border-1px-solid" displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>\n          </ion-item>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Odometer</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="odometer"></ion-input>\n          </ion-item>\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n  <ion-item margin-bottom>\n    <ion-label>Type of Fuel</ion-label>\n    <ion-select [(ngModel)]="selectedFuel" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFuel,\'diesel\')">\n      <ion-option *ngFor="let fuel of fuelList;let i = index" [value]="fuel">{{fuel}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n  <ion-item margin-bottom>\n    <ion-label>Container</ion-label>\n    <ion-select [(ngModel)]="selectedConatiner" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedConatiner,\'container\')">\n      <ion-option *ngFor="let container of containerList;let i = index" [value]="container">{{container}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n  <ion-item margin-bottom>\n    <ion-label>Fleet No.</ion-label>\n    <ion-select [(ngModel)]="selectedFleet" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFleet,\'fleet_no\')">\n      <ion-option *ngFor="let fleet of fleetList;let i = index" [value]="fleet.fleet_no">{{fleet.fleet_no}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Fuel (In Litres)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel" (keyup)="fuelCalculator()"></ion-input>\n          </ion-item>\n       \n          <ion-item>\n            <ion-label floating>Amount</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="amount" disabled="true"></ion-input>\n          </ion-item>\n         \n          <ion-item>\n            <ion-label floating>Fuel ODR</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel_odr"></ion-input>\n          </ion-item>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Location</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="location"></ion-input>\n          </ion-item>\n\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-add/cabsand-fuel-add.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]])
-    ], CabsandFuelTruckAddPage);
-    return CabsandFuelTruckAddPage;
+    ], CabsandFuelAddPage);
+    return CabsandFuelAddPage;
 }());
 
-//# sourceMappingURL=cabsand-fuel-truck-add.js.map
+//# sourceMappingURL=cabsand-fuel-add.js.map
 
 /***/ }),
 
@@ -1641,7 +1641,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandFuelTruckPageModule", function() { return CabsandFuelTruckPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel_truck__ = __webpack_require__(83);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1676,48 +1676,10 @@ var CabsandFuelTruckPageModule = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandPrestartPageModule", function() { return CabsandPrestartPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__ = __webpack_require__(50);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var CabsandPrestartPageModule = /** @class */ (function () {
-    function CabsandPrestartPageModule() {
-    }
-    CabsandPrestartPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__["a" /* CabsandPrestartPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__["a" /* CabsandPrestartPage */]),
-            ],
-        })
-    ], CabsandPrestartPageModule);
-    return CabsandPrestartPageModule;
-}());
-
-//# sourceMappingURL=cabsand-prestart.module.js.map
-
-/***/ }),
-
-/***/ 174:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandFuelPageModule", function() { return CabsandFuelPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_fuel__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1747,7 +1709,7 @@ var CabsandFuelPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 175:
+/***/ 174:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1755,7 +1717,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardPageModule", function() { return DashboardPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard__ = __webpack_require__(175);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1785,7 +1747,7 @@ var DashboardPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 176:
+/***/ 175:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1826,15 +1788,15 @@ var DashboardPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 177:
+/***/ 176:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsaPageModule", function() { return JsaPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandPrestartPageModule", function() { return CabsandPrestartPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jsa__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1844,23 +1806,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var JsaPageModule = /** @class */ (function () {
-    function JsaPageModule() {
+var CabsandPrestartPageModule = /** @class */ (function () {
+    function CabsandPrestartPageModule() {
     }
-    JsaPageModule = __decorate([
+    CabsandPrestartPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__jsa__["a" /* JsaPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__["a" /* CabsandPrestartPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__jsa__["a" /* JsaPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__["a" /* CabsandPrestartPage */]),
             ],
         })
-    ], JsaPageModule);
-    return JsaPageModule;
+    ], CabsandPrestartPageModule);
+    return CabsandPrestartPageModule;
 }());
 
-//# sourceMappingURL=jsa.module.js.map
+//# sourceMappingURL=cabsand-prestart.module.js.map
+
+/***/ }),
+
+/***/ 177:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelAddPageModule", function() { return KlmrFuelAddPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_add__ = __webpack_require__(178);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var KlmrFuelAddPageModule = /** @class */ (function () {
+    function KlmrFuelAddPageModule() {
+    }
+    KlmrFuelAddPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_add__["a" /* KlmrFuelAddPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel_add__["a" /* KlmrFuelAddPage */]),
+            ],
+        })
+    ], KlmrFuelAddPageModule);
+    return KlmrFuelAddPageModule;
+}());
+
+//# sourceMappingURL=klmr-fuel-add.module.js.map
 
 /***/ }),
 
@@ -1868,11 +1868,326 @@ var JsaPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrFuelAddPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_fuel_klmr_fuel__ = __webpack_require__(85);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+var KlmrFuelAddPage = /** @class */ (function () {
+    function KlmrFuelAddPage(navCtrl, navParams, api, utiltiy, formBuilder) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.formBuilder = formBuilder;
+        this.fleetList = [];
+        this.filledByList = [];
+        this.containerList = [
+            "Truck",
+            "Gerry Cans",
+            "Pod",
+        ];
+        this.fuelList = [
+            "Diesel",
+            "Unleaded",
+        ];
+        this.isUpdate = false;
+        this.params = {};
+        this.selectOptions = {
+            mode: 'ios'
+        };
+        this.params = this.navParams.get('param');
+        if (this.params) {
+            this.isUpdate = true;
+        }
+        var currentDate = new Date();
+        var date = currentDate.toISOString().split('T')[0];
+        this.createFuel = this.formBuilder.group({
+            filled_by: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            date: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */](date, [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            odometer: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            diesel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            container: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            fleet_no: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            fuel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            amount: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            fuel_odr: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+            location: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
+        });
+        console.log("param", this.params);
+    }
+    KlmrFuelAddPage.prototype.ionViewDidLoad = function () {
+        this.getappColor();
+        this.getMetaData();
+    };
+    KlmrFuelAddPage.prototype.getappColor = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
+                    case 1:
+                        _a.appColor = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrFuelAddPage.prototype.getMetaData = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.getFleetList()];
+                    case 1:
+                        _a.fleetList = _c.sent();
+                        _b = this;
+                        return [4 /*yield*/, this.getFilledBtList()];
+                    case 2:
+                        _b.filledByList = _c.sent();
+                        if (this.params) {
+                            this.regenerateForm();
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrFuelAddPage.prototype.getFleetList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.fleetList = [];
+                this.utiltiy.startLoading();
+                return [2 /*return*/, this.api.get("/prestart/fleet/get", false)
+                        .then(function (result) {
+                        console.log("result", result);
+                        _this.utiltiy.stopLoading();
+                        if (result.status) {
+                            return result.result;
+                        }
+                    }, function (err) {
+                        _this.utiltiy.stopLoading();
+                        _this.utiltiy.toaster(err.error.message);
+                        return [];
+                    })];
+            });
+        });
+    };
+    KlmrFuelAddPage.prototype.getFilledBtList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.filledByList = [];
+                this.utiltiy.startLoading();
+                return [2 /*return*/, this.api.get("/prestart/fuel/users/get", false)
+                        .then(function (result) {
+                        console.log("result", result);
+                        result.result.forEach(function (element) {
+                            element.name = element.firstName + " " + element.surname;
+                        });
+                        _this.utiltiy.stopLoading();
+                        if (result.status) {
+                            return result.result;
+                        }
+                    }, function (err) {
+                        _this.utiltiy.stopLoading();
+                        _this.utiltiy.toaster(err.error.message);
+                        return [];
+                    })];
+            });
+        });
+    };
+    KlmrFuelAddPage.prototype.regenerateForm = function () {
+        this.createFuel.patchValue({
+            filled_by: this.params.filled_by,
+            date: this.params.date,
+            odometer: this.params.odometer,
+            diesel: this.params.diesel,
+            container: this.params.container,
+            fleet_no: this.params.fleet_no,
+            fuel: this.params.fuel,
+            fuel_odr: this.params.fuel_odr,
+            amount: this.params.amount,
+            location: this.params.location,
+        });
+        this.filledBy = this.params.filled_by;
+        this.selectedConatiner = this.params.container;
+        this.selectedFleet = this.params.fleet_no;
+        this.selectedFuel = this.params.diesel;
+    };
+    KlmrFuelAddPage.prototype.dropDownChange = function (value, key) {
+        this.createFuel.get("" + key).setValue(value);
+        if (key == "diesel" || key == "container") {
+            this.fuelCalculator();
+        }
+    };
+    KlmrFuelAddPage.prototype.fuelCalculator = function () {
+        if (this.createFuel.value.container.length != 0 && this.createFuel.value.diesel.length != 0 && this.createFuel.value.fuel.length != 0) {
+            this.fetchAmount();
+        }
+    };
+    KlmrFuelAddPage.prototype.fetchAmount = function () {
+        var _this = this;
+        this.createFuel.get('amount').setValue("");
+        this.utiltiy.startLoading();
+        var formData = new FormData();
+        formData.append("container", this.createFuel.value.container);
+        formData.append("diesel", this.createFuel.value.diesel);
+        formData.append("fuel", this.createFuel.value.fuel);
+        this.api.post("/prestart/fuel/fuel/detail", false, formData)
+            .then(function (result) {
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                if (result.result.success) {
+                    _this.createFuel.get('amount').setValue(result.result.price);
+                }
+                else {
+                    _this.utiltiy.toaster(result.result.error);
+                }
+            }
+        }, function (err) {
+            console.log("err", err);
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrFuelAddPage.prototype.submit = function () {
+        var _this = this;
+        console.log("this.credentialsForm.value", this.createFuel.value);
+        var formKeys = Object.keys(this.createFuel.value);
+        if (this.isUpdate) {
+            var string_1 = "";
+            formKeys.forEach(function (key) {
+                if (string_1.length == 0) {
+                    string_1 = string_1 + "" + key + "=" + _this.createFuel.value[key];
+                }
+                else {
+                    string_1 = string_1 + "&" + key + "=" + _this.createFuel.value[key];
+                }
+            });
+            var body = string_1;
+            console.log("string-1", body);
+            this.updateFuel(body, this.params.id);
+        }
+        else {
+            var formData_1 = new FormData();
+            formKeys.forEach(function (key) {
+                formData_1.append(key, _this.createFuel.value[key]);
+            });
+            this.addFuel(formData_1);
+        }
+    };
+    KlmrFuelAddPage.prototype.addFuel = function (formData) {
+        var _this = this;
+        this.api.post("/prestart/fuel/fuel/store", false, formData)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__klmr_fuel_klmr_fuel__["a" /* KlmrFuelPage */]);
+            }
+        }, function (err) {
+            console.log("err", err);
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrFuelAddPage.prototype.updateFuel = function (formData, id) {
+        var _this = this;
+        this.api.put("/prestart/fuel/fuel/update/" + id, false, formData)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__klmr_fuel_klmr_fuel__["a" /* KlmrFuelPage */]);
+            }
+        }, function (err) {
+            console.log("err", err);
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrFuelAddPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-klmr-fuel-add',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-add/klmr-fuel-add.html"*/'<ion-header>\n  <ion-toolbar [color]="primarybackground ">\n    <ion-navbar>\n      <ion-title *ngIf="!isUpdate">Add Fuel</ion-title>\n      <ion-title *ngIf="isUpdate">Update Fuel</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" [disabled]="!createFuel.valid" (click)="submit()">\n          <ion-icon name="checkmark"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item margin-bottom>\n    <ion-label>Filled By</ion-label>\n    <ion-select [(ngModel)]="filledBy" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(filledBy,\'filled_by\')">\n      <ion-option *ngFor="let filledBy of filledByList;let i = index" [value]="filledBy.name">{{filledBy.name}}\n      </ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Date</ion-label>\n            <ion-datetime class="border-1px-solid" displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>\n          </ion-item>\n\n          <ion-item  margin-bottom>\n            <ion-label floating>Odometer</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="odometer"></ion-input>\n          </ion-item>\n\n          <!-- <ion-row padding-left>\n            <ion-label>Type of Fuel\n            </ion-label>\n          </ion-row>\n          <ion-row radio-group formControlName="diesel" padding>\n            <ion-col col-6>\n              <ion-label no-margin>Diesel</ion-label>\n              <ion-radio value="Diesel"></ion-radio>\n            </ion-col>\n            <ion-col col-6>\n              <ion-label no-margin>Unleaded</ion-label>\n              <ion-radio value="Unleaded"></ion-radio>\n            </ion-col>\n          </ion-row> -->\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n  <ion-item margin-bottom>\n    <ion-label>Type of Fuel</ion-label>\n    <ion-select [(ngModel)]="selectedFuel" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFuel,\'diesel\')">\n      <ion-option *ngFor="let fuel of fuelList;let i = index" [value]="fuel">{{fuel}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item margin-bottom>\n    <ion-label>Container</ion-label>\n    <ion-select [(ngModel)]="selectedConatiner" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedConatiner,\'container\')">\n      <ion-option *ngFor="let container of containerList;let i = index" [value]="container">{{container}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n  <ion-item margin-bottom>\n    <ion-label>Fleet No.</ion-label>\n    <ion-select [(ngModel)]="selectedFleet" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFleet,\'fleet_no\')">\n      <ion-option *ngFor="let fleet of fleetList;let i = index" [value]="fleet.fleet_no">{{fleet.fleet_no}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Fuel (In Litres)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel" (keyup)="fuelCalculator()"></ion-input>\n          </ion-item>\n       \n          <ion-item>\n            <ion-label floating>Amount</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="amount" disabled="true"></ion-input>\n          </ion-item>\n         \n          <ion-item>\n            <ion-label floating>Fuel ODR</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel_odr"></ion-input>\n          </ion-item>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Location</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="location"></ion-input>\n          </ion-item>\n\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-add/klmr-fuel-add.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]])
+    ], KlmrFuelAddPage);
+    return KlmrFuelAddPage;
+}());
+
+//# sourceMappingURL=klmr-fuel-add.js.map
+
+/***/ }),
+
+/***/ 179:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckAddPageModule", function() { return KlmrFuelTruckAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__ = __webpack_require__(180);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1902,7 +2217,7 @@ var KlmrFuelTruckAddPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 179:
+/***/ 180:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1912,7 +2227,7 @@ var KlmrFuelTruckAddPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_fuel_truck_klmr_fuel_truck__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_fuel_truck_klmr_fuel_truck__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2136,360 +2451,7 @@ var KlmrFuelTruckAddPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 180:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelAddPageModule", function() { return KlmrFuelAddPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_add__ = __webpack_require__(181);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var KlmrFuelAddPageModule = /** @class */ (function () {
-    function KlmrFuelAddPageModule() {
-    }
-    KlmrFuelAddPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_add__["a" /* KlmrFuelAddPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel_add__["a" /* KlmrFuelAddPage */]),
-            ],
-        })
-    ], KlmrFuelAddPageModule);
-    return KlmrFuelAddPageModule;
-}());
-
-//# sourceMappingURL=klmr-fuel-add.module.js.map
-
-/***/ }),
-
 /***/ 181:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrFuelAddPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_fuel_klmr_fuel__ = __webpack_require__(86);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-
-var KlmrFuelAddPage = /** @class */ (function () {
-    function KlmrFuelAddPage(navCtrl, navParams, api, utiltiy, formBuilder) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.formBuilder = formBuilder;
-        this.fleetList = [];
-        this.filledByList = [];
-        this.containerList = [
-            "Truck",
-            "Gerry Cans",
-            "Pod",
-        ];
-        this.fuelList = [
-            "Diesel",
-            "Unleaded",
-        ];
-        this.isUpdate = false;
-        this.params = {};
-        this.selectOptions = {
-            mode: 'ios'
-        };
-        this.params = this.navParams.get('param');
-        if (this.params) {
-            this.isUpdate = true;
-        }
-        var currentDate = new Date();
-        var date = currentDate.toISOString().split('T')[0];
-        this.createFuel = this.formBuilder.group({
-            filled_by: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            date: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */](date, [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            odometer: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            diesel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            container: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            fleet_no: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            fuel: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            amount: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            fuel_odr: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-            location: new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["b" /* FormControl */]('', [__WEBPACK_IMPORTED_MODULE_4__angular_forms__["g" /* Validators */].required]),
-        });
-        console.log("param", this.params);
-    }
-    KlmrFuelAddPage.prototype.ionViewDidLoad = function () {
-        this.getappColor();
-        this.getMetaData();
-    };
-    KlmrFuelAddPage.prototype.getappColor = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        _a = this;
-                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
-                    case 1:
-                        _a.appColor = _b.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrFuelAddPage.prototype.getMetaData = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a, _b;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        _a = this;
-                        return [4 /*yield*/, this.getFleetList()];
-                    case 1:
-                        _a.fleetList = _c.sent();
-                        _b = this;
-                        return [4 /*yield*/, this.getFilledBtList()];
-                    case 2:
-                        _b.filledByList = _c.sent();
-                        if (this.params) {
-                            this.regenerateForm();
-                        }
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrFuelAddPage.prototype.getFleetList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                this.fleetList = [];
-                this.utiltiy.startLoading();
-                return [2 /*return*/, this.api.get("/prestart/fleet/get", false)
-                        .then(function (result) {
-                        console.log("result", result);
-                        _this.utiltiy.stopLoading();
-                        if (result.status) {
-                            return result.result;
-                        }
-                    }, function (err) {
-                        _this.utiltiy.stopLoading();
-                        _this.utiltiy.toaster(err.error.message);
-                        return [];
-                    })];
-            });
-        });
-    };
-    KlmrFuelAddPage.prototype.getFilledBtList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                this.filledByList = [];
-                this.utiltiy.startLoading();
-                return [2 /*return*/, this.api.get("/prestart/fuel/users/get", false)
-                        .then(function (result) {
-                        console.log("result", result);
-                        result.result.forEach(function (element) {
-                            element.name = element.firstName + " " + element.surname;
-                        });
-                        _this.utiltiy.stopLoading();
-                        if (result.status) {
-                            return result.result;
-                        }
-                    }, function (err) {
-                        _this.utiltiy.stopLoading();
-                        _this.utiltiy.toaster(err.error.message);
-                        return [];
-                    })];
-            });
-        });
-    };
-    KlmrFuelAddPage.prototype.regenerateForm = function () {
-        this.createFuel.patchValue({
-            filled_by: this.params.filled_by,
-            date: this.params.date,
-            odometer: this.params.odometer,
-            diesel: this.params.diesel,
-            container: this.params.container,
-            fleet_no: this.params.fleet_no,
-            fuel: this.params.fuel,
-            fuel_odr: this.params.fuel_odr,
-            amount: this.params.amount,
-            location: this.params.location,
-        });
-        this.filledBy = this.params.filled_by;
-        this.selectedConatiner = this.params.container;
-        this.selectedFleet = this.params.fleet_no;
-        this.selectedFuel = this.params.diesel;
-    };
-    KlmrFuelAddPage.prototype.dropDownChange = function (value, key) {
-        this.createFuel.get("" + key).setValue(value);
-        if (key == "diesel" || key == "container") {
-            this.fuelCalculator();
-        }
-    };
-    KlmrFuelAddPage.prototype.fuelCalculator = function () {
-        if (this.createFuel.value.container.length != 0 && this.createFuel.value.diesel.length != 0 && this.createFuel.value.fuel.length != 0) {
-            this.fetchAmount();
-        }
-    };
-    KlmrFuelAddPage.prototype.fetchAmount = function () {
-        var _this = this;
-        this.createFuel.get('amount').setValue("");
-        this.utiltiy.startLoading();
-        var formData = new FormData();
-        formData.append("container", this.createFuel.value.container);
-        formData.append("diesel", this.createFuel.value.diesel);
-        formData.append("fuel", this.createFuel.value.fuel);
-        this.api.post("/prestart/fuel/fuel/detail", false, formData)
-            .then(function (result) {
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                if (result.result.price != 0) {
-                    _this.createFuel.get('amount').setValue(result.result.price);
-                }
-                else {
-                    _this.utiltiy.toaster("fuel is not available in storage");
-                }
-            }
-        }, function (err) {
-            console.log("err", err);
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrFuelAddPage.prototype.submit = function () {
-        var _this = this;
-        console.log("this.credentialsForm.value", this.createFuel.value);
-        var formKeys = Object.keys(this.createFuel.value);
-        if (this.isUpdate) {
-            var string_1 = "";
-            formKeys.forEach(function (key) {
-                if (string_1.length == 0) {
-                    string_1 = string_1 + "" + key + "=" + _this.createFuel.value[key];
-                }
-                else {
-                    string_1 = string_1 + "&" + key + "=" + _this.createFuel.value[key];
-                }
-            });
-            var body = string_1;
-            console.log("string-1", body);
-            this.updateFuel(body, this.params.id);
-        }
-        else {
-            var formData_1 = new FormData();
-            formKeys.forEach(function (key) {
-                formData_1.append(key, _this.createFuel.value[key]);
-            });
-            this.addFuel(formData_1);
-        }
-    };
-    KlmrFuelAddPage.prototype.addFuel = function (formData) {
-        var _this = this;
-        this.api.post("/prestart/fuel/fuel/store", false, formData)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__klmr_fuel_klmr_fuel__["a" /* KlmrFuelPage */]);
-            }
-        }, function (err) {
-            console.log("err", err);
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrFuelAddPage.prototype.updateFuel = function (formData, id) {
-        var _this = this;
-        this.api.put("/prestart/fuel/fuel/update/" + id, false, formData)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__klmr_fuel_klmr_fuel__["a" /* KlmrFuelPage */]);
-            }
-        }, function (err) {
-            console.log("err", err);
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrFuelAddPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-klmr-fuel-add',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-add/klmr-fuel-add.html"*/'<ion-header>\n  <ion-toolbar [color]="primarybackground ">\n    <ion-navbar>\n      <ion-title *ngIf="!isUpdate">Add Fuel</ion-title>\n      <ion-title *ngIf="isUpdate">Update Fuel</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" [disabled]="!createFuel.valid" (click)="submit()">\n          <ion-icon name="checkmark"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item margin-bottom>\n    <ion-label>Filled By</ion-label>\n    <ion-select [(ngModel)]="filledBy" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(filledBy,\'filled_by\')">\n      <ion-option *ngFor="let filledBy of filledByList;let i = index" [value]="filledBy.name">{{filledBy.name}}\n      </ion-option>\n    </ion-select>\n  </ion-item>\n\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Date</ion-label>\n            <ion-datetime class="border-1px-solid" displayFormat="DD/MM/YYYY" formControlName="date"></ion-datetime>\n          </ion-item>\n\n          <ion-item  margin-bottom>\n            <ion-label floating>Odometer</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="odometer"></ion-input>\n          </ion-item>\n\n          <!-- <ion-row padding-left>\n            <ion-label>Type of Fuel\n            </ion-label>\n          </ion-row>\n          <ion-row radio-group formControlName="diesel" padding>\n            <ion-col col-6>\n              <ion-label no-margin>Diesel</ion-label>\n              <ion-radio value="Diesel"></ion-radio>\n            </ion-col>\n            <ion-col col-6>\n              <ion-label no-margin>Unleaded</ion-label>\n              <ion-radio value="Unleaded"></ion-radio>\n            </ion-col>\n          </ion-row> -->\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n  <ion-item margin-bottom>\n    <ion-label>Type of Fuel</ion-label>\n    <ion-select [(ngModel)]="selectedFuel" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFuel,\'diesel\')">\n      <ion-option *ngFor="let fuel of fuelList;let i = index" [value]="fuel">{{fuel}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item margin-bottom>\n    <ion-label>Container</ion-label>\n    <ion-select [(ngModel)]="selectedConatiner" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedConatiner,\'container\')">\n      <ion-option *ngFor="let container of containerList;let i = index" [value]="container">{{container}}</ion-option>\n    </ion-select>\n  </ion-item>\n \n  <ion-item margin-bottom>\n    <ion-label>Fleet No.</ion-label>\n    <ion-select [(ngModel)]="selectedFleet" [selectOptions]="selectOptions" interface="popover"\n      (ngModelChange)="dropDownChange(selectedFleet,\'fleet_no\')">\n      <ion-option *ngFor="let fleet of fleetList;let i = index" [value]="fleet.fleet_no">{{fleet.fleet_no}}</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-row padding-bottom>\n    <ion-card no-margin>\n      <form [formGroup]="createFuel" novalidate>\n        <ion-list>\n\n          <ion-item>\n            <ion-label floating>Fuel (In Litres)</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel" (keyup)="fuelCalculator()"></ion-input>\n          </ion-item>\n       \n          <ion-item>\n            <ion-label floating>Amount</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="amount" disabled="true"></ion-input>\n          </ion-item>\n         \n          <ion-item>\n            <ion-label floating>Fuel ODR</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="fuel_odr"></ion-input>\n          </ion-item>\n\n          <ion-item margin-bottom>\n            <ion-label floating>Location</ion-label>\n            <ion-input class="border-1px-solid" type="text" formControlName="location"></ion-input>\n          </ion-item>\n\n\n        </ion-list>\n      </form>\n    </ion-card>\n  </ion-row>\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-add/klmr-fuel-add.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormBuilder */]])
-    ], KlmrFuelAddPage);
-    return KlmrFuelAddPage;
-}());
-
-//# sourceMappingURL=klmr-fuel-add.js.map
-
-/***/ }),
-
-/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2497,7 +2459,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckPageModule", function() { return KlmrFuelTruckPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2527,45 +2489,7 @@ var KlmrFuelTruckPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 183:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrestartPageModule", function() { return PrestartPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prestart__ = __webpack_require__(49);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var PrestartPageModule = /** @class */ (function () {
-    function PrestartPageModule() {
-    }
-    PrestartPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__prestart__["a" /* PrestartPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__prestart__["a" /* PrestartPage */]),
-            ],
-        })
-    ], PrestartPageModule);
-    return PrestartPageModule;
-}());
-
-//# sourceMappingURL=prestart.module.js.map
-
-/***/ }),
-
-/***/ 184:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2573,7 +2497,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelPageModule", function() { return KlmrFuelPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel__ = __webpack_require__(85);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2603,7 +2527,7 @@ var KlmrFuelPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 185:
+/***/ 183:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2611,7 +2535,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(184);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2641,7 +2565,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 186:
+/***/ 184:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2649,7 +2573,7 @@ var LoginPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utiltiy_utiltiy__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__prestart_prestart__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cabsand_prestart_cabsand_prestart__ = __webpack_require__(50);
@@ -2775,7 +2699,7 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 187:
+/***/ 185:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2820,6 +2744,82 @@ var AuthProvider = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 186:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrestartPageModule", function() { return PrestartPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prestart__ = __webpack_require__(49);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PrestartPageModule = /** @class */ (function () {
+    function PrestartPageModule() {
+    }
+    PrestartPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__prestart__["a" /* PrestartPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__prestart__["a" /* PrestartPage */]),
+            ],
+        })
+    ], PrestartPageModule);
+    return PrestartPageModule;
+}());
+
+//# sourceMappingURL=prestart.module.js.map
+
+/***/ }),
+
+/***/ 187:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsaPageModule", function() { return JsaPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jsa__ = __webpack_require__(284);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var JsaPageModule = /** @class */ (function () {
+    function JsaPageModule() {
+    }
+    JsaPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__jsa__["a" /* JsaPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__jsa__["a" /* JsaPage */]),
+            ],
+        })
+    ], JsaPageModule);
+    return JsaPageModule;
+}());
+
+//# sourceMappingURL=jsa.module.js.map
+
+/***/ }),
+
 /***/ 231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2828,7 +2828,7 @@ var AuthProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(184);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2943,26 +2943,26 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login_module__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login_module__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_dashboard_dashboard_module__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_dashboard_dashboard_module__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_prestart_prestart_module__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_prestart_prestart_module__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_addprestart_addprestart_module__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_prestart_prestart__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_crud_crud__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cabsand_prestart_cabsand_prestart_module__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cabsand_prestart_cabsand_prestart_module__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_cabsand_addprestart_cabsand_addprestart_module__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_klmr_fuel_klmr_fuel_module__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_fuel_truck_klmr_fuel_truck_module__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_fuel_add_klmr_fuel_add_module__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_fuel_truck_add_klmr_fuel_truck_add_module__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cabsand_fuel_cabsand_fuel_module__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_klmr_fuel_klmr_fuel_module__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_fuel_truck_klmr_fuel_truck_module__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_fuel_add_klmr_fuel_add_module__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_fuel_truck_add_klmr_fuel_truck_add_module__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cabsand_fuel_cabsand_fuel_module__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_cabsand_fuel_truck_cabsand_fuel_truck_module__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cabsand_fuel_add_cabsand_fuel_add_module__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_cabsand_fuel_truck_add_cabsand_fuel_truck_add_module__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_jsa_jsa_module__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cabsand_fuel_add_cabsand_fuel_add_module__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_cabsand_fuel_truck_add_cabsand_fuel_truck_add_module__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_jsa_jsa_module__ = __webpack_require__(187);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3029,20 +3029,20 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/addprestart/addprestart.module#AddprestartPageModule', name: 'AddprestartPage', segment: 'addprestart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-fuel-add/cabsand-fuel-add.module#CabsandFuelAddPageModule', name: 'CabsandFuelAddPage', segment: 'cabsand-fuel-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-addprestart/cabsand-addprestart.module#CabsandAddprestartPageModule', name: 'CabsandAddprestartPage', segment: 'cabsand-addprestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.module#CabsandFuelTruckAddPageModule', name: 'CabsandFuelTruckAddPage', segment: 'cabsand-fuel-truck-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-addprestart/cabsand-addprestart.module#CabsandAddprestartPageModule', name: 'CabsandAddprestartPage', segment: 'cabsand-addprestart', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-fuel-add/cabsand-fuel-add.module#CabsandFuelAddPageModule', name: 'CabsandFuelAddPage', segment: 'cabsand-fuel-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-fuel-truck/cabsand-fuel-truck.module#CabsandFuelTruckPageModule', name: 'CabsandFuelTruckPage', segment: 'cabsand-fuel-truck', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-prestart/cabsand-prestart.module#CabsandPrestartPageModule', name: 'CabsandPrestartPage', segment: 'cabsand-prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-fuel/cabsand-fuel.module#CabsandFuelPageModule', name: 'CabsandFuelPage', segment: 'cabsand-fuel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/jsa/jsa.module#JsaPageModule', name: 'JsaPage', segment: 'jsa', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module#KlmrFuelTruckAddPageModule', name: 'KlmrFuelTruckAddPage', segment: 'klmr-fuel-truck-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-prestart/cabsand-prestart.module#CabsandPrestartPageModule', name: 'CabsandPrestartPage', segment: 'cabsand-prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-add/klmr-fuel-add.module#KlmrFuelAddPageModule', name: 'KlmrFuelAddPage', segment: 'klmr-fuel-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module#KlmrFuelTruckAddPageModule', name: 'KlmrFuelTruckAddPage', segment: 'klmr-fuel-truck-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-truck/klmr-fuel-truck.module#KlmrFuelTruckPageModule', name: 'KlmrFuelTruckPage', segment: 'klmr-fuel-truck', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/prestart/prestart.module#PrestartPageModule', name: 'PrestartPage', segment: 'prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel/klmr-fuel.module#KlmrFuelPageModule', name: 'KlmrFuelPage', segment: 'klmr-fuel', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/prestart/prestart.module#PrestartPageModule', name: 'PrestartPage', segment: 'prestart', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/jsa/jsa.module#JsaPageModule', name: 'JsaPage', segment: 'jsa', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -3126,14 +3126,14 @@ var JsaPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_dashboard_dashboard__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_dashboard_dashboard__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utiltiy_utiltiy__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_prestart_prestart__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_cabsand_prestart_cabsand_prestart__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_klmr_fuel_klmr_fuel__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_klmr_fuel_truck_klmr_fuel_truck__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_cabsand_fuel_cabsand_fuel__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_cabsand_fuel_truck_cabsand_fuel_truck__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_klmr_fuel_klmr_fuel__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_klmr_fuel_truck_klmr_fuel_truck__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_cabsand_fuel_cabsand_fuel__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_cabsand_fuel_truck_cabsand_fuel_truck__ = __webpack_require__(83);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3903,12 +3903,147 @@ var CabsandPrestartPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelTruckPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_truck_add_cabsand_fuel_truck_add__ = __webpack_require__(167);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var CabsandFuelTruckPage = /** @class */ (function () {
+    function CabsandFuelTruckPage(navCtrl, navParams, api, utiltiy) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.fuelTruckList = [];
+    }
+    CabsandFuelTruckPage.prototype.ionViewDidLoad = function () {
+        this.getfuelTruckList();
+    };
+    CabsandFuelTruckPage.prototype.getfuelTruckList = function () {
+        var _this = this;
+        this.fuelTruckList = [];
+        this.utiltiy.startLoading();
+        this.api.get("/tansix_prestart/fuel/fuel_truck/get", false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.fuelTruckList = result.result;
+            _this.utiltiy.stopLoading();
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    CabsandFuelTruckPage.prototype.deleteRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.deleteTruckList(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CabsandFuelTruckPage.prototype.deleteTruckList = function (id) {
+        var _this = this;
+        this.api.delete("/tansix_prestart/fuel/fuel_truck/delete/" + id, false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.getfuelTruckList();
+            }
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    CabsandFuelTruckPage.prototype.addFuelTruck = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_truck_add_cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */], { param: null });
+    };
+    CabsandFuelTruckPage.prototype.updateFuelTruck = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_truck_add_cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */], { param: prestart });
+    };
+    CabsandFuelTruckPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-cabsand-fuel-truck',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck/cabsand-fuel-truck.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Fuel Truck</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addFuelTruck()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  fuelTruckList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <h2>\n            <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge>\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Container :</span>\n              <div>{{fuel.truck}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="logo-usd" role="img" class="icon icon-md ion-md-logo-usd" aria-label="map"></ion-icon>\n              <div>{{fuel.price}}/ltr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-color-fill" aria-label="calendar"></ion-icon>\n              <div>{{fuel.diesel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Litres :</span>\n              <div>{{fuel.fuel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck/cabsand-fuel-truck.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], CabsandFuelTruckPage);
+    return CabsandFuelTruckPage;
+}());
+
+//# sourceMappingURL=cabsand-fuel-truck.js.map
+
+/***/ }),
+
+/***/ 84:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_add_cabsand_fuel_add__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_add_cabsand_fuel_add__ = __webpack_require__(171);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4050,277 +4185,7 @@ var CabsandFuelPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 84:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandFuelTruckPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_truck_add_cabsand_fuel_truck_add__ = __webpack_require__(171);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-var CabsandFuelTruckPage = /** @class */ (function () {
-    function CabsandFuelTruckPage(navCtrl, navParams, api, utiltiy) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.fuelTruckList = [];
-    }
-    CabsandFuelTruckPage.prototype.ionViewDidLoad = function () {
-        this.getfuelTruckList();
-    };
-    CabsandFuelTruckPage.prototype.getfuelTruckList = function () {
-        var _this = this;
-        this.fuelTruckList = [];
-        this.utiltiy.startLoading();
-        this.api.get("/tansix_prestart/fuel/fuel_truck/get", false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.fuelTruckList = result.result;
-            _this.utiltiy.stopLoading();
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    CabsandFuelTruckPage.prototype.deleteRecord = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var status;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
-                    case 1:
-                        status = _a.sent();
-                        if (status) {
-                            this.deleteTruckList(id);
-                        }
-                        console.log("status", status);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    CabsandFuelTruckPage.prototype.deleteTruckList = function (id) {
-        var _this = this;
-        this.api.delete("/tansix_prestart/fuel/fuel_truck/delete/" + id, false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.getfuelTruckList();
-            }
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    CabsandFuelTruckPage.prototype.addFuelTruck = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_truck_add_cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */], { param: null });
-    };
-    CabsandFuelTruckPage.prototype.updateFuelTruck = function (prestart) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_fuel_truck_add_cabsand_fuel_truck_add__["a" /* CabsandFuelTruckAddPage */], { param: prestart });
-    };
-    CabsandFuelTruckPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-fuel-truck',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck/cabsand-fuel-truck.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Fuel Truck</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addFuelTruck()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  fuelTruckList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <h2>\n            <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge>\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Container :</span>\n              <div>{{fuel.truck}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="logo-usd" role="img" class="icon icon-md ion-md-logo-usd" aria-label="map"></ion-icon>\n              <div>{{fuel.price}}/ltr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-color-fill" aria-label="calendar"></ion-icon>\n              <div>{{fuel.diesel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Litres :</span>\n              <div>{{fuel.fuel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-fuel-truck/cabsand-fuel-truck.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], CabsandFuelTruckPage);
-    return CabsandFuelTruckPage;
-}());
-
-//# sourceMappingURL=cabsand-fuel-truck.js.map
-
-/***/ }),
-
 /***/ 85:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrFuelTruckPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_fuel_truck_add_klmr_fuel_truck_add__ = __webpack_require__(179);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-var KlmrFuelTruckPage = /** @class */ (function () {
-    function KlmrFuelTruckPage(navCtrl, navParams, api, utiltiy) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.fuelTruckList = [];
-    }
-    KlmrFuelTruckPage.prototype.ionViewDidLoad = function () {
-        this.getfuelTruckList();
-    };
-    KlmrFuelTruckPage.prototype.getfuelTruckList = function () {
-        var _this = this;
-        this.fuelTruckList = [];
-        this.utiltiy.startLoading();
-        this.api.get("/prestart/fuel/fuel_truck/get", false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.fuelTruckList = result.result;
-            _this.utiltiy.stopLoading();
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrFuelTruckPage.prototype.deleteRecord = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var status;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
-                    case 1:
-                        status = _a.sent();
-                        if (status) {
-                            this.deleteTruckList(id);
-                        }
-                        console.log("status", status);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrFuelTruckPage.prototype.deleteTruckList = function (id) {
-        var _this = this;
-        this.api.delete("/prestart/fuel/fuel_truck/delete/" + id, false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.getfuelTruckList();
-            }
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrFuelTruckPage.prototype.addFuelTruck = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_fuel_truck_add_klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */], { param: null });
-    };
-    KlmrFuelTruckPage.prototype.updateFuelTruck = function (prestart) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_fuel_truck_add_klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */], { param: prestart });
-    };
-    KlmrFuelTruckPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-klmr-fuel-truck',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-truck/klmr-fuel-truck.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Fuel Truck</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addFuelTruck()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  fuelTruckList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <h2>\n            <ion-badge item-end [color]="\'primarybackground\' ">{{fuel.id}}</ion-badge>\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Container :</span>\n              <div>{{fuel.truck}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="logo-usd" role="img" class="icon icon-md ion-md-logo-usd" aria-label="map"></ion-icon>\n              <div>{{fuel.price}}/ltr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-color-fill" aria-label="calendar"></ion-icon>\n              <div>{{fuel.diesel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Litres :</span>\n              <div>{{fuel.fuel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-truck/klmr-fuel-truck.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], KlmrFuelTruckPage);
-    return KlmrFuelTruckPage;
-}());
-
-//# sourceMappingURL=klmr-fuel-truck.js.map
-
-/***/ }),
-
-/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4329,7 +4194,7 @@ var KlmrFuelTruckPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_fuel_add_klmr_fuel_add__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_fuel_add_klmr_fuel_add__ = __webpack_require__(178);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4468,6 +4333,141 @@ var KlmrFuelPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=klmr-fuel.js.map
+
+/***/ }),
+
+/***/ 86:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrFuelTruckPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_fuel_truck_add_klmr_fuel_truck_add__ = __webpack_require__(180);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var KlmrFuelTruckPage = /** @class */ (function () {
+    function KlmrFuelTruckPage(navCtrl, navParams, api, utiltiy) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.fuelTruckList = [];
+    }
+    KlmrFuelTruckPage.prototype.ionViewDidLoad = function () {
+        this.getfuelTruckList();
+    };
+    KlmrFuelTruckPage.prototype.getfuelTruckList = function () {
+        var _this = this;
+        this.fuelTruckList = [];
+        this.utiltiy.startLoading();
+        this.api.get("/prestart/fuel/fuel_truck/get", false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.fuelTruckList = result.result;
+            _this.utiltiy.stopLoading();
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrFuelTruckPage.prototype.deleteRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.deleteTruckList(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrFuelTruckPage.prototype.deleteTruckList = function (id) {
+        var _this = this;
+        this.api.delete("/prestart/fuel/fuel_truck/delete/" + id, false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.getfuelTruckList();
+            }
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrFuelTruckPage.prototype.addFuelTruck = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_fuel_truck_add_klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */], { param: null });
+    };
+    KlmrFuelTruckPage.prototype.updateFuelTruck = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_fuel_truck_add_klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */], { param: prestart });
+    };
+    KlmrFuelTruckPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-klmr-fuel-truck',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-truck/klmr-fuel-truck.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Fuel Truck</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addFuelTruck()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  fuelTruckList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <h2>\n            <ion-badge item-end [color]="\'primarybackground\' ">{{fuel.id}}</ion-badge>\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Container :</span>\n              <div>{{fuel.truck}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="logo-usd" role="img" class="icon icon-md ion-md-logo-usd" aria-label="map"></ion-icon>\n              <div>{{fuel.price}}/ltr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-color-fill" aria-label="calendar"></ion-icon>\n              <div>{{fuel.diesel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateFuelTruck(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Litres :</span>\n              <div>{{fuel.fuel}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-fuel-truck/klmr-fuel-truck.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], KlmrFuelTruckPage);
+    return KlmrFuelTruckPage;
+}());
+
+//# sourceMappingURL=klmr-fuel-truck.js.map
 
 /***/ })
 
