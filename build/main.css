@@ -28310,6 +28310,45 @@ page-klmr-fuel-truck-add .label-ios[stacked], page-klmr-fuel-truck-add .label-io
   margin-left: 5px;
 }
 
+page-klmr-jsa-add .card-md {
+  width: 100%;
+}
+
+page-klmr-jsa-add .card-ios {
+  width: 100%;
+}
+
+page-klmr-jsa-add .card-title-md {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-klmr-jsa-add .card-title-ios {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-klmr-jsa-add .border-1px-solid {
+  border: 1px solid lightgrey;
+}
+
+page-klmr-jsa-add .label-md[stacked], page-klmr-jsa-add .label-md[floating] {
+  margin-left: 5spx;
+}
+
+page-klmr-jsa-add .label-ios[stacked], page-klmr-jsa-add .label-ios[floating] {
+  margin-left: 5px;
+}
+
+page-klmr-jsa-add table, page-klmr-jsa-add th, page-klmr-jsa-add td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 page-prestart .padding-border {
   padding: 0 16px 0 16px;
 }
