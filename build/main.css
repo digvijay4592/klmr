@@ -28262,6 +28262,36 @@ page-cabsand-jsa-add table, page-cabsand-jsa-add th, page-cabsand-jsa-add td {
   border-collapse: collapse;
 }
 
+page-cabsand-jsa-add th {
+  font-size: smaller;
+}
+
+page-cabsand-jsa-add .width-100 {
+  max-width: 100%;
+}
+
+page-cabsand-jsa-add .width-50 {
+  max-width: 50%;
+}
+
+page-cabsand-jsa-add .width-75 {
+  width: 75%;
+}
+
+page-cabsand-jsa-add .item-cover {
+  height: 0% !important;
+  width: 100%;
+}
+
+page-cabsand-jsa-add .border {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+page-cabsand-jsa-add .align-right {
+  text-align: end;
+}
+
 page-cabsand-prestart .padding-border {
   padding: 0 16px 0 16px;
 }
@@ -28386,6 +28416,36 @@ page-klmr-jsa-add .label-ios[stacked], page-klmr-jsa-add .label-ios[floating] {
 page-klmr-jsa-add table, page-klmr-jsa-add th, page-klmr-jsa-add td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+
+page-klmr-jsa-add th {
+  font-size: smaller;
+}
+
+page-klmr-jsa-add .width-100 {
+  max-width: 100%;
+}
+
+page-klmr-jsa-add .width-50 {
+  max-width: 50%;
+}
+
+page-klmr-jsa-add .width-75 {
+  width: 75%;
+}
+
+page-klmr-jsa-add .item-cover {
+  height: 0% !important;
+  width: 100%;
+}
+
+page-klmr-jsa-add .border {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+page-klmr-jsa-add .align-right {
+  text-align: end;
 }
 
 page-prestart .padding-border {
