@@ -28087,6 +28087,11 @@ ion-label {
   width: 100%;
 }
 
+.select-modal {
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 20% 10%  !important;
+}
+
 page-addprestart .card-md {
   width: 100%;
 }
@@ -28296,6 +28301,70 @@ page-cabsand-prestart .padding-border {
   padding: 0 16px 0 16px;
 }
 
+page-cabsand-timesheet-create-add .card-md {
+  width: 100%;
+}
+
+page-cabsand-timesheet-create-add .card-ios {
+  width: 100%;
+}
+
+page-cabsand-timesheet-create-add .card-title-md {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-cabsand-timesheet-create-add .card-title-ios {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-cabsand-timesheet-create-add .border-1px-solid {
+  border: 1px solid lightgrey;
+}
+
+page-cabsand-timesheet-create-add .label-md[stacked], page-cabsand-timesheet-create-add .label-md[floating] {
+  margin-left: 5spx;
+}
+
+page-cabsand-timesheet-create-add .label-ios[stacked], page-cabsand-timesheet-create-add .label-ios[floating] {
+  margin-left: 5px;
+}
+
+page-cabsand-timesheet-create-add .picker-opts {
+  max-width: 70px !important;
+}
+
+page-cabsand-timesheet-create-add .autocomplete {
+  width: 100%;
+}
+
+page-cabsand-timesheet-create-add .autocomplete ion-item ion-input {
+  padding: 1px !important;
+}
+
+page-cabsand-timesheet-create-add .autocomplete ion-list {
+  position: absolute;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 150%;
+  border: 5px;
+  z-index: 999;
+}
+
+page-cabsand-timesheet-create-add .autocomplete ion-list ion-item {
+  background: #f1f1f1;
+}
+
+page-cabsand-timesheet-create-add .autocomplete ion-list ion-item:hover {
+  cursor: pointer;
+  background: #dddddd;
+}
+
 page-home .logo-img {
   width: 100%;
   height: 100%;
@@ -28484,6 +28553,32 @@ page-klmr-timesheet-create-add .label-ios[stacked], page-klmr-timesheet-create-a
 
 page-klmr-timesheet-create-add .picker-opts {
   max-width: 70px !important;
+}
+
+page-klmr-timesheet-create-add .autocomplete {
+  width: 100%;
+}
+
+page-klmr-timesheet-create-add .autocomplete ion-item ion-input {
+  padding: 1px !important;
+}
+
+page-klmr-timesheet-create-add .autocomplete ion-list {
+  position: absolute;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 150%;
+  border: 5px;
+  z-index: 999;
+}
+
+page-klmr-timesheet-create-add .autocomplete ion-list ion-item {
+  background: #f1f1f1;
+}
+
+page-klmr-timesheet-create-add .autocomplete ion-list ion-item:hover {
+  cursor: pointer;
+  background: #dddddd;
 }
 
 page-prestart .padding-border {
