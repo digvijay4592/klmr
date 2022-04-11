@@ -157,10 +157,10 @@ var map = {
 		188
 	],
 	"../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module": [
-		190
+		192
 	],
 	"../pages/klmr-fuel-truck/klmr-fuel-truck.module": [
-		192
+		190
 	],
 	"../pages/klmr-fuel/klmr-fuel.module": [
 		193
@@ -175,10 +175,10 @@ var map = {
 		197
 	],
 	"../pages/klmr-timesheet-create/klmr-timesheet-create.module": [
-		199
+		202
 	],
 	"../pages/login/login.module": [
-		200
+		199
 	],
 	"../pages/prestart/prestart.module": [
 		203
@@ -997,13 +997,12 @@ var CabsandFuelAddPage = /** @class */ (function () {
         this.fleetList = [];
         this.filledByList = [];
         this.containerList = [
-            "Truck",
-            "Gerry Cans",
+            // "Truck",
+            // "Gerry Cans",
             "Pod",
         ];
         this.fuelList = [
             "Diesel",
-            "Unleaded",
         ];
         this.isUpdate = false;
         this.params = {};
@@ -1036,7 +1035,7 @@ var CabsandFuelAddPage = /** @class */ (function () {
     };
     CabsandFuelAddPage.prototype.getappColor = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a;
+            var _a, userName;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1044,6 +1043,13 @@ var CabsandFuelAddPage = /** @class */ (function () {
                         return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
                     case 1:
                         _a.appColor = _b.sent();
+                        return [4 /*yield*/, this.utiltiy.getStorage("name")];
+                    case 2:
+                        userName = _b.sent();
+                        if (userName) {
+                            this.createFuel.get("filled_by").setValue(userName);
+                            this.filledBy = userName;
+                        }
                         return [2 /*return*/];
                 }
             });
@@ -1392,7 +1398,7 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
     };
     CabsandFuelTruckAddPage.prototype.getMetaData = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a;
+            var _a, userName;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1400,6 +1406,13 @@ var CabsandFuelTruckAddPage = /** @class */ (function () {
                         return [4 /*yield*/, this.getFilledBtList()];
                     case 1:
                         _a.filledByList = _b.sent();
+                        return [4 /*yield*/, this.utiltiy.getStorage("name")];
+                    case 2:
+                        userName = _b.sent();
+                        if (userName) {
+                            this.createFuel.get("filled_by").setValue(userName);
+                            this.filledBy = userName;
+                        }
                         if (this.params) {
                             this.regenerateForm();
                         }
@@ -2715,13 +2728,12 @@ var KlmrFuelAddPage = /** @class */ (function () {
         this.fleetList = [];
         this.filledByList = [];
         this.containerList = [
-            "Truck",
-            "Gerry Cans",
+            // "Truck",
+            // "Gerry Cans",
             "Pod",
         ];
         this.fuelList = [
             "Diesel",
-            "Unleaded",
         ];
         this.isUpdate = false;
         this.params = {};
@@ -2754,7 +2766,7 @@ var KlmrFuelAddPage = /** @class */ (function () {
     };
     KlmrFuelAddPage.prototype.getappColor = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a;
+            var _a, userName;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -2762,6 +2774,13 @@ var KlmrFuelAddPage = /** @class */ (function () {
                         return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
                     case 1:
                         _a.appColor = _b.sent();
+                        return [4 /*yield*/, this.utiltiy.getStorage("name")];
+                    case 2:
+                        userName = _b.sent();
+                        if (userName) {
+                            this.createFuel.get("filled_by").setValue(userName);
+                            this.filledBy = userName;
+                        }
                         return [2 /*return*/];
                 }
             });
@@ -2964,10 +2983,10 @@ var KlmrFuelAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckAddPageModule", function() { return KlmrFuelTruckAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckPageModule", function() { return KlmrFuelTruckPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2977,23 +2996,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var KlmrFuelTruckAddPageModule = /** @class */ (function () {
-    function KlmrFuelTruckAddPageModule() {
+var KlmrFuelTruckPageModule = /** @class */ (function () {
+    function KlmrFuelTruckPageModule() {
     }
-    KlmrFuelTruckAddPageModule = __decorate([
+    KlmrFuelTruckPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__["a" /* KlmrFuelTruckPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__["a" /* KlmrFuelTruckPage */]),
             ],
         })
-    ], KlmrFuelTruckAddPageModule);
-    return KlmrFuelTruckAddPageModule;
+    ], KlmrFuelTruckPageModule);
+    return KlmrFuelTruckPageModule;
 }());
 
-//# sourceMappingURL=klmr-fuel-truck-add.module.js.map
+//# sourceMappingURL=klmr-fuel-truck.module.js.map
 
 /***/ }),
 
@@ -3110,7 +3129,7 @@ var KlmrFuelTruckAddPage = /** @class */ (function () {
     };
     KlmrFuelTruckAddPage.prototype.getMetaData = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a;
+            var _a, userName;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -3118,6 +3137,13 @@ var KlmrFuelTruckAddPage = /** @class */ (function () {
                         return [4 /*yield*/, this.getFilledBtList()];
                     case 1:
                         _a.filledByList = _b.sent();
+                        return [4 /*yield*/, this.utiltiy.getStorage("name")];
+                    case 2:
+                        userName = _b.sent();
+                        if (userName) {
+                            this.createFuel.get("filled_by").setValue(userName);
+                            this.filledBy = userName;
+                        }
                         if (this.params) {
                             this.regenerateForm();
                         }
@@ -3250,10 +3276,10 @@ var KlmrFuelTruckAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckPageModule", function() { return KlmrFuelTruckPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckAddPageModule", function() { return KlmrFuelTruckAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__ = __webpack_require__(191);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3263,23 +3289,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var KlmrFuelTruckPageModule = /** @class */ (function () {
-    function KlmrFuelTruckPageModule() {
+var KlmrFuelTruckAddPageModule = /** @class */ (function () {
+    function KlmrFuelTruckAddPageModule() {
     }
-    KlmrFuelTruckPageModule = __decorate([
+    KlmrFuelTruckAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__["a" /* KlmrFuelTruckPage */],
+                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck__["a" /* KlmrFuelTruckPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel_truck_add__["a" /* KlmrFuelTruckAddPage */]),
             ],
         })
-    ], KlmrFuelTruckPageModule);
-    return KlmrFuelTruckPageModule;
+    ], KlmrFuelTruckAddPageModule);
+    return KlmrFuelTruckAddPageModule;
 }());
 
-//# sourceMappingURL=klmr-fuel-truck.module.js.map
+//# sourceMappingURL=klmr-fuel-truck-add.module.js.map
 
 /***/ }),
 
@@ -4132,48 +4158,10 @@ var KlmrTimesheetCreateAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetCreatePageModule", function() { return KlmrTimesheetCreatePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__ = __webpack_require__(90);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var KlmrTimesheetCreatePageModule = /** @class */ (function () {
-    function KlmrTimesheetCreatePageModule() {
-    }
-    KlmrTimesheetCreatePageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__["a" /* KlmrTimesheetCreatePage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__["a" /* KlmrTimesheetCreatePage */]),
-            ],
-        })
-    ], KlmrTimesheetCreatePageModule);
-    return KlmrTimesheetCreatePageModule;
-}());
-
-//# sourceMappingURL=klmr-timesheet-create.module.js.map
-
-/***/ }),
-
-/***/ 200:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4203,7 +4191,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 201:
+/***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4211,7 +4199,7 @@ var LoginPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utiltiy_utiltiy__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__prestart_prestart__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cabsand_prestart_cabsand_prestart__ = __webpack_require__(50);
@@ -4339,7 +4327,7 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 202:
+/***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4381,6 +4369,44 @@ var AuthProvider = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=auth.js.map
+
+/***/ }),
+
+/***/ 202:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetCreatePageModule", function() { return KlmrTimesheetCreatePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__ = __webpack_require__(90);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var KlmrTimesheetCreatePageModule = /** @class */ (function () {
+    function KlmrTimesheetCreatePageModule() {
+    }
+    KlmrTimesheetCreatePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__["a" /* KlmrTimesheetCreatePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__["a" /* KlmrTimesheetCreatePage */]),
+            ],
+        })
+    ], KlmrTimesheetCreatePageModule);
+    return KlmrTimesheetCreatePageModule;
+}());
+
+//# sourceMappingURL=klmr-timesheet-create.module.js.map
 
 /***/ }),
 
@@ -4468,7 +4494,7 @@ var SearchPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4583,8 +4609,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(328);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(244);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login_module__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_login_login_module__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_auth_auth__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_dashboard_dashboard_module__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_utiltiy_utiltiy__ = __webpack_require__(7);
@@ -4595,9 +4621,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cabsand_prestart_cabsand_prestart_module__ = __webpack_require__(181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_cabsand_addprestart_cabsand_addprestart_module__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_klmr_fuel_klmr_fuel_module__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_fuel_truck_klmr_fuel_truck_module__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_fuel_truck_klmr_fuel_truck_module__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_fuel_add_klmr_fuel_add_module__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_fuel_truck_add_klmr_fuel_truck_add_module__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_fuel_truck_add_klmr_fuel_truck_add_module__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cabsand_fuel_cabsand_fuel_module__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_cabsand_fuel_truck_cabsand_fuel_truck_module__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cabsand_fuel_add_cabsand_fuel_add_module__ = __webpack_require__(172);
@@ -4607,7 +4633,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_klmr_jsa_add_klmr_jsa_add_module__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_cabsand_jsa_cabsand_jsa_module__ = __webpack_require__(180);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_cabsand_jsa_add_cabsand_jsa_add_module__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_klmr_timesheet_create_klmr_timesheet_create_module__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_klmr_timesheet_create_klmr_timesheet_create_module__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_klmr_timesheet_create_add_klmr_timesheet_create_add_module__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_search_search_module__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_cabsand_timesheet_create_cabsand_timesheet_create_module__ = __webpack_require__(184);
@@ -4709,14 +4735,14 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/jsa/jsa.module#JsaPageModule', name: 'JsaPage', segment: 'jsa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-add/klmr-fuel-add.module#KlmrFuelAddPageModule', name: 'KlmrFuelAddPage', segment: 'klmr-fuel-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module#KlmrFuelTruckAddPageModule', name: 'KlmrFuelTruckAddPage', segment: 'klmr-fuel-truck-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-truck/klmr-fuel-truck.module#KlmrFuelTruckPageModule', name: 'KlmrFuelTruckPage', segment: 'klmr-fuel-truck', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module#KlmrFuelTruckAddPageModule', name: 'KlmrFuelTruckAddPage', segment: 'klmr-fuel-truck-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel/klmr-fuel.module#KlmrFuelPageModule', name: 'KlmrFuelPage', segment: 'klmr-fuel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-jsa-add/klmr-jsa-add.module#KlmrJsaAddPageModule', name: 'KlmrJsaAddPage', segment: 'klmr-jsa-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-jsa/klmr-jsa.module#KlmrJsaPageModule', name: 'KlmrJsaPage', segment: 'klmr-jsa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-create-add/klmr-timesheet-create-add.module#KlmrTimesheetCreateAddPageModule', name: 'KlmrTimesheetCreateAddPage', segment: 'klmr-timesheet-create-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-timesheet-create/klmr-timesheet-create.module#KlmrTimesheetCreatePageModule', name: 'KlmrTimesheetCreatePage', segment: 'klmr-timesheet-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-timesheet-create/klmr-timesheet-create.module#KlmrTimesheetCreatePageModule', name: 'KlmrTimesheetCreatePage', segment: 'klmr-timesheet-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prestart/prestart.module#PrestartPageModule', name: 'PrestartPage', segment: 'prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] }
                     ]
