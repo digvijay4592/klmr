@@ -27990,6 +27990,12 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: transparent !important;
+  -webkit-box-shadow: transparent !important;
+  box-shadow: inset 0 -1px 0 0 #fff;
+}
+
 .margin-top-25 {
   margin-top: 25%;
 }
@@ -28374,6 +28380,44 @@ page-home .logo-img {
   page-home .logo-img {
     width: 60%;
   }
+}
+
+page-home .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-home .slide-zoom {
+  height: 100%;
+}
+
+page-home .slide-title {
+  margin-top: 2rem;
+}
+
+page-home .slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 18px 0;
+}
+
+page-home b {
+  font-weight: 500;
+}
+
+page-home h2 {
+  font-size: 2rem;
+}
+
+page-home p {
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #60646B;
+}
+
+page-home p b {
+  color: #000000;
 }
 
 page-klmr-fuel .padding-border {
