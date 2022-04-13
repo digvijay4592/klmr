@@ -28411,13 +28411,19 @@ page-home h2 {
 
 page-home p {
   padding: 0 40px;
-  font-size: 14px;
+  font-size: 2rem;
   line-height: 1.5;
   color: #60646B;
 }
 
 page-home p b {
   color: #000000;
+}
+
+page-home .inner-news {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: justify;
 }
 
 page-klmr-fuel .padding-border {
@@ -28623,6 +28629,61 @@ page-klmr-timesheet-create-add .autocomplete ion-list ion-item {
 page-klmr-timesheet-create-add .autocomplete ion-list ion-item:hover {
   cursor: pointer;
   background: #dddddd;
+}
+
+page-news .logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  page-news .logo-img {
+    width: 60%;
+  }
+}
+
+page-news .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-news .slide-zoom {
+  height: 100%;
+}
+
+page-news .slide-title {
+  margin-top: 2rem;
+}
+
+page-news .slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 18px 0;
+}
+
+page-news b {
+  font-weight: 500;
+}
+
+page-news h2 {
+  font-size: 2rem;
+}
+
+page-news p {
+  padding: 0 40px;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #60646B;
+}
+
+page-news p b {
+  color: #000000;
+}
+
+page-news .inner-news {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: justify;
 }
 
 page-prestart .padding-border {
