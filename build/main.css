@@ -28653,6 +28653,7 @@ page-news .slide-zoom {
 
 page-news .slide-title {
   margin-top: 2rem;
+  text-align: center;
 }
 
 page-news .slide-image {
@@ -28684,6 +28685,10 @@ page-news .inner-news {
   padding-left: 16px;
   padding-right: 16px;
   text-align: justify;
+}
+
+page-news .row-height {
+  height: 40px;
 }
 
 page-prestart .padding-border {
