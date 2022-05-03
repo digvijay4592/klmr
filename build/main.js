@@ -2346,10 +2346,10 @@ var map = {
 		189
 	],
 	"../pages/cabsand-timesheet-create/cabsand-timesheet-create.module": [
-		193
+		191
 	],
 	"../pages/cabsand-timesheet-history/cabsand-timesheet-history.module": [
-		191
+		192
 	],
 	"../pages/cabsand-timesheet-pending/cabsand-timesheet-pending.module": [
 		194
@@ -2367,16 +2367,16 @@ var map = {
 		201
 	],
 	"../pages/klmr-fuel-truck/klmr-fuel-truck.module": [
-		204
-	],
-	"../pages/klmr-fuel/klmr-fuel.module": [
 		203
 	],
+	"../pages/klmr-fuel/klmr-fuel.module": [
+		204
+	],
 	"../pages/klmr-jsa-add/klmr-jsa-add.module": [
-		207
+		205
 	],
 	"../pages/klmr-jsa/klmr-jsa.module": [
-		205
+		207
 	],
 	"../pages/klmr-news/klmr-news.module": [
 		349,
@@ -2392,10 +2392,10 @@ var map = {
 		212
 	],
 	"../pages/klmr-timesheet-history/klmr-timesheet-history.module": [
-		215
+		213
 	],
 	"../pages/klmr-timesheet-pending/klmr-timesheet-pending.module": [
-		213
+		215
 	],
 	"../pages/login/login.module": [
 		217
@@ -4982,10 +4982,47 @@ var CabsandTimesheetCreateAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetCreatePageModule", function() { return CabsandTimesheetCreatePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__ = __webpack_require__(88);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CabsandTimesheetCreatePageModule = /** @class */ (function () {
+    function CabsandTimesheetCreatePageModule() {
+    }
+    CabsandTimesheetCreatePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__["a" /* CabsandTimesheetCreatePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__["a" /* CabsandTimesheetCreatePage */]),
+            ],
+        })
+    ], CabsandTimesheetCreatePageModule);
+    return CabsandTimesheetCreatePageModule;
+}());
+
+//# sourceMappingURL=cabsand-timesheet-create.module.js.map
+
+/***/ }),
+/* 192 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetHistoryPageModule", function() { return CabsandTimesheetHistoryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_history__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_history__ = __webpack_require__(193);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5014,7 +5051,7 @@ var CabsandTimesheetHistoryPageModule = /** @class */ (function () {
 //# sourceMappingURL=cabsand-timesheet-history.module.js.map
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5133,43 +5170,6 @@ var CabsandTimesheetHistoryPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=cabsand-timesheet-history.js.map
-
-/***/ }),
-/* 193 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetCreatePageModule", function() { return CabsandTimesheetCreatePageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__ = __webpack_require__(88);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var CabsandTimesheetCreatePageModule = /** @class */ (function () {
-    function CabsandTimesheetCreatePageModule() {
-    }
-    CabsandTimesheetCreatePageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__["a" /* CabsandTimesheetCreatePage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__["a" /* CabsandTimesheetCreatePage */]),
-            ],
-        })
-    ], CabsandTimesheetCreatePageModule);
-    return CabsandTimesheetCreatePageModule;
-}());
-
-//# sourceMappingURL=cabsand-timesheet-create.module.js.map
 
 /***/ }),
 /* 194 */
@@ -6104,43 +6104,6 @@ var KlmrFuelTruckAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelPageModule", function() { return KlmrFuelPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel__ = __webpack_require__(89);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var KlmrFuelPageModule = /** @class */ (function () {
-    function KlmrFuelPageModule() {
-    }
-    KlmrFuelPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel__["a" /* KlmrFuelPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel__["a" /* KlmrFuelPage */]),
-            ],
-        })
-    ], KlmrFuelPageModule);
-    return KlmrFuelPageModule;
-}());
-
-//# sourceMappingURL=klmr-fuel.module.js.map
-
-/***/ }),
-/* 204 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelTruckPageModule", function() { return KlmrFuelTruckPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
@@ -6173,15 +6136,15 @@ var KlmrFuelTruckPageModule = /** @class */ (function () {
 //# sourceMappingURL=klmr-fuel-truck.module.js.map
 
 /***/ }),
-/* 205 */
+/* 204 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaPageModule", function() { return KlmrJsaPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrFuelPageModule", function() { return KlmrFuelPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_fuel__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6191,23 +6154,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var KlmrJsaPageModule = /** @class */ (function () {
-    function KlmrJsaPageModule() {
+var KlmrFuelPageModule = /** @class */ (function () {
+    function KlmrFuelPageModule() {
     }
-    KlmrJsaPageModule = __decorate([
+    KlmrFuelPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */],
+                __WEBPACK_IMPORTED_MODULE_2__klmr_fuel__["a" /* KlmrFuelPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_fuel__["a" /* KlmrFuelPage */]),
             ],
         })
-    ], KlmrJsaPageModule);
-    return KlmrJsaPageModule;
+    ], KlmrFuelPageModule);
+    return KlmrFuelPageModule;
 }());
 
-//# sourceMappingURL=klmr-jsa.module.js.map
+//# sourceMappingURL=klmr-fuel.module.js.map
+
+/***/ }),
+/* 205 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaAddPageModule", function() { return KlmrJsaAddPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__ = __webpack_require__(206);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var KlmrJsaAddPageModule = /** @class */ (function () {
+    function KlmrJsaAddPageModule() {
+    }
+    KlmrJsaAddPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */]),
+            ],
+        })
+    ], KlmrJsaAddPageModule);
+    return KlmrJsaAddPageModule;
+}());
+
+//# sourceMappingURL=klmr-jsa-add.module.js.map
 
 /***/ }),
 /* 206 */
@@ -6544,10 +6544,10 @@ var KlmrJsaAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaAddPageModule", function() { return KlmrJsaAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaPageModule", function() { return KlmrJsaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6557,23 +6557,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var KlmrJsaAddPageModule = /** @class */ (function () {
-    function KlmrJsaAddPageModule() {
+var KlmrJsaPageModule = /** @class */ (function () {
+    function KlmrJsaPageModule() {
     }
-    KlmrJsaAddPageModule = __decorate([
+    KlmrJsaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */]),
             ],
         })
-    ], KlmrJsaAddPageModule);
-    return KlmrJsaAddPageModule;
+    ], KlmrJsaPageModule);
+    return KlmrJsaPageModule;
 }());
 
-//# sourceMappingURL=klmr-jsa-add.module.js.map
+//# sourceMappingURL=klmr-jsa.module.js.map
 
 /***/ }),
 /* 208 */
@@ -7287,10 +7287,168 @@ var KlmrTimesheetCreatePageModule = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetHistoryPageModule", function() { return KlmrTimesheetHistoryPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__ = __webpack_require__(214);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var KlmrTimesheetHistoryPageModule = /** @class */ (function () {
+    function KlmrTimesheetHistoryPageModule() {
+    }
+    KlmrTimesheetHistoryPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__["a" /* KlmrTimesheetHistoryPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__["a" /* KlmrTimesheetHistoryPage */]),
+            ],
+        })
+    ], KlmrTimesheetHistoryPageModule);
+    return KlmrTimesheetHistoryPageModule;
+}());
+
+//# sourceMappingURL=klmr-timesheet-history.module.js.map
+
+/***/ }),
+/* 214 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrTimesheetHistoryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+var KlmrTimesheetHistoryPage = /** @class */ (function () {
+    function KlmrTimesheetHistoryPage(navCtrl, navParams, api, utiltiy) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.timeSheetList = [];
+    }
+    KlmrTimesheetHistoryPage.prototype.ionViewDidLoad = function () {
+        this.gettimeSheetList();
+    };
+    KlmrTimesheetHistoryPage.prototype.gettimeSheetList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var userId, formData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        this.timeSheetList = [];
+                        this.utiltiy.startLoading();
+                        return [4 /*yield*/, this.utiltiy.getStorage("userId")];
+                    case 1:
+                        userId = _a.sent();
+                        formData = new FormData();
+                        formData.append("user_id", userId);
+                        formData.append("status", "2");
+                        this.api.post("/prestart/timesheet/approver/approver_post", false, formData)
+                            .then(function (result) {
+                            console.log("result", result);
+                            _this.utiltiy.stopLoading();
+                            _this.timeSheetList = result.result;
+                        }, function (err) {
+                            console.log("err", err);
+                            _this.utiltiy.stopLoading();
+                            _this.utiltiy.toaster(err.error.message);
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrTimesheetHistoryPage.prototype.formatAMPM = function (date) {
+        date = date.split(":");
+        var hours = date[0];
+        var minutes = date[1];
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
+    };
+    KlmrTimesheetHistoryPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-klmr-timesheet-history',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-history/klmr-timesheet-history.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">History</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" >\n          <h2>\n            <ion-badge item-end [color]="\'primarybackground\' ">{{fuel.id}}</ion-badge>\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity:</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code:</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start:</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish :</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n     \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-history/klmr-timesheet-history.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], KlmrTimesheetHistoryPage);
+    return KlmrTimesheetHistoryPage;
+}());
+
+//# sourceMappingURL=klmr-timesheet-history.js.map
+
+/***/ }),
+/* 215 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetPendingPageModule", function() { return KlmrTimesheetPendingPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_pending__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_pending__ = __webpack_require__(216);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7319,7 +7477,7 @@ var KlmrTimesheetPendingPageModule = /** @class */ (function () {
 //# sourceMappingURL=klmr-timesheet-pending.module.js.map
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7453,164 +7611,6 @@ var KlmrTimesheetPendingPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=klmr-timesheet-pending.js.map
-
-/***/ }),
-/* 215 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetHistoryPageModule", function() { return KlmrTimesheetHistoryPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__ = __webpack_require__(216);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var KlmrTimesheetHistoryPageModule = /** @class */ (function () {
-    function KlmrTimesheetHistoryPageModule() {
-    }
-    KlmrTimesheetHistoryPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__["a" /* KlmrTimesheetHistoryPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__["a" /* KlmrTimesheetHistoryPage */]),
-            ],
-        })
-    ], KlmrTimesheetHistoryPageModule);
-    return KlmrTimesheetHistoryPageModule;
-}());
-
-//# sourceMappingURL=klmr-timesheet-history.module.js.map
-
-/***/ }),
-/* 216 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrTimesheetHistoryPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-var KlmrTimesheetHistoryPage = /** @class */ (function () {
-    function KlmrTimesheetHistoryPage(navCtrl, navParams, api, utiltiy) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.timeSheetList = [];
-    }
-    KlmrTimesheetHistoryPage.prototype.ionViewDidLoad = function () {
-        this.gettimeSheetList();
-    };
-    KlmrTimesheetHistoryPage.prototype.gettimeSheetList = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var userId, formData;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        this.timeSheetList = [];
-                        this.utiltiy.startLoading();
-                        return [4 /*yield*/, this.utiltiy.getStorage("userId")];
-                    case 1:
-                        userId = _a.sent();
-                        formData = new FormData();
-                        formData.append("user_id", userId);
-                        formData.append("status", "2");
-                        this.api.post("/prestart/timesheet/approver/approver_post", false, formData)
-                            .then(function (result) {
-                            console.log("result", result);
-                            _this.utiltiy.stopLoading();
-                            _this.timeSheetList = result.result;
-                        }, function (err) {
-                            console.log("err", err);
-                            _this.utiltiy.stopLoading();
-                            _this.utiltiy.toaster(err.error.message);
-                        });
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrTimesheetHistoryPage.prototype.formatAMPM = function (date) {
-        date = date.split(":");
-        var hours = date[0];
-        var minutes = date[1];
-        var ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        var strTime = hours + ':' + minutes + ' ' + ampm;
-        return strTime;
-    };
-    KlmrTimesheetHistoryPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-klmr-timesheet-history',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-history/klmr-timesheet-history.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">History</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" >\n          <h2>\n            <ion-badge item-end [color]="\'primarybackground\' ">{{fuel.id}}</ion-badge>\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity:</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code:</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start:</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish :</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n     \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-history/klmr-timesheet-history.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], KlmrTimesheetHistoryPage);
-    return KlmrTimesheetHistoryPage;
-}());
-
-//# sourceMappingURL=klmr-timesheet-history.js.map
 
 /***/ }),
 /* 217 */
@@ -8120,8 +8120,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_crud_crud__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_cabsand_prestart_cabsand_prestart_module__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cabsand_addprestart_cabsand_addprestart_module__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_fuel_klmr_fuel_module__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_fuel_truck_klmr_fuel_truck_module__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_fuel_klmr_fuel_module__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_fuel_truck_klmr_fuel_truck_module__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_fuel_add_klmr_fuel_add_module__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_klmr_fuel_truck_add_klmr_fuel_truck_add_module__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_cabsand_fuel_cabsand_fuel_module__ = __webpack_require__(182);
@@ -8129,24 +8129,24 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_cabsand_fuel_add_cabsand_fuel_add_module__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_cabsand_fuel_truck_add_cabsand_fuel_truck_add_module__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_jsa_jsa_module__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_klmr_jsa_klmr_jsa_module__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_klmr_jsa_add_klmr_jsa_add_module__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_klmr_jsa_klmr_jsa_module__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_klmr_jsa_add_klmr_jsa_add_module__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_cabsand_jsa_cabsand_jsa_module__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_cabsand_jsa_add_cabsand_jsa_add_module__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_klmr_timesheet_create_klmr_timesheet_create_module__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_klmr_timesheet_create_add_klmr_timesheet_create_add_module__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_search_search_module__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_cabsand_timesheet_create_cabsand_timesheet_create_module__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_cabsand_timesheet_create_cabsand_timesheet_create_module__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_cabsand_timesheet_create_add_cabsand_timesheet_create_add_module__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_ionic_marquee__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_news_news__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_klmr_news_klmr_news__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_cabsand_news_cabsand_news__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_klmr_timesheet_approvals_klmr_timesheet_approvals_module__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_klmr_timesheet_history_klmr_timesheet_history_module__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_klmr_timesheet_pending_klmr_timesheet_pending_module__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_klmr_timesheet_history_klmr_timesheet_history_module__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_klmr_timesheet_pending_klmr_timesheet_pending_module__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_cabsand_timesheet_approvals_cabsand_timesheet_approvals_module__ = __webpack_require__(187);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_cabsand_timesheet_history_cabsand_timesheet_history_module__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_cabsand_timesheet_history_cabsand_timesheet_history_module__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_cabsand_timesheet_pending_cabsand_timesheet_pending_module__ = __webpack_require__(194);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8260,29 +8260,29 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/cabsand-fuel/cabsand-fuel.module#CabsandFuelPageModule', name: 'CabsandFuelPage', segment: 'cabsand-fuel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-jsa-add/cabsand-jsa-add.module#CabsandJsaAddPageModule', name: 'CabsandJsaAddPage', segment: 'cabsand-jsa-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-jsa/cabsand-jsa.module#CabsandJsaPageModule', name: 'CabsandJsaPage', segment: 'cabsand-jsa', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-prestart/cabsand-prestart.module#CabsandPrestartPageModule', name: 'CabsandPrestartPage', segment: 'cabsand-prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-news/cabsand-news.module#CabsandNewsPageModule', name: 'CabsandNewsPage', segment: 'cabsand-news', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-prestart/cabsand-prestart.module#CabsandPrestartPageModule', name: 'CabsandPrestartPage', segment: 'cabsand-prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.module#CabsandTimesheetApprovalsPageModule', name: 'CabsandTimesheetApprovalsPage', segment: 'cabsand-timesheet-approvals', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-create-add/cabsand-timesheet-create-add.module#CabsandTimesheetCreateAddPageModule', name: 'CabsandTimesheetCreateAddPage', segment: 'cabsand-timesheet-create-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-timesheet-history/cabsand-timesheet-history.module#CabsandTimesheetHistoryPageModule', name: 'CabsandTimesheetHistoryPage', segment: 'cabsand-timesheet-history', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-create/cabsand-timesheet-create.module#CabsandTimesheetCreatePageModule', name: 'CabsandTimesheetCreatePage', segment: 'cabsand-timesheet-create', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-timesheet-history/cabsand-timesheet-history.module#CabsandTimesheetHistoryPageModule', name: 'CabsandTimesheetHistoryPage', segment: 'cabsand-timesheet-history', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-pending/cabsand-timesheet-pending.module#CabsandTimesheetPendingPageModule', name: 'CabsandTimesheetPendingPage', segment: 'cabsand-timesheet-pending', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/jsa/jsa.module#JsaPageModule', name: 'JsaPage', segment: 'jsa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-add/klmr-fuel-add.module#KlmrFuelAddPageModule', name: 'KlmrFuelAddPage', segment: 'klmr-fuel-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module#KlmrFuelTruckAddPageModule', name: 'KlmrFuelTruckAddPage', segment: 'klmr-fuel-truck-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-fuel/klmr-fuel.module#KlmrFuelPageModule', name: 'KlmrFuelPage', segment: 'klmr-fuel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-truck/klmr-fuel-truck.module#KlmrFuelTruckPageModule', name: 'KlmrFuelTruckPage', segment: 'klmr-fuel-truck', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-jsa/klmr-jsa.module#KlmrJsaPageModule', name: 'KlmrJsaPage', segment: 'klmr-jsa', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-fuel/klmr-fuel.module#KlmrFuelPageModule', name: 'KlmrFuelPage', segment: 'klmr-fuel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-jsa-add/klmr-jsa-add.module#KlmrJsaAddPageModule', name: 'KlmrJsaAddPage', segment: 'klmr-jsa-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-timesheet-approvals/klmr-timesheet-approvals.module#KlmrTimesheetApprovalsPageModule', name: 'KlmrTimesheetApprovalsPage', segment: 'klmr-timesheet-approvals', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-jsa/klmr-jsa.module#KlmrJsaPageModule', name: 'KlmrJsaPage', segment: 'klmr-jsa', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-news/klmr-news.module#KlmrNewsPageModule', name: 'KlmrNewsPage', segment: 'klmr-news', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-timesheet-approvals/klmr-timesheet-approvals.module#KlmrTimesheetApprovalsPageModule', name: 'KlmrTimesheetApprovalsPage', segment: 'klmr-timesheet-approvals', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-create-add/klmr-timesheet-create-add.module#KlmrTimesheetCreateAddPageModule', name: 'KlmrTimesheetCreateAddPage', segment: 'klmr-timesheet-create-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-create/klmr-timesheet-create.module#KlmrTimesheetCreatePageModule', name: 'KlmrTimesheetCreatePage', segment: 'klmr-timesheet-create', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-timesheet-pending/klmr-timesheet-pending.module#KlmrTimesheetPendingPageModule', name: 'KlmrTimesheetPendingPage', segment: 'klmr-timesheet-pending', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-history/klmr-timesheet-history.module#KlmrTimesheetHistoryPageModule', name: 'KlmrTimesheetHistoryPage', segment: 'klmr-timesheet-history', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-timesheet-pending/klmr-timesheet-pending.module#KlmrTimesheetPendingPageModule', name: 'KlmrTimesheetPendingPage', segment: 'klmr-timesheet-pending', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prestart/prestart.module#PrestartPageModule', name: 'PrestartPage', segment: 'prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] }
@@ -8474,11 +8474,11 @@ var SearchPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cabsand_timesheet_create_cabsand_timesheet_create__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_klmr_news_klmr_news__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cabsand_news_cabsand_news__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_timesheet_pending_klmr_timesheet_pending__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_timesheet_pending_klmr_timesheet_pending__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_timesheet_approvals_klmr_timesheet_approvals__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_timesheet_history_klmr_timesheet_history__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_klmr_timesheet_history_klmr_timesheet_history__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cabsand_timesheet_pending_cabsand_timesheet_pending__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_cabsand_timesheet_history_cabsand_timesheet_history__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_cabsand_timesheet_history_cabsand_timesheet_history__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cabsand_timesheet_approvals_cabsand_timesheet_approvals__ = __webpack_require__(188);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8713,14 +8713,7 @@ var MyApp = /** @class */ (function () {
                         verifiedUser = _a.sent();
                         console.log("verifiedUser", verifiedUser);
                         if (!verifiedUser) {
-                            this.utility.toaster("Invalid User");
-                            this.utility.removeStorage("token");
-                            this.utility.removeStorage("roleID");
-                            this.utility.removeStorage("primaryColor");
-                            this.utility.removeStorage("name");
-                            this.utility.removeStorage("permissions");
-                            this.utility.removeStorage("biometric");
-                            this.rootPage.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_login_login__["a" /* LoginPage */]);
+                            this.bioLogout();
                             return [2 /*return*/];
                         }
                         else {
@@ -8754,6 +8747,42 @@ var MyApp = /** @class */ (function () {
                 }
             });
         });
+    };
+    MyApp.prototype.resumeBioMetric = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var biometricStatus, verifiedUser;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utility.getStorage("biometric")];
+                    case 1:
+                        biometricStatus = _a.sent();
+                        if (!biometricStatus) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.verifyUser()];
+                    case 2:
+                        verifiedUser = _a.sent();
+                        console.log("verifiedUser", verifiedUser);
+                        if (!verifiedUser) {
+                            this.bioLogout();
+                            return [2 /*return*/];
+                        }
+                        else {
+                            this.utility.toaster("Welcome Back");
+                        }
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    MyApp.prototype.bioLogout = function () {
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_login_login__["a" /* LoginPage */]);
+        this.utility.toaster("Invalid User");
+        this.utility.removeStorage("token");
+        this.utility.removeStorage("roleID");
+        this.utility.removeStorage("primaryColor");
+        this.utility.removeStorage("name");
+        this.utility.removeStorage("permissions");
+        this.utility.removeStorage("biometric");
     };
     MyApp.prototype.checkBioMetric = function () {
         var _this = this;
@@ -8834,6 +8863,16 @@ var MyApp = /** @class */ (function () {
             _this.statusBar.styleDefault();
             _this.getState();
             _this.splashScreen.hide();
+            // this.platform.pause.subscribe(async () => {
+            //   alert("Pause event detected"); 
+            //   //Do stuff here
+            // });
+            _this.platform.resume.subscribe(function () { return __awaiter(_this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    this.resumeBioMetric();
+                    return [2 /*return*/];
+                });
+            }); });
             _this.checkBioMetric();
         });
     };
