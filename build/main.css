@@ -30698,6 +30698,10 @@ page-addprestart .label-ios[stacked], page-addprestart .label-ios[floating] {
   margin-left: 5px;
 }
 
+page-addprestart .select-text {
+  padding-left: 5px !important;
+}
+
 page-cabsand-addprestart .card-md {
   width: 100%;
 }
@@ -30730,6 +30734,10 @@ page-cabsand-addprestart .label-md[stacked], page-cabsand-addprestart .label-md[
 
 page-cabsand-addprestart .label-ios[stacked], page-cabsand-addprestart .label-ios[floating] {
   margin-left: 5px;
+}
+
+page-cabsand-addprestart .select-text {
+  padding-left: 5px !important;
 }
 
 page-cabsand-fuel-add .card-md {
@@ -30800,6 +30808,70 @@ page-cabsand-fuel-truck-add .label-ios[stacked], page-cabsand-fuel-truck-add .la
   margin-left: 5px;
 }
 
+page-cabsand-jobcard-add .card-md {
+  width: 100%;
+}
+
+page-cabsand-jobcard-add .card-ios {
+  width: 100%;
+}
+
+page-cabsand-jobcard-add .card-title-md {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-cabsand-jobcard-add .card-title-ios {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-cabsand-jobcard-add .border-1px-solid {
+  border: 1px solid lightgrey;
+}
+
+page-cabsand-jobcard-add .label-md[stacked], page-cabsand-jobcard-add .label-md[floating] {
+  margin-left: 5spx;
+}
+
+page-cabsand-jobcard-add .label-ios[stacked], page-cabsand-jobcard-add .label-ios[floating] {
+  margin-left: 5px;
+}
+
+page-cabsand-jobcard-add .picker-opts {
+  max-width: 70px !important;
+}
+
+page-cabsand-jobcard-add .autocomplete {
+  width: 100%;
+}
+
+page-cabsand-jobcard-add .autocomplete ion-item ion-input {
+  padding: 1px !important;
+}
+
+page-cabsand-jobcard-add .autocomplete ion-list {
+  position: absolute;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 150%;
+  border: 5px;
+  z-index: 999;
+}
+
+page-cabsand-jobcard-add .autocomplete ion-list ion-item {
+  background: #f1f1f1;
+}
+
+page-cabsand-jobcard-add .autocomplete ion-list ion-item:hover {
+  cursor: pointer;
+  background: #dddddd;
+}
+
 page-cabsand-jsa-add .card-md {
   width: 100%;
 }
@@ -30867,6 +30939,66 @@ page-cabsand-jsa-add .border {
 
 page-cabsand-jsa-add .align-right {
   text-align: end;
+}
+
+page-cabsand-news .logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  page-cabsand-news .logo-img {
+    width: 60%;
+  }
+}
+
+page-cabsand-news .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-cabsand-news .slide-zoom {
+  height: 100%;
+}
+
+page-cabsand-news .slide-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+page-cabsand-news .slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 18px 0;
+}
+
+page-cabsand-news b {
+  font-weight: 500;
+}
+
+page-cabsand-news h2 {
+  font-size: 2rem;
+}
+
+page-cabsand-news p {
+  padding: 0 40px;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #60646B;
+}
+
+page-cabsand-news p b {
+  color: #000000;
+}
+
+page-cabsand-news .inner-news {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: justify;
+}
+
+page-cabsand-news .row-height {
+  height: 40px;
 }
 
 page-cabsand-prestart .padding-border {
@@ -30959,6 +31091,7 @@ page-home .slide-zoom {
 
 page-home .slide-title {
   margin-top: 2rem;
+  text-align: center;
 }
 
 page-home .slide-image {
@@ -30990,6 +31123,10 @@ page-home .inner-news {
   padding-left: 16px;
   padding-right: 16px;
   text-align: justify;
+}
+
+page-home .row-height {
+  height: 40px;
 }
 
 page-klmr-fuel .padding-border {
@@ -31064,6 +31201,70 @@ page-klmr-fuel-truck-add .label-ios[stacked], page-klmr-fuel-truck-add .label-io
   margin-left: 5px;
 }
 
+page-klmr-jobcard-add .card-md {
+  width: 100%;
+}
+
+page-klmr-jobcard-add .card-ios {
+  width: 100%;
+}
+
+page-klmr-jobcard-add .card-title-md {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-klmr-jobcard-add .card-title-ios {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-klmr-jobcard-add .border-1px-solid {
+  border: 1px solid lightgrey;
+}
+
+page-klmr-jobcard-add .label-md[stacked], page-klmr-jobcard-add .label-md[floating] {
+  margin-left: 5spx;
+}
+
+page-klmr-jobcard-add .label-ios[stacked], page-klmr-jobcard-add .label-ios[floating] {
+  margin-left: 5px;
+}
+
+page-klmr-jobcard-add .picker-opts {
+  max-width: 70px !important;
+}
+
+page-klmr-jobcard-add .autocomplete {
+  width: 100%;
+}
+
+page-klmr-jobcard-add .autocomplete ion-item ion-input {
+  padding: 1px !important;
+}
+
+page-klmr-jobcard-add .autocomplete ion-list {
+  position: absolute;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 150%;
+  border: 5px;
+  z-index: 999;
+}
+
+page-klmr-jobcard-add .autocomplete ion-list ion-item {
+  background: #f1f1f1;
+}
+
+page-klmr-jobcard-add .autocomplete ion-list ion-item:hover {
+  cursor: pointer;
+  background: #dddddd;
+}
+
 page-klmr-jsa-add .card-md {
   width: 100%;
 }
@@ -31131,6 +31332,66 @@ page-klmr-jsa-add .border {
 
 page-klmr-jsa-add .align-right {
   text-align: end;
+}
+
+page-klmr-news .logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  page-klmr-news .logo-img {
+    width: 60%;
+  }
+}
+
+page-klmr-news .toolbar-background {
+  background: #fff;
+  border-color: transparent;
+}
+
+page-klmr-news .slide-zoom {
+  height: 100%;
+}
+
+page-klmr-news .slide-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+page-klmr-news .slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 18px 0;
+}
+
+page-klmr-news b {
+  font-weight: 500;
+}
+
+page-klmr-news h2 {
+  font-size: 2rem;
+}
+
+page-klmr-news p {
+  padding: 0 40px;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #60646B;
+}
+
+page-klmr-news p b {
+  color: #000000;
+}
+
+page-klmr-news .inner-news {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: justify;
+}
+
+page-klmr-news .row-height {
+  height: 40px;
 }
 
 page-klmr-timesheet-create-add .card-md {
