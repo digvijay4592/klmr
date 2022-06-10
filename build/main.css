@@ -30702,6 +30702,10 @@ page-addprestart .select-text {
   padding-left: 5px !important;
 }
 
+page-addprestart .img-thumbnail {
+  width: 50%;
+}
+
 page-cabsand-addprestart .card-md {
   width: 100%;
 }
@@ -30872,6 +30876,21 @@ page-cabsand-jobcard-add .autocomplete ion-list ion-item:hover {
   background: #dddddd;
 }
 
+page-cabsand-jobcard-add .list-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+}
+
 page-cabsand-jsa-add .card-md {
   width: 100%;
 }
@@ -31003,6 +31022,85 @@ page-cabsand-news .row-height {
 
 page-cabsand-prestart .padding-border {
   padding: 0 16px 0 16px;
+}
+
+page-cabsand-prestart-jobcard .card-md {
+  width: 100%;
+}
+
+page-cabsand-prestart-jobcard .card-ios {
+  width: 100%;
+}
+
+page-cabsand-prestart-jobcard .card-title-md {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-cabsand-prestart-jobcard .card-title-ios {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-cabsand-prestart-jobcard .border-1px-solid {
+  border: 1px solid lightgrey;
+}
+
+page-cabsand-prestart-jobcard .label-md[stacked], page-cabsand-prestart-jobcard .label-md[floating] {
+  margin-left: 5spx;
+}
+
+page-cabsand-prestart-jobcard .label-ios[stacked], page-cabsand-prestart-jobcard .label-ios[floating] {
+  margin-left: 5px;
+}
+
+page-cabsand-prestart-jobcard .picker-opts {
+  max-width: 70px !important;
+}
+
+page-cabsand-prestart-jobcard .autocomplete {
+  width: 100%;
+}
+
+page-cabsand-prestart-jobcard .autocomplete ion-item ion-input {
+  padding: 1px !important;
+}
+
+page-cabsand-prestart-jobcard .autocomplete ion-list {
+  position: absolute;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 150%;
+  border: 5px;
+  z-index: 999;
+}
+
+page-cabsand-prestart-jobcard .autocomplete ion-list ion-item {
+  background: #f1f1f1;
+}
+
+page-cabsand-prestart-jobcard .autocomplete ion-list ion-item:hover {
+  cursor: pointer;
+  background: #dddddd;
+}
+
+page-cabsand-prestart-jobcard .list-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
 }
 
 page-cabsand-timesheet-create-add .card-md {
@@ -31265,6 +31363,21 @@ page-klmr-jobcard-add .autocomplete ion-list ion-item:hover {
   background: #dddddd;
 }
 
+page-klmr-jobcard-add .list-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+}
+
 page-klmr-jsa-add .card-md {
   width: 100%;
 }
@@ -31392,6 +31505,85 @@ page-klmr-news .inner-news {
 
 page-klmr-news .row-height {
   height: 40px;
+}
+
+page-klmr-prestart-jobcard .card-md {
+  width: 100%;
+}
+
+page-klmr-prestart-jobcard .card-ios {
+  width: 100%;
+}
+
+page-klmr-prestart-jobcard .card-title-md {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-klmr-prestart-jobcard .card-title-ios {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+page-klmr-prestart-jobcard .border-1px-solid {
+  border: 1px solid lightgrey;
+}
+
+page-klmr-prestart-jobcard .label-md[stacked], page-klmr-prestart-jobcard .label-md[floating] {
+  margin-left: 5spx;
+}
+
+page-klmr-prestart-jobcard .label-ios[stacked], page-klmr-prestart-jobcard .label-ios[floating] {
+  margin-left: 5px;
+}
+
+page-klmr-prestart-jobcard .picker-opts {
+  max-width: 70px !important;
+}
+
+page-klmr-prestart-jobcard .autocomplete {
+  width: 100%;
+}
+
+page-klmr-prestart-jobcard .autocomplete ion-item ion-input {
+  padding: 1px !important;
+}
+
+page-klmr-prestart-jobcard .autocomplete ion-list {
+  position: absolute;
+  width: 95%;
+  overflow-y: scroll;
+  max-height: 150%;
+  border: 5px;
+  z-index: 999;
+}
+
+page-klmr-prestart-jobcard .autocomplete ion-list ion-item {
+  background: #f1f1f1;
+}
+
+page-klmr-prestart-jobcard .autocomplete ion-list ion-item:hover {
+  cursor: pointer;
+  background: #dddddd;
+}
+
+page-klmr-prestart-jobcard .list-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
 }
 
 page-klmr-timesheet-create-add .card-md {
