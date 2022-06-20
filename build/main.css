@@ -30706,42 +30706,46 @@ page-addprestart .img-thumbnail {
   width: 50%;
 }
 
-page-cabsand-addprestart .card-md {
+page-addprestart .card-md {
   width: 100%;
 }
 
-page-cabsand-addprestart .card-ios {
+page-addprestart .card-ios {
   width: 100%;
 }
 
-page-cabsand-addprestart .card-title-md {
+page-addprestart .card-title-md {
   display: block;
   font-size: 1.5rem;
   line-height: 1.2;
   color: #222;
 }
 
-page-cabsand-addprestart .card-title-ios {
+page-addprestart .card-title-ios {
   display: block;
   font-size: 1.5rem;
   line-height: 1.2;
   color: #222;
 }
 
-page-cabsand-addprestart .border-1px-solid {
+page-addprestart .border-1px-solid {
   border: 1px solid lightgrey;
 }
 
-page-cabsand-addprestart .label-md[stacked], page-cabsand-addprestart .label-md[floating] {
+page-addprestart .label-md[stacked], page-addprestart .label-md[floating] {
   margin-left: 5spx;
 }
 
-page-cabsand-addprestart .label-ios[stacked], page-cabsand-addprestart .label-ios[floating] {
+page-addprestart .label-ios[stacked], page-addprestart .label-ios[floating] {
   margin-left: 5px;
 }
 
-page-cabsand-addprestart .select-text {
+page-addprestart .select-text {
   padding-left: 5px !important;
+}
+
+page-addprestart .img-thumbnail {
+  width: 50%;
 }
 
 page-cabsand-fuel-add .card-md {
