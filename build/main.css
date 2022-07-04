@@ -30895,6 +30895,11 @@ page-cabsand-jobcard-add .list-group {
   border-radius: 0.25rem;
 }
 
+.select-pre-btn {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
 page-cabsand-jsa-add .card-md {
   width: 100%;
 }
@@ -31171,6 +31176,51 @@ page-cabsand-timesheet-create-add .autocomplete ion-list ion-item:hover {
   background: #dddddd;
 }
 
+.flex-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.search-wrapper {
+  width: 100%;
+  margin: 10px 10px 0;
+  border: 1px solid #b4a9a9;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-wrapper ion-label {
+  display: contents;
+}
+
+.search-wrapper ion-select {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+}
+
+.search-wrapper .search-icon {
+  height: 45px;
+  width: 45px;
+  background: black;
+}
+
+.search-wrapper .search-icon ion-icon {
+  font-size: 24px;
+  margin: 0 16px;
+}
+
 page-home .logo-img {
   width: 100%;
   height: 100%;
@@ -31380,6 +31430,70 @@ page-klmr-jobcard-add .list-group {
   padding-left: 0;
   margin-bottom: 0;
   border-radius: 0.25rem;
+}
+
+.select-pre-btn {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td, table th {
+  vertical-align: top;
+  border: 1px solid #d6d6d6;
+  text-align: left;
+  padding: 12px;
+  color: #4c4c4c;
+}
+
+.text-area {
+  border: 1px solid lightgray;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.tbl-item-width {
+  width: 24%;
+}
+
+tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+input[type=file] {
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  width: 90%;
+  color: #495056;
+  background: white;
+  border-right: none;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+input[type=file]::file-selector-button {
+  border: none;
+  background: #eaedf0;
+  padding: 8px;
+  border-right: 1px solid #bbbbbb;
+  color: #495056;
+}
+
+input[type=file]::file-selector-label {
+  background: white;
+}
+
+.close-btn {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #bbbbbb;
+  background: #eaedf0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 page-klmr-jsa-add .card-md {
@@ -31654,6 +31768,51 @@ page-klmr-timesheet-create-add .autocomplete ion-list ion-item:hover {
   background: #dddddd;
 }
 
+.flex-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.search-wrapper {
+  width: 100%;
+  margin: 10px 10px 0;
+  border: 1px solid #b4a9a9;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-wrapper ion-label {
+  display: contents;
+}
+
+.search-wrapper ion-select {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+}
+
+.search-wrapper .search-icon {
+  height: 45px;
+  width: 45px;
+  background: black;
+}
+
+.search-wrapper .search-icon ion-icon {
+  font-size: 24px;
+  margin: 0 16px;
+}
+
 page-news .logo-img {
   width: 100%;
   height: 100%;
@@ -31716,4 +31875,82 @@ page-news .row-height {
 
 page-prestart .padding-border {
   padding: 0 16px 0 16px;
+}
+
+page-select-prestart-items .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 18px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+page-select-prestart-items .title ion-label {
+  font-size: 19px;
+  font-weight: 500;
+  color: #6b6b6b;
+}
+
+page-select-prestart-items .title .close-icon {
+  font-size: 29px;
+  color: #6b6b6b;
+  margin-top: 10px;
+}
+
+page-select-prestart-items .checkbox-content {
+  border: 1px solid #e3e3e3;
+  margin: 15px;
+}
+
+page-select-prestart-items .checkbox-content .item-div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #cacaca;
+}
+
+page-select-prestart-items .checkbox-content .item-div ion-checkbox {
+  margin: 0px 40px 0px 20px;
+}
+
+page-select-prestart-items .checkbox-content .item-div .checkbox-input {
+  margin: 0px 10px;
+  height: 15px;
+  width: 15px;
+}
+
+page-select-prestart-items .checkbox-content .item-div .checkbox-label {
+  margin: 10px 0px;
+}
+
+.no-data-div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 533px;
+}
+
+.no-data-div .no-record-text {
+  font-size: 30px;
+}
+
+.component-div {
+  overflow: scroll;
+  height: 600px;
+  background: white;
 }
