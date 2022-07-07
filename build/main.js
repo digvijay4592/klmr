@@ -585,7 +585,7 @@ var CrudProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_timesheet_create_klmr_timesheet_create__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_timesheet_create_klmr_timesheet_create__ = __webpack_require__(90);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -1495,876 +1495,7 @@ var CabsandJobcardPage = /** @class */ (function () {
 //# sourceMappingURL=cabsand-jobcard.js.map
 
 /***/ }),
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandNewsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__ = __webpack_require__(5);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-var CabsandNewsPage = /** @class */ (function () {
-    function CabsandNewsPage(navCtrl, utility, api, events) {
-        this.navCtrl = navCtrl;
-        this.utility = utility;
-        this.api = api;
-        this.events = events;
-        this.horizontalText = "";
-        this.newsLiist = [];
-        this.getNews();
-        // this.navCtrl.swipeBackEnabled = false;
-    }
-    CabsandNewsPage.prototype.getStatus = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                this.horizontalText = "";
-                return [2 /*return*/];
-            });
-        });
-    };
-    CabsandNewsPage.prototype.getNews = function () {
-        var _this = this;
-        this.newsLiist = [];
-        var string = "";
-        this.api.get("/prestart/news/News_get", "false")
-            .then(function (result) {
-            result.result.forEach(function (element) {
-                string = string + ("Subject: " + element.subject + " Date: " + element.date + " By:" + element.username + "     ");
-            });
-            _this.horizontalText = string;
-            _this.newsLiist = result.result;
-            console.log("result", _this.newsLiist);
-            console.log("this.horizontalText ", _this.horizontalText);
-        }, function (err) {
-        });
-    };
-    CabsandNewsPage.prototype.dateConvert = function (date) {
-        if (date) {
-            var dateString = date.split("-");
-            return dateString[2] + "-" + dateString[1] + "-" + dateString[0];
-        }
-        else {
-            return "";
-        }
-    };
-    CabsandNewsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-news',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-news/cabsand-news.html"*/'\n<ion-header>\n  <ion-toolbar [color]="\'dark\'">\n  <ion-navbar>\n    <button ion-button menuToggle color="light">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title color="light">News</ion-title>\n \n  </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class="tutorial-page">\n  <!-- <ion-slides pager direction="vertical"> -->\n    <span *ngFor="let news of newsLiist;let i = index">\n\n    <!-- <ion-slide > -->\n    <ion-row *ngIf="i != 0" class="row-height"></ion-row>\n      <h2 class="slide-title" >\n        {{news.subject}}\n      </h2>\n      <p ion-text text-left class="inner-news" style="font-size: medium;">\n        <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n        {{dateConvert(news.date)}}\n        <span ion-text color="primarybackground"> {{news.username}}</span>\n      </p>\n      <p class="inner-news" [innerHTML]="news.news">\n      </p>\n    <!-- </ion-slide> -->\n  </span>\n  \n  <!-- </ion-slides> -->\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-news/cabsand-news.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
-    ], CabsandNewsPage);
-    return CabsandNewsPage;
-}());
-
-//# sourceMappingURL=cabsand-news.js.map
-
-/***/ }),
-/* 57 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrNewsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__ = __webpack_require__(5);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-var KlmrNewsPage = /** @class */ (function () {
-    function KlmrNewsPage(navCtrl, utility, api, events) {
-        this.navCtrl = navCtrl;
-        this.utility = utility;
-        this.api = api;
-        this.events = events;
-        this.horizontalText = "";
-        this.newsLiist = [];
-        this.getNews();
-        // this.navCtrl.swipeBackEnabled = false;
-    }
-    KlmrNewsPage.prototype.getStatus = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                this.horizontalText = "";
-                return [2 /*return*/];
-            });
-        });
-    };
-    KlmrNewsPage.prototype.getNews = function () {
-        var _this = this;
-        this.newsLiist = [];
-        var string = "";
-        this.api.get("/prestart/news/News_get", "false")
-            .then(function (result) {
-            result.result.forEach(function (element) {
-                string = string + ("Subject: " + element.subject + " Date: " + element.date + " By:" + element.username + "     ");
-            });
-            _this.horizontalText = string;
-            _this.newsLiist = result.result;
-            console.log("result", _this.newsLiist);
-            console.log("this.horizontalText ", _this.horizontalText);
-        }, function (err) {
-        });
-    };
-    KlmrNewsPage.prototype.dateConvert = function (date) {
-        if (date) {
-            var dateString = date.split("-");
-            return dateString[2] + "-" + dateString[1] + "-" + dateString[0];
-        }
-        else {
-            return "";
-        }
-    };
-    KlmrNewsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-klmr-news',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-news/klmr-news.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">News</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class="tutorial-page">\n  <!-- <ion-slides pager direction="vertical"> -->\n    <span *ngFor="let news of newsLiist;let i = index">\n\n    <!-- <ion-slide > -->\n    <ion-row *ngIf="i != 0" class="row-height"></ion-row>\n      <h2 class="slide-title" >\n        {{news.subject}}\n      </h2>\n      <p ion-text text-left class="inner-news" style="font-size: medium;">\n        <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n        {{dateConvert(news.date)}}\n        <span ion-text color="primarybackground"> {{news.username}}</span>\n      </p>\n      <p class="inner-news" [innerHTML]="news.news">\n      </p>\n    <!-- </ion-slide> -->\n  </span>\n  \n  <!-- </ion-slides> -->\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-news/klmr-news.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
-    ], KlmrNewsPage);
-    return KlmrNewsPage;
-}());
-
-//# sourceMappingURL=klmr-news.js.map
-
-/***/ }),
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__addprestart_addprestart__ = __webpack_require__(176);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-var PrestartPage = /** @class */ (function () {
-    function PrestartPage(navCtrl, navParams, api, utiltiy) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.prestartList = [];
-    }
-    PrestartPage.prototype.ionViewDidLoad = function () {
-        this.getappColor();
-        this.getprestartList();
-    };
-    PrestartPage.prototype.getappColor = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        _a = this;
-                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
-                    case 1:
-                        _a.appColor = _b.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    PrestartPage.prototype.getprestartList = function () {
-        var _this = this;
-        this.prestartList = [];
-        this.utiltiy.startLoading();
-        this.api.get("/prestart/get", false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.prestartList = result.result;
-            _this.filePathUrl = result.file_uploaded_path;
-            _this.utiltiy.stopLoading();
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    PrestartPage.prototype.checkStatus = function (string) {
-        return string.includes("Faulty");
-    };
-    PrestartPage.prototype.deleteRecord = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var status;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
-                    case 1:
-                        status = _a.sent();
-                        if (status) {
-                            this.deletePrestart(id);
-                        }
-                        console.log("status", status);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    PrestartPage.prototype.deletePrestart = function (id) {
-        var _this = this;
-        this.api.delete("/prestart/delete/" + id, false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.getprestartList();
-            }
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    PrestartPage.prototype.addPrestart = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__addprestart_addprestart__["a" /* AddprestartPage */], { param: null });
-    };
-    PrestartPage.prototype.updatePrestart = function (prestart) {
-        prestart.file_uploaded_path = this.filePathUrl;
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__addprestart_addprestart__["a" /* AddprestartPage */], { param: prestart });
-    };
-    PrestartPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-prestart',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/prestart/prestart.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Prestart</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addPrestart()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let prestart of  prestartList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n          <h2>\n            <ion-badge item-end [color]="\'primarybackground\' ">{{prestart.id}}</ion-badge>\n            {{prestart.drivername}}\n          </h2>\n          <p>{{prestart.fleet_no}}</p>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="pin" role="img" class="icon icon-md ion-md-pin" aria-label="pin"></ion-icon>\n              <div>{{prestart.location}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <!-- <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="map" role="img" class="icon icon-md ion-md-map" aria-label="map"></ion-icon>\n              <div>{{prestart.kilometers}} km</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="clock" role="img" class="icon icon-md ion-md-clock" aria-label="clock"></ion-icon>\n              <div>{{prestart.hours}} hr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(prestart.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n    <ion-item (click)="updatePrestart(prestart)">\n      <ion-badge item-start color="secondary" *ngIf="!checkStatus(prestart.item_status)">Good</ion-badge>\n      <ion-badge item-start color="danger" *ngIf="checkStatus(prestart.item_status)">Faulty</ion-badge>\n    </ion-item>\n\n    <ion-card-content (click)="updatePrestart(prestart)">\n      <p>{{prestart.items}}</p>\n    </ion-card-content>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/prestart/prestart.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], PrestartPage);
-    return PrestartPage;
-}());
-
-//# sourceMappingURL=prestart.js.map
-
-/***/ }),
-/* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectPrestartItemsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the SelectPrestartItemsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SelectPrestartItemsPage = /** @class */ (function () {
-    function SelectPrestartItemsPage(viewCtrl, api, utiltiy) {
-        this.viewCtrl = viewCtrl;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.itemList = [];
-        this.isNoData = false;
-    }
-    SelectPrestartItemsPage.prototype.ngOnInit = function () {
-    };
-    SelectPrestartItemsPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        if (this.viewCtrl.data.list.length) {
-            this.itemList = this.viewCtrl.data.list;
-            return;
-        }
-        if (this.viewCtrl.data.fleetId) {
-            this.utiltiy.startLoading();
-            var formData = new FormData();
-            formData.append("method_name", "prestart_items");
-            formData.append("fleet_no", this.viewCtrl.data.fleetId);
-            this.api.post('/prestart/jobcard', false, formData).then(function (res) {
-                console.log(res);
-                if (res.message === 'No Data Found') {
-                    _this.isNoData = true;
-                    _this.utiltiy.stopLoading();
-                }
-                else {
-                    _this.isNoData = false;
-                    res.result[0].vehicles.split(',').forEach(function (element) {
-                        var data = {
-                            isChecked: false,
-                            title: element
-                        };
-                        _this.itemList.push(data);
-                    });
-                    _this.utiltiy.stopLoading();
-                }
-            }).catch(function (error) {
-                console.log(error);
-                _this.isNoData = true;
-                _this.utiltiy.stopLoading();
-            });
-        }
-        else {
-            this.isNoData = true;
-        }
-    };
-    SelectPrestartItemsPage.prototype.closeModal = function () {
-        this.viewCtrl.dismiss(this.itemList);
-    };
-    SelectPrestartItemsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-select-prestart-items',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/select-prestart-items/select-prestart-items.html"*/' <div class="component-div">\n    <div class="title">\n      <ion-label>Select Prestart Items</ion-label>\n      <ion-icon (click)="closeModal()" class="close-icon" name="close"></ion-icon>\n    </div>\n      <div class="checkbox-content" *ngIf="!isNoData">\n        <div *ngFor="let item of itemList; let i = index" class="item-div">\n          <input class="checkbox-input" [id]="i" type="checkbox" [(ngModel)]="item.isChecked" >\n        <label class="checkbox-label" [for]="i" >{{item.title}}</label>\n      </div>\n      </div>\n    <div *ngIf="isNoData" class="no-data-div">\n      <div class="no-record-text">No Records</div>\n    </div>\n  </div>\n    '/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/select-prestart-items/select-prestart-items.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], SelectPrestartItemsPage);
-    return SelectPrestartItemsPage;
-}());
-
-//# sourceMappingURL=select-prestart-items.js.map
-
-/***/ }),
-/* 88 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrTimesheetCreatePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__ = __webpack_require__(44);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-var KlmrTimesheetCreatePage = /** @class */ (function () {
-    function KlmrTimesheetCreatePage(navCtrl, navParams, api, utiltiy) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.timeSheetList = [];
-    }
-    KlmrTimesheetCreatePage.prototype.ionViewDidLoad = function () {
-        this.gettimeSheetList();
-    };
-    KlmrTimesheetCreatePage.prototype.gettimeSheetList = function () {
-        var _this = this;
-        this.timeSheetList = [];
-        this.utiltiy.startLoading();
-        var formData = new FormData();
-        formData.append("method_name", "timesheet_list");
-        // http://cotest.online/klmr_cabsand/index.php/api/prestart/timesheet/
-        // /prestart/timesheet/get
-        this.api.post("/prestart/timesheet/approver", true, formData)
-            .then(function (result) {
-            console.log("result", result);
-            _this.timeSheetList = result.result;
-            _this.utiltiy.stopLoading();
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrTimesheetCreatePage.prototype.deleteRecord = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var status;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
-                    case 1:
-                        status = _a.sent();
-                        if (status) {
-                            this.deleteTimeSheet(id);
-                        }
-                        console.log("status", status);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrTimesheetCreatePage.prototype.acceptRecord = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var options, status;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        options = {
-                            "title": '',
-                            "message": 'Are you sure?',
-                            "approveText": 'Yes',
-                            "rejectText": 'No',
-                        };
-                        return [4 /*yield*/, this.utiltiy.attentionDialog(options)];
-                    case 1:
-                        status = _a.sent();
-                        if (status) {
-                            this.acceptTimesheet(id);
-                        }
-                        console.log("status", status);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrTimesheetCreatePage.prototype.formatAMPM = function (date) {
-        date = date.split(":");
-        var hours = date[0];
-        var minutes = date[1];
-        var ampm = hours >= 12 ? 'PM' : 'AM';
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? minutes : minutes;
-        var strTime = hours + ':' + minutes + ' ' + ampm;
-        return strTime;
-    };
-    KlmrTimesheetCreatePage.prototype.deleteTimeSheet = function (id) {
-        var _this = this;
-        this.api.delete("/prestart/timesheet/delete/" + id, false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.gettimeSheetList();
-            }
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    KlmrTimesheetCreatePage.prototype.acceptTimesheet = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var userId, formData;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.utiltiy.getStorage("userId")];
-                    case 1:
-                        userId = _a.sent();
-                        formData = new FormData();
-                        formData.append("method_name", "approver_timesheet_reject_approve_update_status");
-                        // formData.append("user_id", userId);
-                        formData.append("timesheet_id", id);
-                        formData.append("status", '1');
-                        // timesheet/approver
-                        this.api.post("/prestart/timesheet/approver", false, formData)
-                            .then(function (result) {
-                            console.log("result", result);
-                            _this.utiltiy.stopLoading();
-                            if (result.status) {
-                                _this.utiltiy.toaster(result.message);
-                                _this.gettimeSheetList();
-                            }
-                        }, function (err) {
-                            console.log("err", err);
-                            _this.utiltiy.stopLoading();
-                            _this.utiltiy.toaster(err.error.message);
-                        });
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    KlmrTimesheetCreatePage.prototype.addTimeSheet = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */], { param: null, copy: false });
-    };
-    KlmrTimesheetCreatePage.prototype.updateTimeSheet = function (prestart) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */], { param: prestart, copy: false });
-    };
-    KlmrTimesheetCreatePage.prototype.copyTimeSheet = function (prestart) {
-        console.log("copyTimeSheet", prestart);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */], { param: prestart, copy: true });
-    };
-    KlmrTimesheetCreatePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-klmr-timesheet-create',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-create/klmr-timesheet-create.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Time Sheet</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addTimeSheet()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row" justify-content-center align-items-center>\n        <ion-col class="col">\n\n          <button *ngIf="fuel.status == \'0\'" clear="" color="danger" icon-start="" ion-button="" small=""\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"\n            (click)="acceptRecord(fuel.id)"><span class="button-inner">\n              <ion-badge item-end color="primary">\n                <ion-icon name="thumbs-up" role="img" class="icon icon-md ion-md-thumbs-up" aria-label="thumbs-up">\n                </ion-icon> Created\n              </ion-badge>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n\n          <ion-badge item-end color="danger" *ngIf="fuel.status == \'4\'">\n            <ion-icon name="close" role="img" class="icon icon-md ion-md-close" aria-label="close"></ion-icon>\n            Rejected\n          </ion-badge>\n\n          <ion-badge item-end color="pending" *ngIf="fuel.status == \'1\'">\n            <ion-icon name="timer" role="img" class="icon icon-md ion-md-timer" aria-label="timer"></ion-icon>\n            Waiting for Approval\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'2\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Approved\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'3\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Processed\n          </ion-badge>\n\n\n        </ion-col>\n        <ion-col class="col">\n          <h2>\n            <!-- <ion-badge item-end [color]="\'primarybackground\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <!-- <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity :</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code : &nbsp; </span>\n              <div> {{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar">\n              </ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start : &nbsp;</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Finish : &nbsp;</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <span *ngIf="fuel.status == \'0\'">\n\n          <ion-col class="col">\n            <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              (click)="copyTimeSheet(fuel)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n        <span *ngIf="fuel.status == \'1\'">\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-create/klmr-timesheet-create.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], KlmrTimesheetCreatePage);
-    return KlmrTimesheetCreatePage;
-}());
-
-//# sourceMappingURL=klmr-timesheet-create.js.map
-
-/***/ }),
-/* 89 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandPrestartPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_addprestart_cabsand_addprestart__ = __webpack_require__(183);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-var CabsandPrestartPage = /** @class */ (function () {
-    function CabsandPrestartPage(navCtrl, navParams, api, utiltiy) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.api = api;
-        this.utiltiy = utiltiy;
-        this.prestartList = [];
-    }
-    CabsandPrestartPage.prototype.ionViewDidLoad = function () {
-        this.getappColor();
-        this.getprestartList();
-    };
-    CabsandPrestartPage.prototype.getappColor = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        _a = this;
-                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
-                    case 1:
-                        _a.appColor = _b.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    CabsandPrestartPage.prototype.getprestartList = function () {
-        var _this = this;
-        this.prestartList = [];
-        this.utiltiy.startLoading();
-        this.api.get("/tansix_prestart/get", false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.prestartList = result.result;
-            _this.utiltiy.stopLoading();
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    CabsandPrestartPage.prototype.checkStatus = function (string) {
-        return string.includes("Faulty");
-    };
-    CabsandPrestartPage.prototype.deleteRecord = function (id) {
-        return __awaiter(this, void 0, void 0, function () {
-            var status;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
-                    case 1:
-                        status = _a.sent();
-                        if (status) {
-                            this.deletePrestart(id);
-                        }
-                        console.log("status", status);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    CabsandPrestartPage.prototype.deletePrestart = function (id) {
-        var _this = this;
-        this.api.delete("/tansix_prestart/delete/" + id, false)
-            .then(function (result) {
-            console.log("result", result);
-            _this.utiltiy.stopLoading();
-            if (result.status) {
-                _this.utiltiy.toaster(result.message);
-                _this.getprestartList();
-            }
-        }, function (err) {
-            _this.utiltiy.stopLoading();
-            _this.utiltiy.toaster(err.error.message);
-        });
-    };
-    CabsandPrestartPage.prototype.addPrestart = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_addprestart_cabsand_addprestart__["a" /* CabsandAddprestartPage */], { param: null });
-    };
-    CabsandPrestartPage.prototype.updatePrestart = function (prestart) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_addprestart_cabsand_addprestart__["a" /* CabsandAddprestartPage */], { param: prestart });
-    };
-    CabsandPrestartPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-prestart',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-prestart/cabsand-prestart.html"*/'\n<ion-header>\n  <ion-toolbar [color]="\'dark\'">\n  <ion-navbar>\n    <button ion-button menuToggle color="light">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title color="light">Cabsand Prestart</ion-title>\n    <ion-buttons end> <!-- Here we use end -->\n      <button ion-button icon-only  color="light" (click)="addPrestart()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n  </ion-buttons>\n  </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let prestart of  prestartList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n          <h2>\n            <ion-badge item-end [color]="\'dark\' ">{{prestart.id}}</ion-badge>\n            {{prestart.drivername}}\n          </h2>\n          <p>{{prestart.fleet_no}}</p>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="pin" role="img" class="icon icon-md ion-md-pin" aria-label="pin"></ion-icon>\n              <div>{{prestart.location}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <!-- <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="map" role="img" class="icon icon-md ion-md-map" aria-label="map"></ion-icon>\n              <div>{{prestart.kilometers}} km</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="clock" role="img" class="icon icon-md ion-md-clock" aria-label="clock"></ion-icon>\n              <div>{{prestart.hours}} hr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(prestart.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n    <ion-item (click)="updatePrestart(prestart)">\n      <ion-badge item-start color="secondary" *ngIf="!checkStatus(prestart.item_status)">Good</ion-badge>\n      <ion-badge item-start color="danger" *ngIf="checkStatus(prestart.item_status)">Faulty</ion-badge>\n    </ion-item>\n\n    <ion-card-content (click)="updatePrestart(prestart)">\n      <p>{{prestart.items}}</p>\n    </ion-card-content>\n  </ion-card>\n\n\n\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-prestart/cabsand-prestart.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
-    ], CabsandPrestartPage);
-    return CabsandPrestartPage;
-}());
-
-//# sourceMappingURL=cabsand-prestart.js.map
-
-/***/ }),
-/* 90 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2374,7 +1505,7 @@ var CabsandPrestartPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_timesheet_create_cabsand_timesheet_create__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_timesheet_create_cabsand_timesheet_create__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2788,7 +1919,7 @@ var CabsandTimesheetCreateAddPage = /** @class */ (function () {
 //# sourceMappingURL=cabsand-timesheet-create-add.js.map
 
 /***/ }),
-/* 91 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2797,7 +1928,7 @@ var CabsandTimesheetCreateAddPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_add_cabsand_timesheet_create_add__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_add_cabsand_timesheet_create_add__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2985,7 +2116,7 @@ var CabsandTimesheetCreatePage = /** @class */ (function () {
     };
     CabsandTimesheetCreatePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-timesheet-create',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-create/cabsand-timesheet-create.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Time Sheet</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addTimeSheet()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n\n          <button  *ngIf="fuel.status == \'0\'" clear="" color="danger" icon-start="" ion-button="" small=""\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger" (click)="acceptRecord(fuel.id)"><span\n              class="button-inner">\n              <ion-badge item-end color="primary">\n                <ion-icon name="thumbs-up" role="img" class="icon icon-md ion-md-thumbs-up" aria-label="thumbs-up">\n                </ion-icon> Created\n              </ion-badge>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n          \n          <ion-badge item-end color="danger" *ngIf="fuel.status == \'4\'">\n            <ion-icon name="close" role="img" class="icon icon-md ion-md-close" aria-label="close"></ion-icon>\n            Reject\n          </ion-badge>\n\n          <ion-badge item-end color="pending" *ngIf="fuel.status == \'1\'">\n            <ion-icon name="timer" role="img" class="icon icon-md ion-md-timer" aria-label="timer"></ion-icon>\n            Waiting for Approval\n          </ion-badge>\n          \n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'2\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Approved\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'3\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Processed\n          </ion-badge>\n\n\n        </ion-col>\n        <ion-col class="col" (click)="updateTimeSheet(fuel)">\n          <h2>\n            <!-- <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" (click)="updateTimeSheet(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity :</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateTimeSheet(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code : &nbsp;</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateTimeSheet(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateTimeSheet(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start : &nbsp;</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" (click)="updateTimeSheet(fuel)">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish : &nbsp;</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="dark" icon-start="" ion-button="" small="" (click)="copyTimeSheet(fuel)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="dark" icon-start="" ion-button="" small="" (click)="updateTimeSheet(fuel)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n       \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-create/cabsand-timesheet-create.html"*/,
+            selector: 'page-cabsand-timesheet-create',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-create/cabsand-timesheet-create.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Time Sheet</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addTimeSheet()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n\n          <button  *ngIf="fuel.status == \'0\'" clear="" color="danger" icon-start="" ion-button="" small=""\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger" (click)="acceptRecord(fuel.id)"><span\n              class="button-inner">\n              <ion-badge item-end color="primary">\n                <ion-icon name="thumbs-up" role="img" class="icon icon-md ion-md-thumbs-up" aria-label="thumbs-up">\n                </ion-icon> Created\n              </ion-badge>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n          \n          <ion-badge item-end color="danger" *ngIf="fuel.status == \'4\'">\n            <ion-icon name="close" role="img" class="icon icon-md ion-md-close" aria-label="close"></ion-icon>\n            Reject\n          </ion-badge>\n\n          <ion-badge item-end color="pending" *ngIf="fuel.status == \'1\'">\n            <ion-icon name="timer" role="img" class="icon icon-md ion-md-timer" aria-label="timer"></ion-icon>\n            Waiting for Approval\n          </ion-badge>\n          \n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'2\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Approved\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'3\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Processed\n          </ion-badge>\n\n\n        </ion-col>\n        <ion-col class="col" >\n          <h2>\n            <!-- <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        \n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code : &nbsp;</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start : &nbsp;</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish : &nbsp;</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n<!--         \n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="dark" icon-start="" ion-button="" small="" (click)="copyTimeSheet(fuel)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" color="dark" icon-start="" ion-button="" small="" \n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n\n        <span *ngIf="fuel.status == \'0\'">\n\n          <ion-col class="col">\n            <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              (click)="copyTimeSheet(fuel)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n        <span *ngIf="fuel.status == \'1\'">\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n       \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-create/cabsand-timesheet-create.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
     ], CabsandTimesheetCreatePage);
@@ -2993,6 +2124,875 @@ var CabsandTimesheetCreatePage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=cabsand-timesheet-create.js.map
+
+/***/ }),
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandNewsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__ = __webpack_require__(5);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+var CabsandNewsPage = /** @class */ (function () {
+    function CabsandNewsPage(navCtrl, utility, api, events) {
+        this.navCtrl = navCtrl;
+        this.utility = utility;
+        this.api = api;
+        this.events = events;
+        this.horizontalText = "";
+        this.newsLiist = [];
+        this.getNews();
+        // this.navCtrl.swipeBackEnabled = false;
+    }
+    CabsandNewsPage.prototype.getStatus = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.horizontalText = "";
+                return [2 /*return*/];
+            });
+        });
+    };
+    CabsandNewsPage.prototype.getNews = function () {
+        var _this = this;
+        this.newsLiist = [];
+        var string = "";
+        this.api.get("/prestart/news/News_get", "false")
+            .then(function (result) {
+            result.result.forEach(function (element) {
+                string = string + ("Subject: " + element.subject + " Date: " + element.date + " By:" + element.username + "     ");
+            });
+            _this.horizontalText = string;
+            _this.newsLiist = result.result;
+            console.log("result", _this.newsLiist);
+            console.log("this.horizontalText ", _this.horizontalText);
+        }, function (err) {
+        });
+    };
+    CabsandNewsPage.prototype.dateConvert = function (date) {
+        if (date) {
+            var dateString = date.split("-");
+            return dateString[2] + "-" + dateString[1] + "-" + dateString[0];
+        }
+        else {
+            return "";
+        }
+    };
+    CabsandNewsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-cabsand-news',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-news/cabsand-news.html"*/'\n<ion-header>\n  <ion-toolbar [color]="\'dark\'">\n  <ion-navbar>\n    <button ion-button menuToggle color="light">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title color="light">News</ion-title>\n \n  </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class="tutorial-page">\n  <!-- <ion-slides pager direction="vertical"> -->\n    <span *ngFor="let news of newsLiist;let i = index">\n\n    <!-- <ion-slide > -->\n    <ion-row *ngIf="i != 0" class="row-height"></ion-row>\n      <h2 class="slide-title" >\n        {{news.subject}}\n      </h2>\n      <p ion-text text-left class="inner-news" style="font-size: medium;">\n        <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n        {{dateConvert(news.date)}}\n        <span ion-text color="primarybackground"> {{news.username}}</span>\n      </p>\n      <p class="inner-news" [innerHTML]="news.news">\n      </p>\n    <!-- </ion-slide> -->\n  </span>\n  \n  <!-- </ion-slides> -->\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-news/cabsand-news.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
+    ], CabsandNewsPage);
+    return CabsandNewsPage;
+}());
+
+//# sourceMappingURL=cabsand-news.js.map
+
+/***/ }),
+/* 59 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrNewsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__ = __webpack_require__(5);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+var KlmrNewsPage = /** @class */ (function () {
+    function KlmrNewsPage(navCtrl, utility, api, events) {
+        this.navCtrl = navCtrl;
+        this.utility = utility;
+        this.api = api;
+        this.events = events;
+        this.horizontalText = "";
+        this.newsLiist = [];
+        this.getNews();
+        // this.navCtrl.swipeBackEnabled = false;
+    }
+    KlmrNewsPage.prototype.getStatus = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.horizontalText = "";
+                return [2 /*return*/];
+            });
+        });
+    };
+    KlmrNewsPage.prototype.getNews = function () {
+        var _this = this;
+        this.newsLiist = [];
+        var string = "";
+        this.api.get("/prestart/news/News_get", "false")
+            .then(function (result) {
+            result.result.forEach(function (element) {
+                string = string + ("Subject: " + element.subject + " Date: " + element.date + " By:" + element.username + "     ");
+            });
+            _this.horizontalText = string;
+            _this.newsLiist = result.result;
+            console.log("result", _this.newsLiist);
+            console.log("this.horizontalText ", _this.horizontalText);
+        }, function (err) {
+        });
+    };
+    KlmrNewsPage.prototype.dateConvert = function (date) {
+        if (date) {
+            var dateString = date.split("-");
+            return dateString[2] + "-" + dateString[1] + "-" + dateString[0];
+        }
+        else {
+            return "";
+        }
+    };
+    KlmrNewsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-klmr-news',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-news/klmr-news.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">News</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class="tutorial-page">\n  <!-- <ion-slides pager direction="vertical"> -->\n    <span *ngFor="let news of newsLiist;let i = index">\n\n    <!-- <ion-slide > -->\n    <ion-row *ngIf="i != 0" class="row-height"></ion-row>\n      <h2 class="slide-title" >\n        {{news.subject}}\n      </h2>\n      <p ion-text text-left class="inner-news" style="font-size: medium;">\n        <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n        {{dateConvert(news.date)}}\n        <span ion-text color="primarybackground"> {{news.username}}</span>\n      </p>\n      <p class="inner-news" [innerHTML]="news.news">\n      </p>\n    <!-- </ion-slide> -->\n  </span>\n  \n  <!-- </ion-slides> -->\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-news/klmr-news.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Events */]])
+    ], KlmrNewsPage);
+    return KlmrNewsPage;
+}());
+
+//# sourceMappingURL=klmr-news.js.map
+
+/***/ }),
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrestartPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__addprestart_addprestart__ = __webpack_require__(176);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var PrestartPage = /** @class */ (function () {
+    function PrestartPage(navCtrl, navParams, api, utiltiy) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.prestartList = [];
+    }
+    PrestartPage.prototype.ionViewDidLoad = function () {
+        this.getappColor();
+        this.getprestartList();
+    };
+    PrestartPage.prototype.getappColor = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
+                    case 1:
+                        _a.appColor = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    PrestartPage.prototype.getprestartList = function () {
+        var _this = this;
+        this.prestartList = [];
+        this.utiltiy.startLoading();
+        this.api.get("/prestart/get", false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.prestartList = result.result;
+            _this.filePathUrl = result.file_uploaded_path;
+            _this.utiltiy.stopLoading();
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    PrestartPage.prototype.checkStatus = function (string) {
+        return string.includes("Faulty");
+    };
+    PrestartPage.prototype.deleteRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.deletePrestart(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    PrestartPage.prototype.deletePrestart = function (id) {
+        var _this = this;
+        this.api.delete("/prestart/delete/" + id, false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.getprestartList();
+            }
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    PrestartPage.prototype.addPrestart = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__addprestart_addprestart__["a" /* AddprestartPage */], { param: null });
+    };
+    PrestartPage.prototype.updatePrestart = function (prestart) {
+        prestart.file_uploaded_path = this.filePathUrl;
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__addprestart_addprestart__["a" /* AddprestartPage */], { param: prestart });
+    };
+    PrestartPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-prestart',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/prestart/prestart.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Prestart</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addPrestart()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let prestart of  prestartList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n          <h2>\n            <ion-badge item-end [color]="\'primarybackground\' ">{{prestart.id}}</ion-badge>\n            {{prestart.drivername}}\n          </h2>\n          <p>{{prestart.fleet_no}}</p>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="pin" role="img" class="icon icon-md ion-md-pin" aria-label="pin"></ion-icon>\n              <div>{{prestart.location}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <!-- <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="map" role="img" class="icon icon-md ion-md-map" aria-label="map"></ion-icon>\n              <div>{{prestart.kilometers}} km</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="clock" role="img" class="icon icon-md ion-md-clock" aria-label="clock"></ion-icon>\n              <div>{{prestart.hours}} hr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(prestart.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n    <ion-item (click)="updatePrestart(prestart)">\n      <ion-badge item-start color="secondary" *ngIf="!checkStatus(prestart.item_status)">Good</ion-badge>\n      <ion-badge item-start color="danger" *ngIf="checkStatus(prestart.item_status)">Faulty</ion-badge>\n    </ion-item>\n\n    <ion-card-content (click)="updatePrestart(prestart)">\n      <p>{{prestart.items}}</p>\n    </ion-card-content>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/prestart/prestart.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], PrestartPage);
+    return PrestartPage;
+}());
+
+//# sourceMappingURL=prestart.js.map
+
+/***/ }),
+/* 89 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectPrestartItemsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the SelectPrestartItemsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SelectPrestartItemsPage = /** @class */ (function () {
+    function SelectPrestartItemsPage(viewCtrl, api, utiltiy) {
+        this.viewCtrl = viewCtrl;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.itemList = [];
+        this.isNoData = false;
+    }
+    SelectPrestartItemsPage.prototype.ngOnInit = function () {
+    };
+    SelectPrestartItemsPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        if (this.viewCtrl.data.list.length) {
+            this.itemList = this.viewCtrl.data.list;
+            return;
+        }
+        if (this.viewCtrl.data.fleetId) {
+            this.utiltiy.startLoading();
+            var formData = new FormData();
+            formData.append("method_name", "prestart_items");
+            formData.append("fleet_no", this.viewCtrl.data.fleetId);
+            this.api.post('/prestart/jobcard', false, formData).then(function (res) {
+                console.log(res);
+                if (res.message === 'No Data Found') {
+                    _this.isNoData = true;
+                    _this.utiltiy.stopLoading();
+                }
+                else {
+                    _this.isNoData = false;
+                    res.result[0].vehicles.split(',').forEach(function (element) {
+                        var data = {
+                            isChecked: false,
+                            title: element
+                        };
+                        _this.itemList.push(data);
+                    });
+                    _this.utiltiy.stopLoading();
+                }
+            }).catch(function (error) {
+                console.log(error);
+                _this.isNoData = true;
+                _this.utiltiy.stopLoading();
+            });
+        }
+        else {
+            this.isNoData = true;
+        }
+    };
+    SelectPrestartItemsPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss(this.itemList);
+    };
+    SelectPrestartItemsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-select-prestart-items',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/select-prestart-items/select-prestart-items.html"*/' <div class="component-div">\n    <div class="title">\n      <ion-label>Select Prestart Items</ion-label>\n      <ion-icon (click)="closeModal()" class="close-icon" name="close"></ion-icon>\n    </div>\n      <div class="checkbox-content" *ngIf="!isNoData">\n        <div *ngFor="let item of itemList; let i = index" class="item-div">\n          <input class="checkbox-input" [id]="i" type="checkbox" [(ngModel)]="item.isChecked" >\n        <label class="checkbox-label" [for]="i" >{{item.title}}</label>\n      </div>\n      </div>\n    <div *ngIf="isNoData" class="no-data-div">\n      <div class="no-record-text">No Records</div>\n    </div>\n  </div>\n    '/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/select-prestart-items/select-prestart-items.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], SelectPrestartItemsPage);
+    return SelectPrestartItemsPage;
+}());
+
+//# sourceMappingURL=select-prestart-items.js.map
+
+/***/ }),
+/* 90 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KlmrTimesheetCreatePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__ = __webpack_require__(44);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var KlmrTimesheetCreatePage = /** @class */ (function () {
+    function KlmrTimesheetCreatePage(navCtrl, navParams, api, utiltiy) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.timeSheetList = [];
+    }
+    KlmrTimesheetCreatePage.prototype.ionViewDidLoad = function () {
+        this.gettimeSheetList();
+    };
+    KlmrTimesheetCreatePage.prototype.gettimeSheetList = function () {
+        var _this = this;
+        this.timeSheetList = [];
+        this.utiltiy.startLoading();
+        var formData = new FormData();
+        formData.append("method_name", "timesheet_list");
+        // http://cotest.online/klmr_cabsand/index.php/api/prestart/timesheet/
+        // /prestart/timesheet/get
+        this.api.post("/prestart/timesheet/approver", true, formData)
+            .then(function (result) {
+            console.log("result", result);
+            _this.timeSheetList = result.result;
+            _this.utiltiy.stopLoading();
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrTimesheetCreatePage.prototype.deleteRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.deleteTimeSheet(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrTimesheetCreatePage.prototype.acceptRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var options, status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        options = {
+                            "title": '',
+                            "message": 'Are you sure?',
+                            "approveText": 'Yes',
+                            "rejectText": 'No',
+                        };
+                        return [4 /*yield*/, this.utiltiy.attentionDialog(options)];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.acceptTimesheet(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrTimesheetCreatePage.prototype.formatAMPM = function (date) {
+        date = date.split(":");
+        var hours = date[0];
+        var minutes = date[1];
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
+    };
+    KlmrTimesheetCreatePage.prototype.deleteTimeSheet = function (id) {
+        var _this = this;
+        this.api.delete("/prestart/timesheet/delete/" + id, false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.gettimeSheetList();
+            }
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    KlmrTimesheetCreatePage.prototype.acceptTimesheet = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var userId, formData;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.getStorage("userId")];
+                    case 1:
+                        userId = _a.sent();
+                        formData = new FormData();
+                        formData.append("method_name", "approver_timesheet_reject_approve_update_status");
+                        // formData.append("user_id", userId);
+                        formData.append("timesheet_id", id);
+                        formData.append("status", '1');
+                        // timesheet/approver
+                        this.api.post("/prestart/timesheet/approver", false, formData)
+                            .then(function (result) {
+                            console.log("result", result);
+                            _this.utiltiy.stopLoading();
+                            if (result.status) {
+                                _this.utiltiy.toaster(result.message);
+                                _this.gettimeSheetList();
+                            }
+                        }, function (err) {
+                            console.log("err", err);
+                            _this.utiltiy.stopLoading();
+                            _this.utiltiy.toaster(err.error.message);
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    KlmrTimesheetCreatePage.prototype.addTimeSheet = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */], { param: null, copy: false });
+    };
+    KlmrTimesheetCreatePage.prototype.updateTimeSheet = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */], { param: prestart, copy: false });
+    };
+    KlmrTimesheetCreatePage.prototype.copyTimeSheet = function (prestart) {
+        console.log("copyTimeSheet", prestart);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__klmr_timesheet_create_add_klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */], { param: prestart, copy: true });
+    };
+    KlmrTimesheetCreatePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-klmr-timesheet-create',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-create/klmr-timesheet-create.html"*/'<ion-header>\n  <ion-toolbar [color]="\'primarybackground\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Time Sheet</ion-title>\n      <ion-buttons end>\n        <!-- Here we use end -->\n        <button ion-button icon-only color="light" (click)="addTimeSheet()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row" justify-content-center align-items-center>\n        <ion-col class="col">\n\n          <button *ngIf="fuel.status == \'0\'" clear="" color="danger" icon-start="" ion-button="" small=""\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"\n            (click)="acceptRecord(fuel.id)"><span class="button-inner">\n              <ion-badge item-end color="primary">\n                <ion-icon name="thumbs-up" role="img" class="icon icon-md ion-md-thumbs-up" aria-label="thumbs-up">\n                </ion-icon> Created\n              </ion-badge>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n\n          <ion-badge item-end color="danger" *ngIf="fuel.status == \'4\'">\n            <ion-icon name="close" role="img" class="icon icon-md ion-md-close" aria-label="close"></ion-icon>\n            Rejected\n          </ion-badge>\n\n          <ion-badge item-end color="pending" *ngIf="fuel.status == \'1\'">\n            <ion-icon name="timer" role="img" class="icon icon-md ion-md-timer" aria-label="timer"></ion-icon>\n            Waiting for Approval\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'2\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Approved\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'3\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Processed\n          </ion-badge>\n\n\n        </ion-col>\n        <ion-col class="col">\n          <h2>\n            <!-- <ion-badge item-end [color]="\'primarybackground\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <!-- <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity :</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code : &nbsp; </span>\n              <div> {{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar">\n              </ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start : &nbsp;</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Finish : &nbsp;</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n        <span *ngIf="fuel.status == \'0\'">\n\n          <ion-col class="col">\n            <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          \n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              (click)="copyTimeSheet(fuel)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n        <span *ngIf="fuel.status == \'1\'">\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/klmr-timesheet-create/klmr-timesheet-create.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], KlmrTimesheetCreatePage);
+    return KlmrTimesheetCreatePage;
+}());
+
+//# sourceMappingURL=klmr-timesheet-create.js.map
+
+/***/ }),
+/* 91 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CabsandPrestartPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_addprestart_cabsand_addprestart__ = __webpack_require__(183);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+var CabsandPrestartPage = /** @class */ (function () {
+    function CabsandPrestartPage(navCtrl, navParams, api, utiltiy) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.api = api;
+        this.utiltiy = utiltiy;
+        this.prestartList = [];
+    }
+    CabsandPrestartPage.prototype.ionViewDidLoad = function () {
+        this.getappColor();
+        this.getprestartList();
+    };
+    CabsandPrestartPage.prototype.getappColor = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.utiltiy.getStorage("primaryColor")];
+                    case 1:
+                        _a.appColor = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CabsandPrestartPage.prototype.getprestartList = function () {
+        var _this = this;
+        this.prestartList = [];
+        this.utiltiy.startLoading();
+        this.api.get("/tansix_prestart/get", false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.prestartList = result.result;
+            _this.utiltiy.stopLoading();
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    CabsandPrestartPage.prototype.checkStatus = function (string) {
+        return string.includes("Faulty");
+    };
+    CabsandPrestartPage.prototype.deleteRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.deletePrestart(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CabsandPrestartPage.prototype.deletePrestart = function (id) {
+        var _this = this;
+        this.api.delete("/tansix_prestart/delete/" + id, false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.getprestartList();
+            }
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    CabsandPrestartPage.prototype.addPrestart = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_addprestart_cabsand_addprestart__["a" /* CabsandAddprestartPage */], { param: null });
+    };
+    CabsandPrestartPage.prototype.updatePrestart = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_addprestart_cabsand_addprestart__["a" /* CabsandAddprestartPage */], { param: prestart });
+    };
+    CabsandPrestartPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-cabsand-prestart',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-prestart/cabsand-prestart.html"*/'\n<ion-header>\n  <ion-toolbar [color]="\'dark\'">\n  <ion-navbar>\n    <button ion-button menuToggle color="light">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title color="light">Cabsand Prestart</ion-title>\n    <ion-buttons end> <!-- Here we use end -->\n      <button ion-button icon-only  color="light" (click)="addPrestart()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n  </ion-buttons>\n  </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-card *ngFor="let prestart of  prestartList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n          <h2>\n            <ion-badge item-end [color]="\'dark\' ">{{prestart.id}}</ion-badge>\n            {{prestart.drivername}}\n          </h2>\n          <p>{{prestart.fleet_no}}</p>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="pin" role="img" class="icon icon-md ion-md-pin" aria-label="pin"></ion-icon>\n              <div>{{prestart.location}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <!-- <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="map" role="img" class="icon icon-md ion-md-map" aria-label="map"></ion-icon>\n              <div>{{prestart.kilometers}} km</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b71464\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="clock" role="img" class="icon icon-md ion-md-clock" aria-label="clock"></ion-icon>\n              <div>{{prestart.hours}} hr</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col">\n          <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(prestart.id)"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner">\n              <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n      </ion-row>\n    </ion-card-header>\n    <ion-item (click)="updatePrestart(prestart)">\n      <ion-badge item-start color="secondary" *ngIf="!checkStatus(prestart.item_status)">Good</ion-badge>\n      <ion-badge item-start color="danger" *ngIf="checkStatus(prestart.item_status)">Faulty</ion-badge>\n    </ion-item>\n\n    <ion-card-content (click)="updatePrestart(prestart)">\n      <p>{{prestart.items}}</p>\n    </ion-card-content>\n  </ion-card>\n\n\n\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-prestart/cabsand-prestart.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
+    ], CabsandPrestartPage);
+    return CabsandPrestartPage;
+}());
+
+//# sourceMappingURL=cabsand-prestart.js.map
 
 /***/ }),
 /* 92 */
@@ -3706,7 +3706,7 @@ var KlmrFuelTruckPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_jsa_add_klmr_jsa_add__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__klmr_jsa_add_klmr_jsa_add__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3841,8 +3841,8 @@ var KlmrJsaPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_news_klmr_news__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cabsand_news_cabsand_news__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_news_klmr_news__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cabsand_news_cabsand_news__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4109,16 +4109,16 @@ var map = {
 		191
 	],
 	"../pages/cabsand-jobcard-add/cabsand-jobcard-add.module": [
-		193
-	],
-	"../pages/cabsand-jobcard/cabsand-jobcard.module": [
 		192
 	],
+	"../pages/cabsand-jobcard/cabsand-jobcard.module": [
+		193
+	],
 	"../pages/cabsand-jsa-add/cabsand-jsa-add.module": [
-		194
+		196
 	],
 	"../pages/cabsand-jsa/cabsand-jsa.module": [
-		196
+		194
 	],
 	"../pages/cabsand-news/cabsand-news.module": [
 		362,
@@ -4131,25 +4131,25 @@ var map = {
 		197
 	],
 	"../pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.module": [
-		199
+		200
 	],
 	"../pages/cabsand-timesheet-create-add/cabsand-timesheet-create-add.module": [
-		202
+		199
 	],
 	"../pages/cabsand-timesheet-create/cabsand-timesheet-create.module": [
-		201
+		202
 	],
 	"../pages/cabsand-timesheet-history/cabsand-timesheet-history.module": [
 		203
 	],
 	"../pages/cabsand-timesheet-pending/cabsand-timesheet-pending.module": [
-		208
-	],
-	"../pages/dashboard/dashboard.module": [
 		205
 	],
+	"../pages/dashboard/dashboard.module": [
+		206
+	],
 	"../pages/jsa/jsa.module": [
-		207
+		208
 	],
 	"../pages/klmr-fuel-add/klmr-fuel-add.module": [
 		209
@@ -4167,13 +4167,13 @@ var map = {
 		215
 	],
 	"../pages/klmr-jobcard/klmr-jobcard.module": [
-		216
+		218
 	],
 	"../pages/klmr-jsa-add/klmr-jsa-add.module": [
-		219
+		216
 	],
 	"../pages/klmr-jsa/klmr-jsa.module": [
-		217
+		219
 	],
 	"../pages/klmr-news/klmr-news.module": [
 		363,
@@ -4186,16 +4186,16 @@ var map = {
 		221
 	],
 	"../pages/klmr-timesheet-create-add/klmr-timesheet-create-add.module": [
-		227
-	],
-	"../pages/klmr-timesheet-create/klmr-timesheet-create.module": [
 		223
 	],
-	"../pages/klmr-timesheet-history/klmr-timesheet-history.module": [
+	"../pages/klmr-timesheet-create/klmr-timesheet-create.module": [
 		224
 	],
+	"../pages/klmr-timesheet-history/klmr-timesheet-history.module": [
+		225
+	],
 	"../pages/klmr-timesheet-pending/klmr-timesheet-pending.module": [
-		226
+		227
 	],
 	"../pages/login/login.module": [
 		228
@@ -4212,10 +4212,10 @@ var map = {
 		230
 	],
 	"../pages/search/search.module": [
-		232
+		231
 	],
 	"../pages/select-prestart-items/select-prestart-items.module": [
-		231
+		232
 	]
 };
 function webpackAsyncContext(req) {
@@ -4280,7 +4280,7 @@ var AddprestartPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__prestart_prestart__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__prestart_prestart__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__klmr_prestart_jobcard_klmr_prestart_jobcard__ = __webpack_require__(180);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5197,7 +5197,7 @@ var KlmrPrestartJobcardPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__klmr_jobcard_klmr_jobcard__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__select_prestart_items_select_prestart_items__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__select_prestart_items_select_prestart_items__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__klmr_timesheet_create_add_klmr_timesheet_create_add__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5629,7 +5629,7 @@ var CabsandAddprestartPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_prestart_cabsand_prestart__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_prestart_cabsand_prestart__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cabsand_prestart_jobcard_cabsand_prestart_jobcard__ = __webpack_require__(184);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6523,8 +6523,8 @@ var CabsandPrestartJobcardPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cabsand_jobcard_cabsand_jobcard__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__select_prestart_items_select_prestart_items__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cabsand_timesheet_create_add_cabsand_timesheet_create_add__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__select_prestart_items_select_prestart_items__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__cabsand_timesheet_create_add_cabsand_timesheet_create_add__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7652,43 +7652,6 @@ var CabsandFuelPageModule = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJobcardPageModule", function() { return CabsandJobcardPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_jobcard__ = __webpack_require__(51);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var CabsandJobcardPageModule = /** @class */ (function () {
-    function CabsandJobcardPageModule() {
-    }
-    CabsandJobcardPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_jobcard__["a" /* CabsandJobcardPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_jobcard__["a" /* CabsandJobcardPage */]),
-            ],
-        })
-    ], CabsandJobcardPageModule);
-    return CabsandJobcardPageModule;
-}());
-
-//# sourceMappingURL=cabsand-jobcard.module.js.map
-
-/***/ }),
-/* 193 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJobcardAddPageModule", function() { return CabsandJobcardAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
@@ -7721,15 +7684,15 @@ var CabsandJobcardAddPageModule = /** @class */ (function () {
 //# sourceMappingURL=cabsand-jobcard-add.module.js.map
 
 /***/ }),
-/* 194 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJsaAddPageModule", function() { return CabsandJsaAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJobcardPageModule", function() { return CabsandJobcardPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa_add__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_jobcard__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7739,23 +7702,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CabsandJsaAddPageModule = /** @class */ (function () {
-    function CabsandJsaAddPageModule() {
+var CabsandJobcardPageModule = /** @class */ (function () {
+    function CabsandJobcardPageModule() {
     }
-    CabsandJsaAddPageModule = __decorate([
+    CabsandJobcardPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa_add__["a" /* CabsandJsaAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_jobcard__["a" /* CabsandJobcardPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_jsa_add__["a" /* CabsandJsaAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_jobcard__["a" /* CabsandJobcardPage */]),
             ],
         })
-    ], CabsandJsaAddPageModule);
-    return CabsandJsaAddPageModule;
+    ], CabsandJobcardPageModule);
+    return CabsandJobcardPageModule;
 }());
 
-//# sourceMappingURL=cabsand-jsa-add.module.js.map
+//# sourceMappingURL=cabsand-jobcard.module.js.map
+
+/***/ }),
+/* 194 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJsaPageModule", function() { return CabsandJsaPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa__ = __webpack_require__(94);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CabsandJsaPageModule = /** @class */ (function () {
+    function CabsandJsaPageModule() {
+    }
+    CabsandJsaPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa__["a" /* CabsandJsaPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_jsa__["a" /* CabsandJsaPage */]),
+            ],
+        })
+    ], CabsandJsaPageModule);
+    return CabsandJsaPageModule;
+}());
+
+//# sourceMappingURL=cabsand-jsa.module.js.map
 
 /***/ }),
 /* 195 */
@@ -8092,10 +8092,10 @@ var CabsandJsaAddPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJsaPageModule", function() { return CabsandJsaPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandJsaAddPageModule", function() { return CabsandJsaAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa_add__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8105,23 +8105,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CabsandJsaPageModule = /** @class */ (function () {
-    function CabsandJsaPageModule() {
+var CabsandJsaAddPageModule = /** @class */ (function () {
+    function CabsandJsaAddPageModule() {
     }
-    CabsandJsaPageModule = __decorate([
+    CabsandJsaAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa__["a" /* CabsandJsaPage */],
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_jsa_add__["a" /* CabsandJsaAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_jsa__["a" /* CabsandJsaPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_jsa_add__["a" /* CabsandJsaAddPage */]),
             ],
         })
-    ], CabsandJsaPageModule);
-    return CabsandJsaPageModule;
+    ], CabsandJsaAddPageModule);
+    return CabsandJsaAddPageModule;
 }());
 
-//# sourceMappingURL=cabsand-jsa.module.js.map
+//# sourceMappingURL=cabsand-jsa-add.module.js.map
 
 /***/ }),
 /* 197 */
@@ -8132,7 +8132,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandPrestartPageModule", function() { return CabsandPrestartPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_prestart__ = __webpack_require__(91);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8203,10 +8203,47 @@ var CabsandPrestartJobcardPageModule = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetCreateAddPageModule", function() { return CabsandTimesheetCreateAddPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create_add__ = __webpack_require__(52);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CabsandTimesheetCreateAddPageModule = /** @class */ (function () {
+    function CabsandTimesheetCreateAddPageModule() {
+    }
+    CabsandTimesheetCreateAddPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create_add__["a" /* CabsandTimesheetCreateAddPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create_add__["a" /* CabsandTimesheetCreateAddPage */]),
+            ],
+        })
+    ], CabsandTimesheetCreateAddPageModule);
+    return CabsandTimesheetCreateAddPageModule;
+}());
+
+//# sourceMappingURL=cabsand-timesheet-create-add.module.js.map
+
+/***/ }),
+/* 200 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetApprovalsPageModule", function() { return CabsandTimesheetApprovalsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_approvals__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_approvals__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8235,7 +8272,7 @@ var CabsandTimesheetApprovalsPageModule = /** @class */ (function () {
 //# sourceMappingURL=cabsand-timesheet-approvals.module.js.map
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8244,6 +8281,7 @@ var CabsandTimesheetApprovalsPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_cabsand_timesheet_create__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8288,6 +8326,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+
 
 
 
@@ -8404,9 +8443,12 @@ var CabsandTimesheetApprovalsPage = /** @class */ (function () {
             });
         });
     };
+    CabsandTimesheetApprovalsPage.prototype.updateTimeSheet = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_cabsand_timesheet_create__["a" /* CabsandTimesheetCreatePage */], { param: prestart, copy: false });
+    };
     CabsandTimesheetApprovalsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-timesheet-approvals',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Approvals</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" >\n          <h2>\n            <!-- <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity:</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code:</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start:</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish :</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger" (click)="acceptRejetc(fuel.id)"><span\n              class="button-inner">\n              <ion-icon name="more" role="img" class="icon icon-md ion-md-more" aria-label="more"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.html"*/,
+            selector: 'page-cabsand-timesheet-approvals',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">Approvals</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" >\n          <h2>\n            <!-- <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <!-- <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity:</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code:</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start:</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish :</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n        \n\n        <ion-col class="col">\n          <button clear="" icon-start="" ion-button="" small="" \n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger" (click)="acceptRejetc(fuel.id)"><span\n              class="button-inner">\n              <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n        <ion-col class="col">\n          <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n              class="button-inner" (click)="updateTimeSheet(fuel)">\n              <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
     ], CabsandTimesheetApprovalsPage);
@@ -8416,7 +8458,7 @@ var CabsandTimesheetApprovalsPage = /** @class */ (function () {
 //# sourceMappingURL=cabsand-timesheet-approvals.js.map
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8424,7 +8466,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetCreatePageModule", function() { return CabsandTimesheetCreatePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8451,43 +8493,6 @@ var CabsandTimesheetCreatePageModule = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=cabsand-timesheet-create.module.js.map
-
-/***/ }),
-/* 202 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetCreateAddPageModule", function() { return CabsandTimesheetCreateAddPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create_add__ = __webpack_require__(90);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var CabsandTimesheetCreateAddPageModule = /** @class */ (function () {
-    function CabsandTimesheetCreateAddPageModule() {
-    }
-    CabsandTimesheetCreateAddPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create_add__["a" /* CabsandTimesheetCreateAddPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_create_add__["a" /* CabsandTimesheetCreateAddPage */]),
-            ],
-        })
-    ], CabsandTimesheetCreateAddPageModule);
-    return CabsandTimesheetCreateAddPageModule;
-}());
-
-//# sourceMappingURL=cabsand-timesheet-create-add.module.js.map
 
 /***/ }),
 /* 203 */
@@ -8536,6 +8541,7 @@ var CabsandTimesheetHistoryPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_add_cabsand_timesheet_create_add__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8584,6 +8590,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var CabsandTimesheetHistoryPage = /** @class */ (function () {
     function CabsandTimesheetHistoryPage(navCtrl, navParams, api, utiltiy) {
         this.navCtrl = navCtrl;
@@ -8591,7 +8598,7 @@ var CabsandTimesheetHistoryPage = /** @class */ (function () {
         this.api = api;
         this.utiltiy = utiltiy;
         this.timeSheetList = [];
-        this.weeklySelectedDate = '';
+        this.weeklySelectedDate = null;
         this.dateFilterList = [];
     }
     CabsandTimesheetHistoryPage.prototype.ionViewDidLoad = function () {
@@ -8652,9 +8659,47 @@ var CabsandTimesheetHistoryPage = /** @class */ (function () {
         var strTime = hours + ':' + minutes + ' ' + ampm;
         return strTime;
     };
+    CabsandTimesheetHistoryPage.prototype.deleteRecord = function (id) {
+        return __awaiter(this, void 0, void 0, function () {
+            var status;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.utiltiy.showDialog()];
+                    case 1:
+                        status = _a.sent();
+                        if (status) {
+                            this.deleteTimeSheet(id);
+                        }
+                        console.log("status", status);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CabsandTimesheetHistoryPage.prototype.deleteTimeSheet = function (id) {
+        var _this = this;
+        this.api.delete("/tansix_prestart/timesheet/delete/" + id, false)
+            .then(function (result) {
+            console.log("result", result);
+            _this.utiltiy.stopLoading();
+            if (result.status) {
+                _this.utiltiy.toaster(result.message);
+                _this.searchByDate();
+            }
+        }, function (err) {
+            _this.utiltiy.stopLoading();
+            _this.utiltiy.toaster(err.error.message);
+        });
+    };
+    CabsandTimesheetHistoryPage.prototype.updateTimeSheet = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_add_cabsand_timesheet_create_add__["a" /* CabsandTimesheetCreateAddPage */], { param: prestart, copy: false });
+    };
+    CabsandTimesheetHistoryPage.prototype.copyTimeSheet = function (prestart) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__cabsand_timesheet_create_add_cabsand_timesheet_create_add__["a" /* CabsandTimesheetCreateAddPage */], { param: prestart, copy: true });
+    };
     CabsandTimesheetHistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cabsand-timesheet-history',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-history/cabsand-timesheet-history.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">History</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-row>\n    <ion-col class="search-wrapper flex-center">\n      <ion-item no-lines>\n        <ion-label *ngIf="!weeklySelectedDate">Select Weekly Date</ion-label>\n        <ion-select [(ngModel)]="weeklySelectedDate" (ngModelChange)="searchByDate()">\n          <ion-option value="all">All</ion-option>\n          <ion-option [value]="item" *ngFor="let item of dateFilterList.slice().reverse()">{{item}}</ion-option>\n        </ion-select>\n      </ion-item>\n      <div (click)="searchByDate()" class="search-icon flex-center"><ion-icon color="light" name="search"></ion-icon></div>\n    </ion-col>\n  </ion-row>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col" >\n          <h2>\n            <!-- <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity:</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code:</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start:</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish :</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-history/cabsand-timesheet-history.html"*/,
+            selector: 'page-cabsand-timesheet-history',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-history/cabsand-timesheet-history.html"*/'<ion-header>\n  <ion-toolbar [color]="\'dark\' ">\n    <ion-navbar>\n      <button ion-button menuToggle color="light">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title color="light">History</ion-title>\n    </ion-navbar>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-row>\n    <ion-col class="search-wrapper flex-center">\n      <ion-item no-lines>\n        <ion-label *ngIf="!weeklySelectedDate">Select Weekly Date</ion-label>\n        <ion-select [(ngModel)]="weeklySelectedDate" (ngModelChange)="searchByDate()">\n          <ion-option value="all">All</ion-option>\n          <ion-option [value]="item" *ngFor="let item of dateFilterList.slice().reverse()">{{item}}</ion-option>\n        </ion-select>\n      </ion-item>\n      <div (click)="searchByDate()" class="search-icon flex-center"><ion-icon color="light" name="search"></ion-icon></div>\n    </ion-col>\n  </ion-row>\n  <ion-card *ngFor="let fuel of  timeSheetList;let i = index">\n    <ion-card-header class="padding-border card-header card-header-md">\n\n      <ion-row class="row">\n        <ion-col class="col">\n\n          <button  *ngIf="fuel.status == \'0\'" clear="" color="danger" icon-start="" ion-button="" small=""\n            class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger" (click)="acceptRecord(fuel.id)"><span\n              class="button-inner">\n              <ion-badge item-end color="primary">\n                <ion-icon name="thumbs-up" role="img" class="icon icon-md ion-md-thumbs-up" aria-label="thumbs-up">\n                </ion-icon> Created\n              </ion-badge>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n          \n          <ion-badge item-end color="danger" *ngIf="fuel.status == \'4\'">\n            <ion-icon name="close" role="img" class="icon icon-md ion-md-close" aria-label="close"></ion-icon>\n            Reject\n          </ion-badge>\n\n          <ion-badge item-end color="pending" *ngIf="fuel.status == \'1\'">\n            <ion-icon name="timer" role="img" class="icon icon-md ion-md-timer" aria-label="timer"></ion-icon>\n            Waiting for Approval\n          </ion-badge>\n          \n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'2\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Approved\n          </ion-badge>\n\n          <ion-badge item-end color="secondary" *ngIf="fuel.status == \'3\'">\n            <ion-icon name="checkmark" role="img" class="icon icon-md ion-md-checkmark" aria-label="checkmark">\n            </ion-icon> Processed\n          </ion-badge>\n\n\n        </ion-col>\n        <ion-col class="col" >\n          <h2>\n            <!-- <ion-badge item-end [color]="\'dark\' ">{{fuel.id}}</ion-badge> -->\n            {{fuel.filled_by}}\n          </h2>\n          <!-- <p>{{fuel.fleet_no}}</p> -->\n        </ion-col>\n        <!-- <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity:</span>\n              <div>{{fuel.activity_type}} </div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col> -->\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Activity Code:</span>\n              <div>{{fuel.activity_code}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <ion-icon name="calendar" role="img" class="icon icon-md ion-md-calendar" aria-label="calendar"></ion-icon>\n              <div>{{fuel.date}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n              <span>Start:</span>\n              <div>{{formatAMPM(fuel.start_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n        <ion-col class="col" >\n          <button clear="" icon-start="" ion-button="" small=""\n            [ngStyle]="{\'color\':\'#b1651c\'}"\n            class="button button-md button-clear button-clear-md button-small button-small-md"><span\n              class="button-inner">\n             <span>Finish :</span>\n              <div>{{formatAMPM(fuel.finish_time)}}</div>\n            </span>\n            <div class="button-effect"></div>\n          </button>\n        </ion-col>\n\n        <span *ngIf="fuel.status == \'0\'">\n\n          <ion-col class="col">\n            <button clear="" color="danger" icon-start="" ion-button="" small="" (click)="deleteRecord(fuel.id)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="trash" role="img" class="icon icon-md ion-md-trash" aria-label="trash"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              (click)="copyTimeSheet(fuel)"\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner">\n                <ion-icon name="copy" role="img" class="icon icon-md ion-md-copy" aria-label="copy"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n\n        <span *ngIf="fuel.status == \'1\'">\n          <ion-col class="col">\n            <button clear="" color="primarybackground" icon-start="" ion-button="" small=""\n              class="button button-md button-clear button-clear-md button-small button-small-md button-clear-md-danger"><span\n                class="button-inner" (click)="updateTimeSheet(fuel)">\n                <ion-icon name="create" role="img" class="icon icon-md ion-md-create" aria-label="create"></ion-icon>\n              </span>\n              <div class="button-effect"></div>\n            </button>\n          </ion-col>\n        </span>\n        \n      </ion-row>\n    </ion-card-header>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/cabsand-timesheet-history/cabsand-timesheet-history.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_crud_crud__["a" /* CrudProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utiltiy_utiltiy__["a" /* UtiltiyProvider */]])
     ], CabsandTimesheetHistoryPage);
@@ -8669,10 +8714,47 @@ var CabsandTimesheetHistoryPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetPendingPageModule", function() { return CabsandTimesheetPendingPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_pending__ = __webpack_require__(330);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CabsandTimesheetPendingPageModule = /** @class */ (function () {
+    function CabsandTimesheetPendingPageModule() {
+    }
+    CabsandTimesheetPendingPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_pending__["a" /* CabsandTimesheetPendingPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_pending__["a" /* CabsandTimesheetPendingPage */]),
+            ],
+        })
+    ], CabsandTimesheetPendingPageModule);
+    return CabsandTimesheetPendingPageModule;
+}());
+
+//# sourceMappingURL=cabsand-timesheet-pending.module.js.map
+
+/***/ }),
+/* 206 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardPageModule", function() { return DashboardPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard__ = __webpack_require__(207);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8701,7 +8783,7 @@ var DashboardPageModule = /** @class */ (function () {
 //# sourceMappingURL=dashboard.module.js.map
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8741,7 +8823,7 @@ var DashboardPage = /** @class */ (function () {
 //# sourceMappingURL=dashboard.js.map
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8749,7 +8831,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JsaPageModule", function() { return JsaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jsa__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jsa__ = __webpack_require__(331);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8776,43 +8858,6 @@ var JsaPageModule = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=jsa.module.js.map
-
-/***/ }),
-/* 208 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CabsandTimesheetPendingPageModule", function() { return CabsandTimesheetPendingPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_pending__ = __webpack_require__(331);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var CabsandTimesheetPendingPageModule = /** @class */ (function () {
-    function CabsandTimesheetPendingPageModule() {
-    }
-    CabsandTimesheetPendingPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_pending__["a" /* CabsandTimesheetPendingPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cabsand_timesheet_pending__["a" /* CabsandTimesheetPendingPage */]),
-            ],
-        })
-    ], CabsandTimesheetPendingPageModule);
-    return CabsandTimesheetPendingPageModule;
-}());
-
-//# sourceMappingURL=cabsand-timesheet-pending.module.js.map
 
 /***/ }),
 /* 209 */
@@ -9596,10 +9641,10 @@ var KlmrJobcardAddPageModule = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJobcardPageModule", function() { return KlmrJobcardPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaAddPageModule", function() { return KlmrJsaAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jobcard__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__ = __webpack_require__(217);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -9609,63 +9654,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var KlmrJobcardPageModule = /** @class */ (function () {
-    function KlmrJobcardPageModule() {
+var KlmrJsaAddPageModule = /** @class */ (function () {
+    function KlmrJsaAddPageModule() {
     }
-    KlmrJobcardPageModule = __decorate([
+    KlmrJsaAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_jobcard__["a" /* KlmrJobcardPage */],
+                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jobcard__["a" /* KlmrJobcardPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */]),
             ],
         })
-    ], KlmrJobcardPageModule);
-    return KlmrJobcardPageModule;
+    ], KlmrJsaAddPageModule);
+    return KlmrJsaAddPageModule;
 }());
 
-//# sourceMappingURL=klmr-jobcard.module.js.map
+//# sourceMappingURL=klmr-jsa-add.module.js.map
 
 /***/ }),
 /* 217 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaPageModule", function() { return KlmrJsaPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__ = __webpack_require__(97);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var KlmrJsaPageModule = /** @class */ (function () {
-    function KlmrJsaPageModule() {
-    }
-    KlmrJsaPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */]),
-            ],
-        })
-    ], KlmrJsaPageModule);
-    return KlmrJsaPageModule;
-}());
-
-//# sourceMappingURL=klmr-jsa.module.js.map
-
-/***/ }),
-/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9994,15 +10002,15 @@ var KlmrJsaAddPage = /** @class */ (function () {
 //# sourceMappingURL=klmr-jsa-add.js.map
 
 /***/ }),
-/* 219 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaAddPageModule", function() { return KlmrJsaAddPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJobcardPageModule", function() { return KlmrJobcardPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jobcard__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10012,23 +10020,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var KlmrJsaAddPageModule = /** @class */ (function () {
-    function KlmrJsaAddPageModule() {
+var KlmrJobcardPageModule = /** @class */ (function () {
+    function KlmrJobcardPageModule() {
     }
-    KlmrJsaAddPageModule = __decorate([
+    KlmrJobcardPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */],
+                __WEBPACK_IMPORTED_MODULE_2__klmr_jobcard__["a" /* KlmrJobcardPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa_add__["a" /* KlmrJsaAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jobcard__["a" /* KlmrJobcardPage */]),
             ],
         })
-    ], KlmrJsaAddPageModule);
-    return KlmrJsaAddPageModule;
+    ], KlmrJobcardPageModule);
+    return KlmrJobcardPageModule;
 }());
 
-//# sourceMappingURL=klmr-jsa-add.module.js.map
+//# sourceMappingURL=klmr-jobcard.module.js.map
+
+/***/ }),
+/* 219 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrJsaPageModule", function() { return KlmrJsaPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__ = __webpack_require__(97);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var KlmrJsaPageModule = /** @class */ (function () {
+    function KlmrJsaPageModule() {
+    }
+    KlmrJsaPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_jsa__["a" /* KlmrJsaPage */]),
+            ],
+        })
+    ], KlmrJsaPageModule);
+    return KlmrJsaPageModule;
+}());
+
+//# sourceMappingURL=klmr-jsa.module.js.map
 
 /***/ }),
 /* 220 */
@@ -10298,10 +10343,47 @@ var KlmrTimesheetApprovalsPage = /** @class */ (function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetCreateAddPageModule", function() { return KlmrTimesheetCreateAddPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create_add__ = __webpack_require__(44);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var KlmrTimesheetCreateAddPageModule = /** @class */ (function () {
+    function KlmrTimesheetCreateAddPageModule() {
+    }
+    KlmrTimesheetCreateAddPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */]),
+            ],
+        })
+    ], KlmrTimesheetCreateAddPageModule);
+    return KlmrTimesheetCreateAddPageModule;
+}());
+
+//# sourceMappingURL=klmr-timesheet-create-add.module.js.map
+
+/***/ }),
+/* 224 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetCreatePageModule", function() { return KlmrTimesheetCreatePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create__ = __webpack_require__(90);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10330,7 +10412,7 @@ var KlmrTimesheetCreatePageModule = /** @class */ (function () {
 //# sourceMappingURL=klmr-timesheet-create.module.js.map
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10338,7 +10420,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetHistoryPageModule", function() { return KlmrTimesheetHistoryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_history__ = __webpack_require__(226);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10367,7 +10449,7 @@ var KlmrTimesheetHistoryPageModule = /** @class */ (function () {
 //# sourceMappingURL=klmr-timesheet-history.module.js.map
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10545,7 +10627,7 @@ var KlmrTimesheetHistoryPage = /** @class */ (function () {
 //# sourceMappingURL=klmr-timesheet-history.js.map
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10580,43 +10662,6 @@ var KlmrTimesheetPendingPageModule = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=klmr-timesheet-pending.module.js.map
-
-/***/ }),
-/* 227 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KlmrTimesheetCreateAddPageModule", function() { return KlmrTimesheetCreateAddPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create_add__ = __webpack_require__(44);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var KlmrTimesheetCreateAddPageModule = /** @class */ (function () {
-    function KlmrTimesheetCreateAddPageModule() {
-    }
-    KlmrTimesheetCreateAddPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__klmr_timesheet_create_add__["a" /* KlmrTimesheetCreateAddPage */]),
-            ],
-        })
-    ], KlmrTimesheetCreateAddPageModule);
-    return KlmrTimesheetCreateAddPageModule;
-}());
-
-//# sourceMappingURL=klmr-timesheet-create-add.module.js.map
 
 /***/ }),
 /* 228 */
@@ -10712,7 +10757,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrestartPageModule", function() { return PrestartPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prestart__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__prestart__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10742,46 +10787,6 @@ var PrestartPageModule = /** @class */ (function () {
 
 /***/ }),
 /* 231 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectPrestartItemsPageModule", function() { return SelectPrestartItemsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_prestart_items__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(43);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-var SelectPrestartItemsPageModule = /** @class */ (function () {
-    function SelectPrestartItemsPageModule() {
-    }
-    SelectPrestartItemsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_prestart_items__["a" /* SelectPrestartItemsPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_prestart_items__["a" /* SelectPrestartItemsPage */]),
-                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */]
-            ],
-        })
-    ], SelectPrestartItemsPageModule);
-    return SelectPrestartItemsPageModule;
-}());
-
-//# sourceMappingURL=select-prestart-items.module.js.map
-
-/***/ }),
-/* 232 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10816,6 +10821,46 @@ var SearchPageModule = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=search.module.js.map
+
+/***/ }),
+/* 232 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectPrestartItemsPageModule", function() { return SelectPrestartItemsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_prestart_items__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(43);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var SelectPrestartItemsPageModule = /** @class */ (function () {
+    function SelectPrestartItemsPageModule() {
+    }
+    SelectPrestartItemsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__select_prestart_items__["a" /* SelectPrestartItemsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_prestart_items__["a" /* SelectPrestartItemsPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */]
+            ],
+        })
+    ], SelectPrestartItemsPageModule);
+    return SelectPrestartItemsPageModule;
+}());
+
+//# sourceMappingURL=select-prestart-items.module.js.map
 
 /***/ }),
 /* 233 */,
@@ -11169,7 +11214,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login_module__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_auth__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_dashboard_dashboard_module__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_dashboard_dashboard_module__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_utiltiy_utiltiy__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_prestart_prestart_module__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_addprestart_addprestart_module__ = __webpack_require__(175);
@@ -11185,33 +11230,33 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cabsand_fuel_truck_cabsand_fuel_truck_module__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_cabsand_fuel_add_cabsand_fuel_add_module__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_cabsand_fuel_truck_add_cabsand_fuel_truck_add_module__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_jsa_jsa_module__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_klmr_jsa_klmr_jsa_module__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_klmr_jsa_add_klmr_jsa_add_module__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_cabsand_jsa_cabsand_jsa_module__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_cabsand_jsa_add_cabsand_jsa_add_module__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_klmr_timesheet_create_klmr_timesheet_create_module__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_klmr_timesheet_create_add_klmr_timesheet_create_add_module__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_search_search_module__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_cabsand_timesheet_create_cabsand_timesheet_create_module__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_cabsand_timesheet_create_add_cabsand_timesheet_create_add_module__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_jsa_jsa_module__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_klmr_jsa_klmr_jsa_module__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_klmr_jsa_add_klmr_jsa_add_module__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_cabsand_jsa_cabsand_jsa_module__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_cabsand_jsa_add_cabsand_jsa_add_module__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_klmr_timesheet_create_klmr_timesheet_create_module__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_klmr_timesheet_create_add_klmr_timesheet_create_add_module__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_search_search_module__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_cabsand_timesheet_create_cabsand_timesheet_create_module__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_cabsand_timesheet_create_add_cabsand_timesheet_create_add_module__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_ionic_marquee__ = __webpack_require__(361);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_news_news__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_klmr_news_klmr_news__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_cabsand_news_cabsand_news__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_klmr_news_klmr_news__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_cabsand_news_cabsand_news__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_klmr_timesheet_approvals_klmr_timesheet_approvals_module__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_klmr_timesheet_history_klmr_timesheet_history_module__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_klmr_timesheet_pending_klmr_timesheet_pending_module__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_cabsand_timesheet_approvals_cabsand_timesheet_approvals_module__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_klmr_timesheet_history_klmr_timesheet_history_module__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_klmr_timesheet_pending_klmr_timesheet_pending_module__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_cabsand_timesheet_approvals_cabsand_timesheet_approvals_module__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_cabsand_timesheet_history_cabsand_timesheet_history_module__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_cabsand_timesheet_pending_cabsand_timesheet_pending_module__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__pages_klmr_jobcard_klmr_jobcard_module__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_cabsand_timesheet_pending_cabsand_timesheet_pending_module__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__pages_klmr_jobcard_klmr_jobcard_module__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__pages_klmr_jobcard_add_klmr_jobcard_add_module__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_cabsand_jobcard_cabsand_jobcard_module__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__pages_cabsand_jobcard_add_cabsand_jobcard_add_module__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_cabsand_jobcard_cabsand_jobcard_module__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__pages_cabsand_jobcard_add_cabsand_jobcard_add_module__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__pages_klmr_prestart_jobcard_klmr_prestart_jobcard_module__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_cabsand_prestart_jobcard_cabsand_prestart_jobcard_module__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__pages_select_prestart_items_select_prestart_items_module__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__pages_select_prestart_items_select_prestart_items_module__ = __webpack_require__(232);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11336,41 +11381,41 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/cabsand-fuel-truck-add/cabsand-fuel-truck-add.module#CabsandFuelTruckAddPageModule', name: 'CabsandFuelTruckAddPage', segment: 'cabsand-fuel-truck-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-fuel-truck/cabsand-fuel-truck.module#CabsandFuelTruckPageModule', name: 'CabsandFuelTruckPage', segment: 'cabsand-fuel-truck', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-fuel/cabsand-fuel.module#CabsandFuelPageModule', name: 'CabsandFuelPage', segment: 'cabsand-fuel', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-jobcard/cabsand-jobcard.module#CabsandJobcardPageModule', name: 'CabsandJobcardPage', segment: 'cabsand-jobcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-jobcard-add/cabsand-jobcard-add.module#CabsandJobcardAddPageModule', name: 'CabsandJobcardAddPage', segment: 'cabsand-jobcard-add', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-jsa-add/cabsand-jsa-add.module#CabsandJsaAddPageModule', name: 'CabsandJsaAddPage', segment: 'cabsand-jsa-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-jobcard/cabsand-jobcard.module#CabsandJobcardPageModule', name: 'CabsandJobcardPage', segment: 'cabsand-jobcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-jsa/cabsand-jsa.module#CabsandJsaPageModule', name: 'CabsandJsaPage', segment: 'cabsand-jsa', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-jsa-add/cabsand-jsa-add.module#CabsandJsaAddPageModule', name: 'CabsandJsaAddPage', segment: 'cabsand-jsa-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-news/cabsand-news.module#CabsandNewsPageModule', name: 'CabsandNewsPage', segment: 'cabsand-news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-prestart/cabsand-prestart.module#CabsandPrestartPageModule', name: 'CabsandPrestartPage', segment: 'cabsand-prestart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-prestart-jobcard/cabsand-prestart-jobcard.module#CabsandPrestartJobcardPageModule', name: 'CabsandPrestartJobcardPage', segment: 'cabsand-prestart-jobcard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-timesheet-create-add/cabsand-timesheet-create-add.module#CabsandTimesheetCreateAddPageModule', name: 'CabsandTimesheetCreateAddPage', segment: 'cabsand-timesheet-create-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-approvals/cabsand-timesheet-approvals.module#CabsandTimesheetApprovalsPageModule', name: 'CabsandTimesheetApprovalsPage', segment: 'cabsand-timesheet-approvals', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-create/cabsand-timesheet-create.module#CabsandTimesheetCreatePageModule', name: 'CabsandTimesheetCreatePage', segment: 'cabsand-timesheet-create', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-timesheet-create-add/cabsand-timesheet-create-add.module#CabsandTimesheetCreateAddPageModule', name: 'CabsandTimesheetCreateAddPage', segment: 'cabsand-timesheet-create-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/cabsand-timesheet-history/cabsand-timesheet-history.module#CabsandTimesheetHistoryPageModule', name: 'CabsandTimesheetHistoryPage', segment: 'cabsand-timesheet-history', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cabsand-timesheet-pending/cabsand-timesheet-pending.module#CabsandTimesheetPendingPageModule', name: 'CabsandTimesheetPendingPage', segment: 'cabsand-timesheet-pending', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/jsa/jsa.module#JsaPageModule', name: 'JsaPage', segment: 'jsa', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cabsand-timesheet-pending/cabsand-timesheet-pending.module#CabsandTimesheetPendingPageModule', name: 'CabsandTimesheetPendingPage', segment: 'cabsand-timesheet-pending', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-add/klmr-fuel-add.module#KlmrFuelAddPageModule', name: 'KlmrFuelAddPage', segment: 'klmr-fuel-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-truck-add/klmr-fuel-truck-add.module#KlmrFuelTruckAddPageModule', name: 'KlmrFuelTruckAddPage', segment: 'klmr-fuel-truck-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel-truck/klmr-fuel-truck.module#KlmrFuelTruckPageModule', name: 'KlmrFuelTruckPage', segment: 'klmr-fuel-truck', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-fuel/klmr-fuel.module#KlmrFuelPageModule', name: 'KlmrFuelPage', segment: 'klmr-fuel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-jobcard-add/klmr-jobcard-add.module#KlmrJobcardAddPageModule', name: 'KlmrJobcardAddPage', segment: 'klmr-jobcard-add', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-jsa-add/klmr-jsa-add.module#KlmrJsaAddPageModule', name: 'KlmrJsaAddPage', segment: 'klmr-jsa-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-jobcard/klmr-jobcard.module#KlmrJobcardPageModule', name: 'KlmrJobcardPage', segment: 'klmr-jobcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-jsa/klmr-jsa.module#KlmrJsaPageModule', name: 'KlmrJsaPage', segment: 'klmr-jsa', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-jsa-add/klmr-jsa-add.module#KlmrJsaAddPageModule', name: 'KlmrJsaAddPage', segment: 'klmr-jsa-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-news/klmr-news.module#KlmrNewsPageModule', name: 'KlmrNewsPage', segment: 'klmr-news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-prestart-jobcard/klmr-prestart-jobcard.module#KlmrPrestartJobcardPageModule', name: 'KlmrPrestartJobcardPage', segment: 'klmr-prestart-jobcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-approvals/klmr-timesheet-approvals.module#KlmrTimesheetApprovalsPageModule', name: 'KlmrTimesheetApprovalsPage', segment: 'klmr-timesheet-approvals', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/klmr-timesheet-create-add/klmr-timesheet-create-add.module#KlmrTimesheetCreateAddPageModule', name: 'KlmrTimesheetCreateAddPage', segment: 'klmr-timesheet-create-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-create/klmr-timesheet-create.module#KlmrTimesheetCreatePageModule', name: 'KlmrTimesheetCreatePage', segment: 'klmr-timesheet-create', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-history/klmr-timesheet-history.module#KlmrTimesheetHistoryPageModule', name: 'KlmrTimesheetHistoryPage', segment: 'klmr-timesheet-history', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/klmr-timesheet-pending/klmr-timesheet-pending.module#KlmrTimesheetPendingPageModule', name: 'KlmrTimesheetPendingPage', segment: 'klmr-timesheet-pending', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/klmr-timesheet-create-add/klmr-timesheet-create-add.module#KlmrTimesheetCreateAddPageModule', name: 'KlmrTimesheetCreateAddPage', segment: 'klmr-timesheet-create-add', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prestart/prestart.module#PrestartPageModule', name: 'PrestartPage', segment: 'prestart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/select-prestart-items/select-prestart-items.module#SelectPrestartItemsPageModule', name: 'SelectPrestartItemsPage', segment: 'select-prestart-items', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/select-prestart-items/select-prestart-items.module#SelectPrestartItemsPageModule', name: 'SelectPrestartItemsPage', segment: 'select-prestart-items', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -11434,50 +11479,6 @@ var AppModule = /** @class */ (function () {
 /* 328 */,
 /* 329 */,
 /* 330 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JsaPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the JsaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var JsaPage = /** @class */ (function () {
-    function JsaPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    JsaPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad JsaPage');
-    };
-    JsaPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-jsa',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/jsa/jsa.html"*/'<!--\n  Generated template for the JsaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>jsa</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/jsa/jsa.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
-    ], JsaPage);
-    return JsaPage;
-}());
-
-//# sourceMappingURL=jsa.js.map
-
-/***/ }),
-/* 331 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11597,6 +11598,50 @@ var CabsandTimesheetPendingPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=cabsand-timesheet-pending.js.map
+
+/***/ }),
+/* 331 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JsaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the JsaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var JsaPage = /** @class */ (function () {
+    function JsaPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    JsaPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad JsaPage');
+    };
+    JsaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-jsa',template:/*ion-inline-start:"/Users/digvijay/projects/ionic/service/src/pages/jsa/jsa.html"*/'<!--\n  Generated template for the JsaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>jsa</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/digvijay/projects/ionic/service/src/pages/jsa/jsa.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
+    ], JsaPage);
+    return JsaPage;
+}());
+
+//# sourceMappingURL=jsa.js.map
 
 /***/ }),
 /* 332 */
@@ -11805,24 +11850,24 @@ var SearchPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_fingerprint_aio__ = __webpack_require__(275);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_dashboard_dashboard__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_dashboard_dashboard__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utiltiy_utiltiy__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_prestart_prestart__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cabsand_prestart_cabsand_prestart__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_prestart_prestart__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cabsand_prestart_cabsand_prestart__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_klmr_fuel_klmr_fuel__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_klmr_fuel_truck_klmr_fuel_truck__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_cabsand_fuel_cabsand_fuel__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_cabsand_fuel_truck_cabsand_fuel_truck__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_klmr_jsa_klmr_jsa__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_cabsand_jsa_cabsand_jsa__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_klmr_timesheet_create_klmr_timesheet_create__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cabsand_timesheet_create_cabsand_timesheet_create__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_klmr_news_klmr_news__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cabsand_news_cabsand_news__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_klmr_timesheet_create_klmr_timesheet_create__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cabsand_timesheet_create_cabsand_timesheet_create__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_klmr_news_klmr_news__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cabsand_news_cabsand_news__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_klmr_timesheet_approvals_klmr_timesheet_approvals__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_timesheet_history_klmr_timesheet_history__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_klmr_timesheet_history_klmr_timesheet_history__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_cabsand_timesheet_history_cabsand_timesheet_history__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cabsand_timesheet_approvals_cabsand_timesheet_approvals__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_cabsand_timesheet_approvals_cabsand_timesheet_approvals__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_klmr_jobcard_klmr_jobcard__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_cabsand_jobcard_cabsand_jobcard__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
